@@ -132,6 +132,7 @@ tr('folderItems','материала','материал','resources','dokument',
 tr('folderHint','Нажмите на папку, чтобы открыть материалы. Ссылка под ней ведёт к описанию услуги.','Материалдарды ачуу үчүн папканы басыңыз. Төмөнкү шилтеме кызматтын сүрөттөлүшүнө алып барат.','Click a folder to reveal its resources. The link below opens the service details.','Klicka på en mapp för att visa materialet. Länken nedanför öppnar tjänstens beskrivning.','Klikk på en mappe for å vise innholdet. Lenken under åpner tjenestebeskrivelsen.')
 
 SERVICES=[('medicines-registration','medicines'),('medical-devices-registration','devices'),('dossier-review','review'),('dossier-preparation','preparation'),('variations','variations'),('pharmacovigilance','pv'),('regulatory-consulting','consulting')]
+KNOWLEDGE=json.loads((ROOT/'content/knowledge-articles.json').read_text())
 def build_pages(t):
  def block(title,text):return {'type':'text','title':t[title],'text':t[text]}
  def card(title,text,path):return {'title':t[title],'text':t[text],'path':path}
@@ -170,6 +171,16 @@ def build_pages(t):
  page('request','request','',[form])
  for k in ['privacy','cookies','terms']:page(k,k,k+'Text',[])
  page('404','notFound','',[cards('services',service_cards[:2])])
+ k=KNOWLEDGE[next(lang for lang in LANGS if T[lang] is t)]
+ knowledge_cards=[{'title':k['guideTitle'],'text':k['guideSummary'],'path':'knowledge/initial-assessment'},{'title':k['checkTitle'],'text':k['checkSummary'],'path':'knowledge/checklist'}]
+ pages['knowledge']={'title':t['knowledge'],'lead':k['intro'],'blocks':[{'type':'search','title':t['search'],'items':knowledge_cards}]}
+ pages['knowledge/guides']['blocks']=[cards('guides',[knowledge_cards[0]])]
+ pages['knowledge/documents']['blocks']=[cards('documents',[knowledge_cards[1]])]
+ pages['knowledge/initial-assessment']={'title':k['guideTitle'],'lead':k['guideSummary'],'blocks':[{'type':'text','title':title,'text':text} for title,text in k['guide']]+[{'type':'cards','title':t['documents'],'items':[knowledge_cards[1]]}]}
+ pages['knowledge/checklist']={'title':k['checkTitle'],'lead':k['checkSummary'],'blocks':[{'type':'checklist','title':k['checkHeading'],'text':k['checkIntro'],'items':k['items']},{'type':'text','title':k['noteTitle'],'text':k['note']},{'type':'text','title':k['next'],'text':k['nextText']},{'type':'cards','title':t['guides'],'items':[knowledge_cards[0]]}]}
+ # Home cards use the same concise summaries as the knowledge index.
+ for b in pages['']['blocks']:
+  if b['type']=='cards' and b['title']==t['knowledge']:b['items']=knowledge_cards
  return pages
 
 DATA={'languages':LABELS,'locales':{lang:{'ui':T[lang],'pages':build_pages(T[lang])} for lang in LANGS}}
@@ -180,7 +191,7 @@ print('Content model:',len(DATA['locales']['ru']['pages']),'pages ×',len(LANGS)
 import os
 from html.parser import HTMLParser
 from folder_export import render_service_folders, runtime as folder_runtime
-CSS=(ROOT/'styles/site.css').read_text()+'\n'+(ROOT/'styles/glass-folder.css').read_text()+'\n'+(ROOT/'styles/brand.css').read_text()+'\n'+(ROOT/'styles/hero-editorial.css').read_text()+'\n'+(ROOT/'styles/liquid-glass-button.css').read_text()+'\n'+(ROOT/'styles/glyph-portal.css').read_text()+'\n'+(ROOT/'styles/button-7.css').read_text()+'\n'+(ROOT/'styles/theme.css').read_text()+'\n'+(ROOT/'styles/action-buttons.css').read_text()+'\n'+(ROOT/'styles/shifting-dropdown.css').read_text()+'\n'+(ROOT/'styles/mobile.css').read_text()+'\n'+(ROOT/'styles/project-journey.css').read_text()
+CSS=(ROOT/'styles/site.css').read_text()+'\n'+(ROOT/'styles/glass-folder.css').read_text()+'\n'+(ROOT/'styles/brand.css').read_text()+'\n'+(ROOT/'styles/hero-editorial.css').read_text()+'\n'+(ROOT/'styles/liquid-glass-button.css').read_text()+'\n'+(ROOT/'styles/glyph-portal.css').read_text()+'\n'+(ROOT/'styles/button-7.css').read_text()+'\n'+(ROOT/'styles/theme.css').read_text()+'\n'+(ROOT/'styles/action-buttons.css').read_text()+'\n'+(ROOT/'styles/shifting-dropdown.css').read_text()+'\n'+(ROOT/'styles/mobile.css').read_text()+'\n'+(ROOT/'styles/project-journey.css').read_text()+'\n'+(ROOT/'styles/knowledge.css').read_text()
 EXPORT=ROOT/'prototype'
 NAV=[('services','services'),('pricing','pricing'),('projects','projects'),('knowledge','knowledge'),('about','about'),('contacts','contacts')]
 FOOTER=[['services','pricing','how-we-work','projects','faq'],['for-manufacturers','for-importers','for-partners','knowledge','knowledge/documents'],['about','about/team','about/editorial-policy','contacts','request']]
@@ -224,6 +235,8 @@ def render(lang,path,destination):
    elif b['type']=='journey':
     content+=render_journey(b['items'],lang,b['title'],lambda stage:os.path.relpath(ROOT/f'public/assets/journey-stage-{stage}.svg',destination.parent).replace(os.sep,'/'))
    elif b['type']=='steps':content+='<ol class="steps">'+''.join(f'<li>{escape(item)}</li>' for item in b['items'])+'</ol>'
+   elif b['type']=='checklist':
+    content+=f'<p class="body-copy">{escape(b["text"])}</p><ul class="document-checklist">'+''.join(f'<li><label><input type="checkbox"><span>{escape(item)}</span></label></li>' for item in b['items'])+'</ul>'
    elif b['type']=='faq':content+='<div class="faq-list">'+''.join(f'<details><summary>{escape(item["question"])}</summary><p>{escape(item["answer"])}</p></details>' for item in b['items'])+'</div>'
    elif b['type']=='search':content+=f'<div class="knowledge-search"><label><span class="eyebrow">{escape(t["search"])}</span><input class="search-field" type="search" placeholder="{escape(t["search"],quote=True)}"></label>'+render_cards(b['items'])+f'<p class="search-empty" role="status" hidden>{escape(t["noResults"])}</p></div>'
   blocks.append(f'<section class="content-section"><div class="shell">{content}</div></section>')
@@ -312,7 +325,8 @@ def render(lang,path,destination):
  alternates=''.join(f'<link rel="alternate" hreflang="{other}" href="{escape(url(path,other),quote=True)}">' for other in LANGS)
  social=social_metadata(lang,path,p['title'],p['lead'] or p['title'])
  theme_boot='<script>(function(){var t="light";try{var s=localStorage.getItem("nurba-theme");if(s==="dark"||s==="light")t=s}catch(e){}document.documentElement.classList.toggle("dark",t==="dark");document.documentElement.dataset.theme=t})();</script>'
- return '<!doctype html>\n'+f'<html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="description" content="{escape(p["lead"] or p["title"],quote=True)}"><title>{escape(p["title"])} | {escape(t["brandName"])}</title>{alternates}{social}{theme_boot}<style>{CSS}</style></head><body>{header}<main id="main">{snake_rail}{heading}{"".join(blocks)}</main>{footer}<script>{script}</script></body></html>'
+ main_class='knowledge-article' if path.startswith('knowledge/') else ''
+ return '<!doctype html>\n'+f'<html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="description" content="{escape(p["lead"] or p["title"],quote=True)}"><title>{escape(p["title"])} | {escape(t["brandName"])}</title>{alternates}{social}{theme_boot}<style>{CSS}</style></head><body>{header}<main id="main" class="{main_class}">{snake_rail}{heading}{"".join(blocks)}</main>{footer}<script>{script}</script></body></html>'
 
 for lang in LANGS:
  for path in DATA['locales'][lang]['pages']:

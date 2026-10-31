@@ -30,3 +30,5 @@ import './styles/shifting-dropdown.css'
 import './styles/mobile.css'
 
 import './styles/project-journey.css'
+
+import './styles/knowledge.css'

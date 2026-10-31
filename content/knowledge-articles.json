@@ -1,0 +1,247 @@
+{
+  "ru": {
+    "intro": "Практические материалы для старта регуляторного проекта: подготовка к оценке и работа с исходными документами.",
+    "guideTitle": "Как подготовиться к оценке проекта",
+    "guideSummary": "Шесть шагов: от описания продукта до списка вопросов и передачи материалов.",
+    "checkTitle": "Чек-лист исходных документов",
+    "checkSummary": "Что собрать для первого обсуждения и как отметить недостающие материалы.",
+    "guide": [
+      [
+        "1. Опишите продукт",
+        "Укажите наименование, тип продукта, назначение, форму выпуска или модель. Если продуктов несколько, подготовьте отдельную строку для каждого."
+      ],
+      [
+        "2. Уточните задачу",
+        "Напишите, что нужно оценить: регистрацию, изменение, готовность досье или состав сопровождения. Укажите страну проекта и желаемый срок начала работ."
+      ],
+      [
+        "3. Составьте опись материалов",
+        "Перечислите доступные документы, их язык, дату и версию. Отдельно отметьте, чего пока нет и кто может это предоставить."
+      ],
+      [
+        "4. Опишите текущий статус",
+        "Сообщите об имеющихся регистрациях, предыдущих подачах и полученных замечаниях, если они есть. Приложите доступную переписку по проекту."
+      ],
+      [
+        "5. Подготовьте вопросы",
+        "Запишите, что нужно выяснить по составу работ, распределению ответственности, переводам и последовательности действий. Укажите известные ограничения."
+      ],
+      [
+        "6. Согласуйте передачу",
+        "Выберите контактное лицо и согласуйте способ обмена файлами. На первом этапе достаточно описания и описи: состав полного комплекта уточняется после обсуждения."
+      ]
+    ],
+    "checkHeading": "Отметьте подготовленные материалы",
+    "checkIntro": "Отмечайте только доступные документы. Недостающие позиции внесите в отдельный список для обсуждения.",
+    "items": [
+      "Краткое описание продукта: наименование, назначение, форма выпуска или модель.",
+      "Сведения о производителе, стране и производственной площадке.",
+      "Перечень продуктов и вариантов, которые входят в проект.",
+      "Опись доступной документации с языком, датой и версией файлов.",
+      "Имеющиеся инструкции, маркировка и макеты упаковки.",
+      "Сведения о действующих регистрациях и доступные подтверждающие документы.",
+      "Предыдущие замечания и переписка по проекту, если были.",
+      "Список недостающих материалов, вопросов и ответственных контактов."
+    ],
+    "noteTitle": "Как пользоваться списком",
+    "note": "Это список для первичной оценки, а не обязательный комплект для подачи. Точный состав зависит от продукта и задачи и согласуется отдельно. Отметки действуют, пока страница открыта.",
+    "next": "Следующий шаг",
+    "nextText": "Соберите опись, отметьте пробелы и подготовьте вопросы. С этим набором можно обсудить объём оценки и дальнейшие действия."
+  },
+  "ky": {
+    "intro": "Регулятордук долбоорду баштоо үчүн практикалык материалдар: баалоого даярдык жана баштапкы документтер.",
+    "guideTitle": "Долбоорду баалоого кантип даярдануу керек",
+    "guideSummary": "Алты кадам: продуктуну сүрөттөөдөн суроолорго жана материалдарды өткөрүүгө чейин.",
+    "checkTitle": "Баштапкы документтердин тизмеси",
+    "checkSummary": "Алгачкы талкууга эмне чогултуу жана жетишпеген материалдарды кантип белгилөө керек.",
+    "guide": [
+      [
+        "1. Продуктуну сүрөттөңүз",
+        "Аталышын, түрүн, максатын, чыгаруу формасын же моделин көрсөтүңүз. Ар бир продуктуну өзүнчө тизмектеңиз."
+      ],
+      [
+        "2. Милдетти тактаңыз",
+        "Каттоо, өзгөртүү, досьенин даярдыгы же коштоо иштеринин көлөмү бааланарын жазыңыз. Долбоордун өлкөсүн жана ишти баштоонун каалаган мөөнөтүн көрсөтүңүз."
+      ],
+      [
+        "3. Материалдардын тизмесин түзүңүз",
+        "Документтердин тилин, датасын жана версиясын көрсөтүңүз. Жетишпеген маалыматтарды жана аларды ким бере аларын белгилеңиз."
+      ],
+      [
+        "4. Учурдагы абалды түшүндүрүңүз",
+        "Бар болгон каттоолорду, мурунку тапшырууларды жана эскертүүлөрдү көрсөтүңүз. Долбоор боюнча жеткиликтүү кат алышууну кошуңуз."
+      ],
+      [
+        "5. Суроолорду даярдаңыз",
+        "Иштердин курамы, жоопкерчилик, котормо жана кадамдардын тартиби боюнча суроолорду жазыңыз. Белгилүү чектөөлөрдү көрсөтүңүз."
+      ],
+      [
+        "6. Өткөрүүнү макулдашыңыз",
+        "Байланыш адамын жана файл алмашуу жолун аныктаңыз. Алгач сүрөттөмө жана тизме жетиштүү; толук топтом талкуудан кийин такталат."
+      ]
+    ],
+    "checkHeading": "Даяр материалдарды белгилеңиз",
+    "checkIntro": "Жеткиликтүү документтерди гана белгилеңиз. Жетишпегендерди талкуу үчүн өзүнчө жазыңыз.",
+    "items": [
+      "Продуктунун аталышы, максаты, чыгаруу формасы же модели.",
+      "Өндүрүүчү, өлкө жана өндүрүш аянтчасы жөнүндө маалымат.",
+      "Долбоорго кирген продуктулардын жана варианттардын тизмеси.",
+      "Документтердин тили, датасы жана версиясы көрсөтүлгөн тизме.",
+      "Жеткиликтүү нускамалар, маркировка жана таңгак макеттери.",
+      "Учурдагы каттоолор жана жеткиликтүү ырастоочу документтер.",
+      "Мурунку эскертүүлөр жана долбоор боюнча кат алышуу, эгер болсо.",
+      "Жетишпеген материалдар, суроолор жана жооптуу байланыштар."
+    ],
+    "noteTitle": "Тизмени колдонуу",
+    "note": "Бул алгачкы баалоо үчүн тизме, тапшыруу үчүн милдеттүү топтом эмес. Так курам продуктуга жана милдетке жараша өзүнчө макулдашылат. Белгилер бет ачык турганда гана сакталат.",
+    "next": "Кийинки кадам",
+    "nextText": "Тизмени түзүп, жетишпегендерди белгилеп, суроолорду даярдаңыз. Ушул маалымат менен баалоонун көлөмүн жана кийинки кадамдарды талкууласа болот."
+  },
+  "en": {
+    "intro": "Practical resources for starting a regulatory project: assessment preparation and organising initial documents.",
+    "guideTitle": "How to prepare for a project assessment",
+    "guideSummary": "Six steps from describing your product to preparing questions and sharing materials.",
+    "checkTitle": "Initial document checklist",
+    "checkSummary": "What to gather for a first discussion and how to record missing materials.",
+    "guide": [
+      [
+        "1. Describe the product",
+        "State its name, type, intended purpose, dosage form or model. List each product separately if several are involved."
+      ],
+      [
+        "2. Define the task",
+        "Explain whether you need to assess registration, a change, dossier readiness or the support scope. State the project country and desired start date."
+      ],
+      [
+        "3. Inventory your materials",
+        "List available documents with their language, date and version. Record missing items and who can provide them."
+      ],
+      [
+        "4. Explain the current status",
+        "Note existing registrations, earlier submissions and comments received, where applicable. Include available project correspondence."
+      ],
+      [
+        "5. Prepare your questions",
+        "List questions about scope, responsibilities, translations and the sequence of work. Mention known constraints."
+      ],
+      [
+        "6. Agree how to share files",
+        "Choose a contact person and agree a transfer method. A description and inventory are enough to start; the full set is clarified after discussion."
+      ]
+    ],
+    "checkHeading": "Mark the materials you have prepared",
+    "checkIntro": "Check only available documents. Keep a separate list of missing items for discussion.",
+    "items": [
+      "Product description: name, intended purpose, dosage form or model.",
+      "Manufacturer, country and manufacturing site details.",
+      "List of products and variants included in the project.",
+      "Document inventory showing file language, date and version.",
+      "Available instructions, labelling and packaging artwork.",
+      "Existing registrations and available supporting documents.",
+      "Earlier comments and project correspondence, if applicable.",
+      "Missing materials, open questions and responsible contacts."
+    ],
+    "noteTitle": "Using this checklist",
+    "note": "This is for an initial assessment, not a mandatory submission checklist. The exact set depends on the product and task and is agreed separately. Checkmarks last while the page is open.",
+    "next": "Next step",
+    "nextText": "Prepare the inventory, record gaps and list your questions. Use these to discuss the assessment scope and next actions."
+  },
+  "sv": {
+    "intro": "Praktiskt material inför ett regulatoriskt projekt: förberedelser för bedömning och ordning på underlaget.",
+    "guideTitle": "Så förbereder du en projektbedömning",
+    "guideSummary": "Sex steg från produktbeskrivning till frågor och överföring av material.",
+    "checkTitle": "Checklista för inledande dokument",
+    "checkSummary": "Vad du kan samla inför första samtalet och hur du noterar saknat material.",
+    "guide": [
+      [
+        "1. Beskriv produkten",
+        "Ange namn, typ, avsedd användning, beredningsform eller modell. Lista varje produkt separat."
+      ],
+      [
+        "2. Definiera uppgiften",
+        "Beskriv om bedömningen gäller registrering, en ändring, dossierberedskap eller stödets omfattning. Ange projektland och önskad start."
+      ],
+      [
+        "3. Inventera materialet",
+        "Lista dokument med språk, datum och version. Notera vad som saknas och vem som kan tillhandahålla det."
+      ],
+      [
+        "4. Beskriv nuläget",
+        "Ange befintliga registreringar, tidigare ansökningar och mottagna kommentarer, om sådana finns. Bifoga tillgänglig korrespondens."
+      ],
+      [
+        "5. Förbered frågor",
+        "Skriv frågor om omfattning, ansvar, översättningar och arbetsordning. Ange kända begränsningar."
+      ],
+      [
+        "6. Avtala om överföring",
+        "Utse en kontaktperson och kom överens om filöverföringen. Börja med beskrivning och inventering; hela underlaget preciseras efter samtalet."
+      ]
+    ],
+    "checkHeading": "Markera förberett material",
+    "checkIntro": "Markera bara tillgängliga dokument. Lista saknade delar separat inför samtalet.",
+    "items": [
+      "Produktbeskrivning: namn, användning, beredningsform eller modell.",
+      "Tillverkare, land och tillverkningsställe.",
+      "Produkter och varianter som ingår i projektet.",
+      "Dokumentförteckning med språk, datum och version.",
+      "Tillgängliga instruktioner, märkning och förpackningsoriginal.",
+      "Befintliga registreringar och tillgängliga styrkande dokument.",
+      "Tidigare kommentarer och projektkorrespondens, om tillämpligt.",
+      "Saknat material, öppna frågor och ansvariga kontakter."
+    ],
+    "noteTitle": "Så använder du listan",
+    "note": "Listan gäller en första bedömning och är ingen obligatorisk lista för en ansökan. Exakt underlag beror på produkt och uppgift och avtalas separat. Markeringar gäller medan sidan är öppen.",
+    "next": "Nästa steg",
+    "nextText": "Gör en inventering, notera luckor och lista frågor. Använd detta för att diskutera bedömningens omfattning och nästa steg."
+  },
+  "nb": {
+    "intro": "Praktisk materiale før et regulatorisk prosjekt: forberedelse til vurdering og oversikt over dokumenter.",
+    "guideTitle": "Slik forbereder du en prosjektvurdering",
+    "guideSummary": "Seks trinn fra produktbeskrivelse til spørsmål og deling av materiale.",
+    "checkTitle": "Sjekkliste for innledende dokumenter",
+    "checkSummary": "Hva du kan samle til første samtale og hvordan du noterer mangler.",
+    "guide": [
+      [
+        "1. Beskriv produktet",
+        "Oppgi navn, type, tiltenkt bruk, legemiddelform eller modell. Før opp hvert produkt separat."
+      ],
+      [
+        "2. Definer oppgaven",
+        "Beskriv om vurderingen gjelder registrering, en endring, dokumentasjonsberedskap eller bistandens omfang. Oppgi prosjektland og ønsket oppstart."
+      ],
+      [
+        "3. Lag en materialoversikt",
+        "List dokumenter med språk, dato og versjon. Noter hva som mangler og hvem som kan levere det."
+      ],
+      [
+        "4. Beskriv dagens status",
+        "Oppgi eksisterende registreringer, tidligere søknader og mottatte merknader der det er relevant. Legg ved tilgjengelig korrespondanse."
+      ],
+      [
+        "5. Forbered spørsmål",
+        "Skriv spørsmål om omfang, ansvar, oversettelser og rekkefølge. Oppgi kjente begrensninger."
+      ],
+      [
+        "6. Avtal deling",
+        "Velg en kontaktperson og avtal filoverføring. Start med beskrivelse og oversikt; det fullstendige settet avklares etter samtalen."
+      ]
+    ],
+    "checkHeading": "Merk materialet som er klart",
+    "checkIntro": "Kryss bare av tilgjengelige dokumenter. Lag en egen liste over mangler til samtalen.",
+    "items": [
+      "Produktbeskrivelse: navn, tiltenkt bruk, legemiddelform eller modell.",
+      "Produsent, land og produksjonssted.",
+      "Produkter og varianter som inngår i prosjektet.",
+      "Dokumentoversikt med språk, dato og versjon.",
+      "Tilgjengelige instrukser, merking og emballasjeutkast.",
+      "Eksisterende registreringer og tilgjengelige støttedokumenter.",
+      "Tidligere merknader og prosjektkorrespondanse, hvis relevant.",
+      "Manglende materiale, åpne spørsmål og ansvarlige kontakter."
+    ],
+    "noteTitle": "Bruk av listen",
+    "note": "Listen gjelder en innledende vurdering, ikke et obligatorisk søknadssett. Nøyaktig innhold avhenger av produkt og oppgave og avtales separat. Avkryssingene gjelder mens siden er åpen.",
+    "next": "Neste trinn",
+    "nextText": "Lag oversikten, noter mangler og forbered spørsmål. Bruk dette til å diskutere vurderingens omfang og videre arbeid."
+  }
+}

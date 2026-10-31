@@ -1,0 +1,19 @@
+/* Readable article pages and native, keyboard accessible checkboxes. */
+.knowledge-article .content-section { padding-block:30px; }
+.knowledge-article .content-section > .shell { max-width:900px; }
+.knowledge-article .section-head { margin-bottom:18px; }
+.knowledge-article .section-title { font-size:clamp(22px,2.3vw,30px); }
+.knowledge-article .body-copy { max-width:70ch; line-height:1.8; }
+.knowledge-article .cards { grid-template-columns:1fr; }
+.knowledge-article .content-section:last-child { padding-bottom:72px; }
+.document-checklist { list-style:none; padding:0; margin:26px 0 0; }
+.document-checklist li { border-bottom:1px solid var(--line); }
+.document-checklist label { display:flex; align-items:flex-start; gap:16px; padding:20px 0; cursor:pointer; font-size:17px; line-height:1.65; }
+.document-checklist input { flex:none; width:22px; height:22px; margin:4px 0 0; accent-color:#111; cursor:pointer; }
+.document-checklist input:focus-visible { outline:2px solid currentColor; outline-offset:4px; }
+.document-checklist input:checked + span { color:var(--muted); text-decoration:line-through; }
+.dark .document-checklist input { accent-color:#eee; color-scheme:dark; }
+@media(max-width:760px) {
+ .knowledge-article .content-section { padding-block:22px; }
+ .document-checklist label { font-size:15px; gap:12px; padding:16px 0; }
+}

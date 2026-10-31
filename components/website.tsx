@@ -75,6 +75,7 @@ function ContentBlock({ block, index, locale }: { block: Block; index: number; l
       {block.type === 'search' && <Search block={block} locale={locale} />}
       {block.type === 'journey' && <ProjectJourney items={block.items} locale={locale} title={block.title} />}
       {block.type === 'steps' && <ol className="steps">{block.items.map(item => <li key={item}>{item}</li>)}</ol>}
+      {block.type === 'checklist' && <><p className="body-copy">{block.text}</p><ul className="document-checklist">{block.items.map(item=><li key={item}><label><input type="checkbox" /><span>{item}</span></label></li>)}</ul></>}
       {block.type === 'faq' && <div className="faq-list">{block.items.map(item => <details key={item.question}><summary>{item.question}</summary><p>{item.answer}</p></details>)}</div>}
     </>}
   </div></section>
@@ -104,7 +105,7 @@ export default function Website() {
       <LanguageSwitcher locale={locale} path={path} languages={data.languages} />
       <ThemeToggle locale={locale} />
     </div></header>
-    <main id="main" key={`${locale}/${path}`}>
+    <main id="main" className={path.startsWith('knowledge/') ? 'knowledge-article' : undefined} key={`${locale}/${path}`}>
       {path === '' ? <BrandHero portraitSrc={`${import.meta.env.BASE_URL}assets/four-poppies-continuous-stems.png`} portraitAlt={t.portraitAlt} logoSrc={brandLogo} brandName={t.brandName} title={page.title} description={page.lead} eyebrow={t.region} primaryLabel={t.request} primaryHref={href('request')} secondaryLabel={t.how} secondaryHref={href('how-we-work')} /> : <div className="page-heading"><div className="shell"><nav className="breadcrumbs" aria-label={t.home}><a href={href('')}>{t.home}</a><span aria-hidden="true">/</span><span>{page.title}</span></nav><h1>{page.title}</h1>{page.lead && <p>{page.lead}</p>}</div></div>}
       {page.blocks.map((block, index) => <ContentBlock block={block} index={index} locale={locale} key={`${block.type}-${index}`} />)}
     </main>

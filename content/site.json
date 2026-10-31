@@ -235,13 +235,13 @@
               "text": "",
               "items": [
                 {
-                  "title": "Как подготовиться к первой оценке",
-                  "text": "Сначала определите продукт, производителя и цель проекта. Составьте перечень имеющихся материалов и отдельно отметьте недостающие сведения. Укажите предыдущие регистрации, если они есть. Передачу полного досье согласуйте после определения ответственных и порядка конфиденциального обмена. Это организационная памятка, а не нормативный перечень документов.",
+                  "title": "Как подготовиться к оценке проекта",
+                  "text": "Шесть шагов: от описания продукта до списка вопросов и передачи материалов.",
                   "path": "knowledge/initial-assessment"
                 },
                 {
-                  "title": "Чек-лист исходных данных",
-                  "text": "Продукт и назначение; производитель и страна; текущий статус документов; цель обращения; ответственное контактное лицо; вопросы и ограничения проекта. Не включайте персональные данные пациентов.",
+                  "title": "Чек-лист исходных документов",
+                  "text": "Что собрать для первого обсуждения и как отметить недостающие материалы.",
                   "path": "knowledge/checklist"
                 }
               ]
@@ -1271,53 +1271,21 @@
         },
         "knowledge": {
           "title": "База знаний",
-          "lead": "",
+          "lead": "Практические материалы для старта регуляторного проекта: подготовка к оценке и работа с исходными документами.",
           "blocks": [
             {
               "type": "search",
               "title": "Поиск по базе знаний",
               "items": [
                 {
-                  "title": "Как подготовиться к первой оценке",
-                  "text": "Сначала определите продукт, производителя и цель проекта. Составьте перечень имеющихся материалов и отдельно отметьте недостающие сведения. Укажите предыдущие регистрации, если они есть. Передачу полного досье согласуйте после определения ответственных и порядка конфиденциального обмена. Это организационная памятка, а не нормативный перечень документов.",
+                  "title": "Как подготовиться к оценке проекта",
+                  "text": "Шесть шагов: от описания продукта до списка вопросов и передачи материалов.",
                   "path": "knowledge/initial-assessment"
                 },
                 {
-                  "title": "Чек-лист исходных данных",
-                  "text": "Продукт и назначение; производитель и страна; текущий статус документов; цель обращения; ответственное контактное лицо; вопросы и ограничения проекта. Не включайте персональные данные пациентов.",
+                  "title": "Чек-лист исходных документов",
+                  "text": "Что собрать для первого обсуждения и как отметить недостающие материалы.",
                   "path": "knowledge/checklist"
-                },
-                {
-                  "title": "Глоссарий",
-                  "text": "Досье — комплект материалов по продукту. Регуляторное сопровождение — согласованный комплекс работ по проекту. Фармаконадзор — деятельность, связанная с мониторингом безопасности лекарств. Термины здесь даны в ознакомительной форме.",
-                  "path": "knowledge/glossary"
-                }
-              ]
-            },
-            {
-              "type": "cards",
-              "title": "База знаний",
-              "text": "",
-              "items": [
-                {
-                  "title": "Практические руководства",
-                  "text": "Сначала определите продукт, производителя и цель проекта. Составьте перечень имеющихся материалов и отдельно отметьте недостающие сведения. Укажите предыдущие регистрации, если они есть. Передачу полного досье согласуйте после определения ответственных и порядка конфиденциального обмена. Это организационная памятка, а не нормативный перечень документов.",
-                  "path": "knowledge/guides"
-                },
-                {
-                  "title": "Документы и чек-листы",
-                  "text": "Продукт и назначение; производитель и страна; текущий статус документов; цель обращения; ответственное контактное лицо; вопросы и ограничения проекта. Не включайте персональные данные пациентов.",
-                  "path": "knowledge/documents"
-                },
-                {
-                  "title": "Изменения требований",
-                  "text": "Нормативные новости публикуются после проверки первоисточника, даты вступления в силу и применимости к конкретному продукту. Непроверенных новостей в прототипе нет.",
-                  "path": "knowledge/updates"
-                },
-                {
-                  "title": "Глоссарий",
-                  "text": "Досье — комплект материалов по продукту. Регуляторное сопровождение — согласованный комплекс работ по проекту. Фармаконадзор — деятельность, связанная с мониторингом безопасности лекарств. Термины здесь даны в ознакомительной форме.",
-                  "path": "knowledge/glossary"
                 }
               ]
             }
@@ -1333,8 +1301,8 @@
               "text": "",
               "items": [
                 {
-                  "title": "Как подготовиться к первой оценке",
-                  "text": "Сначала определите продукт, производителя и цель проекта. Составьте перечень имеющихся материалов и отдельно отметьте недостающие сведения. Укажите предыдущие регистрации, если они есть. Передачу полного досье согласуйте после определения ответственных и порядка конфиденциального обмена. Это организационная памятка, а не нормативный перечень документов.",
+                  "title": "Как подготовиться к оценке проекта",
+                  "text": "Шесть шагов: от описания продукта до списка вопросов и передачи материалов.",
                   "path": "knowledge/initial-assessment"
                 }
               ]
@@ -1351,8 +1319,8 @@
               "text": "",
               "items": [
                 {
-                  "title": "Чек-лист исходных данных",
-                  "text": "Продукт и назначение; производитель и страна; текущий статус документов; цель обращения; ответственное контактное лицо; вопросы и ограничения проекта. Не включайте персональные данные пациентов.",
+                  "title": "Чек-лист исходных документов",
+                  "text": "Что собрать для первого обсуждения и как отметить недостающие материалы.",
                   "path": "knowledge/checklist"
                 }
               ]
@@ -1376,81 +1344,91 @@
           "blocks": []
         },
         "knowledge/initial-assessment": {
-          "title": "Как подготовиться к первой оценке",
-          "lead": "Сначала определите продукт, производителя и цель проекта. Составьте перечень имеющихся материалов и отдельно отметьте недостающие сведения. Укажите предыдущие регистрации, если они есть. Передачу полного досье согласуйте после определения ответственных и порядка конфиденциального обмена. Это организационная памятка, а не нормативный перечень документов.",
+          "title": "Как подготовиться к оценке проекта",
+          "lead": "Шесть шагов: от описания продукта до списка вопросов и передачи материалов.",
           "blocks": [
             {
               "type": "text",
-              "title": "Что нужно для начала",
-              "text": "Название и тип продукта, производитель, страна производства, цель обращения и перечень имеющихся документов. На первом этапе достаточно описания без конфиденциального досье."
+              "title": "1. Опишите продукт",
+              "text": "Укажите наименование, тип продукта, назначение, форму выпуска или модель. Если продуктов несколько, подготовьте отдельную строку для каждого."
             },
             {
               "type": "text",
-              "title": "Документы и чек-листы",
-              "text": "Продукт и назначение; производитель и страна; текущий статус документов; цель обращения; ответственное контактное лицо; вопросы и ограничения проекта. Не включайте персональные данные пациентов."
+              "title": "2. Уточните задачу",
+              "text": "Напишите, что нужно оценить: регистрацию, изменение, готовность досье или состав сопровождения. Укажите страну проекта и желаемый срок начала работ."
             },
             {
               "type": "text",
-              "title": "Ответственность и границы",
-              "text": "Заказчик обеспечивает достоверность исходных сведений и согласование материалов. Исполнитель работает в рамках договора. Решения уполномоченных органов не могут быть гарантированы компанией."
+              "title": "3. Составьте опись материалов",
+              "text": "Перечислите доступные документы, их язык, дату и версию. Отдельно отметьте, чего пока нет и кто может это предоставить."
+            },
+            {
+              "type": "text",
+              "title": "4. Опишите текущий статус",
+              "text": "Сообщите об имеющихся регистрациях, предыдущих подачах и полученных замечаниях, если они есть. Приложите доступную переписку по проекту."
+            },
+            {
+              "type": "text",
+              "title": "5. Подготовьте вопросы",
+              "text": "Запишите, что нужно выяснить по составу работ, распределению ответственности, переводам и последовательности действий. Укажите известные ограничения."
+            },
+            {
+              "type": "text",
+              "title": "6. Согласуйте передачу",
+              "text": "Выберите контактное лицо и согласуйте способ обмена файлами. На первом этапе достаточно описания и описи: состав полного комплекта уточняется после обсуждения."
             },
             {
               "type": "cards",
-              "title": "Услуги",
-              "text": "",
+              "title": "Документы и чек-листы",
               "items": [
                 {
-                  "title": "Аудит готовности досье",
-                  "text": "Карта имеющихся материалов, пробелов и вопросов, которые нужно решить до старта.",
-                  "path": "services/dossier-review"
+                  "title": "Чек-лист исходных документов",
+                  "text": "Что собрать для первого обсуждения и как отметить недостающие материалы.",
+                  "path": "knowledge/checklist"
                 }
               ]
-            },
-            {
-              "type": "text",
-              "title": "Проверка материалов",
-              "text": "Регуляторные материалы должны иметь источник, автора, проверяющего и дату проверки. Изменения требований требуют пересмотра связанных страниц и переводов. Переводы прототипа являются черновыми и требуют профессиональной языковой проверки."
-            },
-            {
-              "type": "form",
-              "title": "Расскажите о задаче"
             }
           ]
         },
         "knowledge/checklist": {
-          "title": "Чек-лист исходных данных",
-          "lead": "Продукт и назначение; производитель и страна; текущий статус документов; цель обращения; ответственное контактное лицо; вопросы и ограничения проекта. Не включайте персональные данные пациентов.",
+          "title": "Чек-лист исходных документов",
+          "lead": "Что собрать для первого обсуждения и как отметить недостающие материалы.",
           "blocks": [
             {
-              "type": "text",
-              "title": "Что нужно для начала",
-              "text": "Название и тип продукта, производитель, страна производства, цель обращения и перечень имеющихся документов. На первом этапе достаточно описания без конфиденциального досье."
-            },
-            {
-              "type": "text",
-              "title": "Разработка упаковки и перевод",
-              "text": "Помогаем в разработке упаковки и переводе текстов на кыргызский, русский и английский языки."
-            },
-            {
-              "type": "cards",
-              "title": "Услуги",
-              "text": "",
+              "type": "checklist",
+              "title": "Отметьте подготовленные материалы",
+              "text": "Отмечайте только доступные документы. Недостающие позиции внесите в отдельный список для обсуждения.",
               "items": [
-                {
-                  "title": "Аудит готовности досье",
-                  "text": "Карта имеющихся материалов, пробелов и вопросов, которые нужно решить до старта.",
-                  "path": "services/dossier-review"
-                },
-                {
-                  "title": "Подготовка досье",
-                  "text": "Согласование структуры, сбор и систематизация материалов с командой производителя.",
-                  "path": "services/dossier-preparation"
-                }
+                "Краткое описание продукта: наименование, назначение, форма выпуска или модель.",
+                "Сведения о производителе, стране и производственной площадке.",
+                "Перечень продуктов и вариантов, которые входят в проект.",
+                "Опись доступной документации с языком, датой и версией файлов.",
+                "Имеющиеся инструкции, маркировка и макеты упаковки.",
+                "Сведения о действующих регистрациях и доступные подтверждающие документы.",
+                "Предыдущие замечания и переписка по проекту, если были.",
+                "Список недостающих материалов, вопросов и ответственных контактов."
               ]
             },
             {
-              "type": "form",
-              "title": "Расскажите о задаче"
+              "type": "text",
+              "title": "Как пользоваться списком",
+              "text": "Это список для первичной оценки, а не обязательный комплект для подачи. Точный состав зависит от продукта и задачи и согласуется отдельно. Отметки действуют, пока страница открыта."
+            },
+            {
+              "type": "text",
+              "title": "Следующий шаг",
+              "text": "Соберите опись, отметьте пробелы и подготовьте вопросы. С этим набором можно обсудить объём оценки и дальнейшие действия."
+            },
+            {
+              "type": "cards",
+              "title": "Практические руководства",
+              "items": [
+                {
+                  "title": "Как подготовиться к оценке проекта",
+                  "text": "Шесть шагов: от описания продукта до списка вопросов и передачи материалов.",
+                  "path": "knowledge/initial-assessment"
+                }
+              ]
             }
           ]
         },
@@ -1823,13 +1801,13 @@
               "text": "",
               "items": [
                 {
-                  "title": "Алгачкы баалоого кантип даярдануу керек",
-                  "text": "Адегенде продуктуну, өндүрүүчүнү жана долбоордун максатын аныктаңыз. Учурдагы материалдардын тизмесин түзүп, жетишпеген маалыматтарды өзүнчө белгилеңиз. Мурунку каттоолор болсо, көрсөтүңүз. Толук досьени өткөрүүнү жооптуу тараптарды жана купуя алмашуу тартибин аныктагандан кийин макулдашыңыз. Бул уюштуруучулук эскертме, ченемдик документтердин тизмеси эмес.",
+                  "title": "Долбоорду баалоого кантип даярдануу керек",
+                  "text": "Алты кадам: продуктуну сүрөттөөдөн суроолорго жана материалдарды өткөрүүгө чейин.",
                   "path": "knowledge/initial-assessment"
                 },
                 {
-                  "title": "Баштапкы маалыматтардын тизмеси",
-                  "text": "Продукт жана максаты; өндүрүүчү жана өлкө; документтердин учурдагы абалы; кайрылуунун максаты; жооптуу байланыш адамы; суроолор жана долбоордун чектөөлөрү. Бейтаптардын жеке маалыматтарын кошпоңуз.",
+                  "title": "Баштапкы документтердин тизмеси",
+                  "text": "Алгачкы талкууга эмне чогултуу жана жетишпеген материалдарды кантип белгилөө керек.",
                   "path": "knowledge/checklist"
                 }
               ]
@@ -2859,53 +2837,21 @@
         },
         "knowledge": {
           "title": "Билим базасы",
-          "lead": "",
+          "lead": "Регулятордук долбоорду баштоо үчүн практикалык материалдар: баалоого даярдык жана баштапкы документтер.",
           "blocks": [
             {
               "type": "search",
               "title": "Билим базасынан издөө",
               "items": [
                 {
-                  "title": "Алгачкы баалоого кантип даярдануу керек",
-                  "text": "Адегенде продуктуну, өндүрүүчүнү жана долбоордун максатын аныктаңыз. Учурдагы материалдардын тизмесин түзүп, жетишпеген маалыматтарды өзүнчө белгилеңиз. Мурунку каттоолор болсо, көрсөтүңүз. Толук досьени өткөрүүнү жооптуу тараптарды жана купуя алмашуу тартибин аныктагандан кийин макулдашыңыз. Бул уюштуруучулук эскертме, ченемдик документтердин тизмеси эмес.",
+                  "title": "Долбоорду баалоого кантип даярдануу керек",
+                  "text": "Алты кадам: продуктуну сүрөттөөдөн суроолорго жана материалдарды өткөрүүгө чейин.",
                   "path": "knowledge/initial-assessment"
                 },
                 {
-                  "title": "Баштапкы маалыматтардын тизмеси",
-                  "text": "Продукт жана максаты; өндүрүүчү жана өлкө; документтердин учурдагы абалы; кайрылуунун максаты; жооптуу байланыш адамы; суроолор жана долбоордун чектөөлөрү. Бейтаптардын жеке маалыматтарын кошпоңуз.",
+                  "title": "Баштапкы документтердин тизмеси",
+                  "text": "Алгачкы талкууга эмне чогултуу жана жетишпеген материалдарды кантип белгилөө керек.",
                   "path": "knowledge/checklist"
-                },
-                {
-                  "title": "Терминдер",
-                  "text": "Досье — продукт боюнча материалдардын топтому. Регулятордук коштоо — долбоор боюнча макулдашылган иштердин жыйындысы. Фармакокөзөмөл — дарылардын коопсуздугун көзөмөлдөөгө байланышкан иш. Терминдер тааныштыруу максатында берилген.",
-                  "path": "knowledge/glossary"
-                }
-              ]
-            },
-            {
-              "type": "cards",
-              "title": "Билим базасы",
-              "text": "",
-              "items": [
-                {
-                  "title": "Практикалык колдонмолор",
-                  "text": "Адегенде продуктуну, өндүрүүчүнү жана долбоордун максатын аныктаңыз. Учурдагы материалдардын тизмесин түзүп, жетишпеген маалыматтарды өзүнчө белгилеңиз. Мурунку каттоолор болсо, көрсөтүңүз. Толук досьени өткөрүүнү жооптуу тараптарды жана купуя алмашуу тартибин аныктагандан кийин макулдашыңыз. Бул уюштуруучулук эскертме, ченемдик документтердин тизмеси эмес.",
-                  "path": "knowledge/guides"
-                },
-                {
-                  "title": "Документтер жана тизмелер",
-                  "text": "Продукт жана максаты; өндүрүүчү жана өлкө; документтердин учурдагы абалы; кайрылуунун максаты; жооптуу байланыш адамы; суроолор жана долбоордун чектөөлөрү. Бейтаптардын жеке маалыматтарын кошпоңуз.",
-                  "path": "knowledge/documents"
-                },
-                {
-                  "title": "Талаптардын өзгөрүшү",
-                  "text": "Ченемдик жаңылыктар баштапкы булагы, күчүнө кирүү датасы жана тиешелүү продуктуга колдонулушу текшерилгенден кийин жарыяланат. Прототипте текшерилбеген жаңылыктар жок.",
-                  "path": "knowledge/updates"
-                },
-                {
-                  "title": "Терминдер",
-                  "text": "Досье — продукт боюнча материалдардын топтому. Регулятордук коштоо — долбоор боюнча макулдашылган иштердин жыйындысы. Фармакокөзөмөл — дарылардын коопсуздугун көзөмөлдөөгө байланышкан иш. Терминдер тааныштыруу максатында берилген.",
-                  "path": "knowledge/glossary"
                 }
               ]
             }
@@ -2921,8 +2867,8 @@
               "text": "",
               "items": [
                 {
-                  "title": "Алгачкы баалоого кантип даярдануу керек",
-                  "text": "Адегенде продуктуну, өндүрүүчүнү жана долбоордун максатын аныктаңыз. Учурдагы материалдардын тизмесин түзүп, жетишпеген маалыматтарды өзүнчө белгилеңиз. Мурунку каттоолор болсо, көрсөтүңүз. Толук досьени өткөрүүнү жооптуу тараптарды жана купуя алмашуу тартибин аныктагандан кийин макулдашыңыз. Бул уюштуруучулук эскертме, ченемдик документтердин тизмеси эмес.",
+                  "title": "Долбоорду баалоого кантип даярдануу керек",
+                  "text": "Алты кадам: продуктуну сүрөттөөдөн суроолорго жана материалдарды өткөрүүгө чейин.",
                   "path": "knowledge/initial-assessment"
                 }
               ]
@@ -2939,8 +2885,8 @@
               "text": "",
               "items": [
                 {
-                  "title": "Баштапкы маалыматтардын тизмеси",
-                  "text": "Продукт жана максаты; өндүрүүчү жана өлкө; документтердин учурдагы абалы; кайрылуунун максаты; жооптуу байланыш адамы; суроолор жана долбоордун чектөөлөрү. Бейтаптардын жеке маалыматтарын кошпоңуз.",
+                  "title": "Баштапкы документтердин тизмеси",
+                  "text": "Алгачкы талкууга эмне чогултуу жана жетишпеген материалдарды кантип белгилөө керек.",
                   "path": "knowledge/checklist"
                 }
               ]
@@ -2964,81 +2910,91 @@
           "blocks": []
         },
         "knowledge/initial-assessment": {
-          "title": "Алгачкы баалоого кантип даярдануу керек",
-          "lead": "Адегенде продуктуну, өндүрүүчүнү жана долбоордун максатын аныктаңыз. Учурдагы материалдардын тизмесин түзүп, жетишпеген маалыматтарды өзүнчө белгилеңиз. Мурунку каттоолор болсо, көрсөтүңүз. Толук досьени өткөрүүнү жооптуу тараптарды жана купуя алмашуу тартибин аныктагандан кийин макулдашыңыз. Бул уюштуруучулук эскертме, ченемдик документтердин тизмеси эмес.",
+          "title": "Долбоорду баалоого кантип даярдануу керек",
+          "lead": "Алты кадам: продуктуну сүрөттөөдөн суроолорго жана материалдарды өткөрүүгө чейин.",
           "blocks": [
             {
               "type": "text",
-              "title": "Баштоо үчүн эмне керек",
-              "text": "Продуктунун аталышы жана түрү, өндүрүүчү, өндүрүш өлкөсү, кайрылуунун максаты жана учурдагы документтердин тизмеси. Алгач купуя досьесиз кыскача маалымат жетиштүү."
+              "title": "1. Продуктуну сүрөттөңүз",
+              "text": "Аталышын, түрүн, максатын, чыгаруу формасын же моделин көрсөтүңүз. Ар бир продуктуну өзүнчө тизмектеңиз."
             },
             {
               "type": "text",
-              "title": "Документтер жана тизмелер",
-              "text": "Продукт жана максаты; өндүрүүчү жана өлкө; документтердин учурдагы абалы; кайрылуунун максаты; жооптуу байланыш адамы; суроолор жана долбоордун чектөөлөрү. Бейтаптардын жеке маалыматтарын кошпоңуз."
+              "title": "2. Милдетти тактаңыз",
+              "text": "Каттоо, өзгөртүү, досьенин даярдыгы же коштоо иштеринин көлөмү бааланарын жазыңыз. Долбоордун өлкөсүн жана ишти баштоонун каалаган мөөнөтүн көрсөтүңүз."
             },
             {
               "type": "text",
-              "title": "Жоопкерчилик жана чектер",
-              "text": "Кардар баштапкы маалыматтардын тууралыгын жана материалдарды макулдашууну камсыздайт. Аткаруучу келишимдин алкагында иштейт. Ыйгарым укуктуу органдардын чечимдерине компания кепилдик бере албайт."
+              "title": "3. Материалдардын тизмесин түзүңүз",
+              "text": "Документтердин тилин, датасын жана версиясын көрсөтүңүз. Жетишпеген маалыматтарды жана аларды ким бере аларын белгилеңиз."
+            },
+            {
+              "type": "text",
+              "title": "4. Учурдагы абалды түшүндүрүңүз",
+              "text": "Бар болгон каттоолорду, мурунку тапшырууларды жана эскертүүлөрдү көрсөтүңүз. Долбоор боюнча жеткиликтүү кат алышууну кошуңуз."
+            },
+            {
+              "type": "text",
+              "title": "5. Суроолорду даярдаңыз",
+              "text": "Иштердин курамы, жоопкерчилик, котормо жана кадамдардын тартиби боюнча суроолорду жазыңыз. Белгилүү чектөөлөрдү көрсөтүңүз."
+            },
+            {
+              "type": "text",
+              "title": "6. Өткөрүүнү макулдашыңыз",
+              "text": "Байланыш адамын жана файл алмашуу жолун аныктаңыз. Алгач сүрөттөмө жана тизме жетиштүү; толук топтом талкуудан кийин такталат."
             },
             {
               "type": "cards",
-              "title": "Кызматтар",
-              "text": "",
+              "title": "Документтер жана тизмелер",
               "items": [
                 {
-                  "title": "Досьенин даярдыгын текшерүү",
-                  "text": "Учурдагы материалдардын, жетишпеген маалыматтардын жана баштоого чейинки суроолордун тизмеси.",
-                  "path": "services/dossier-review"
+                  "title": "Баштапкы документтердин тизмеси",
+                  "text": "Алгачкы талкууга эмне чогултуу жана жетишпеген материалдарды кантип белгилөө керек.",
+                  "path": "knowledge/checklist"
                 }
               ]
-            },
-            {
-              "type": "text",
-              "title": "Материалдарды текшерүү",
-              "text": "Регулятордук материалдарда булак, автор, текшерүүчү жана текшерүү датасы болушу керек. Талаптар өзгөргөндө тиешелүү беттер жана котормолор кайра каралат. Прототиптин котормолору долбоордук болуп, кесипкөй тилдик текшерүүнү талап кылат."
-            },
-            {
-              "type": "form",
-              "title": "Милдетиңиз тууралуу айтыңыз"
             }
           ]
         },
         "knowledge/checklist": {
-          "title": "Баштапкы маалыматтардын тизмеси",
-          "lead": "Продукт жана максаты; өндүрүүчү жана өлкө; документтердин учурдагы абалы; кайрылуунун максаты; жооптуу байланыш адамы; суроолор жана долбоордун чектөөлөрү. Бейтаптардын жеке маалыматтарын кошпоңуз.",
+          "title": "Баштапкы документтердин тизмеси",
+          "lead": "Алгачкы талкууга эмне чогултуу жана жетишпеген материалдарды кантип белгилөө керек.",
           "blocks": [
             {
-              "type": "text",
-              "title": "Баштоо үчүн эмне керек",
-              "text": "Продуктунун аталышы жана түрү, өндүрүүчү, өндүрүш өлкөсү, кайрылуунун максаты жана учурдагы документтердин тизмеси. Алгач купуя досьесиз кыскача маалымат жетиштүү."
-            },
-            {
-              "type": "text",
-              "title": "Таңгакты иштеп чыгуу жана котормо",
-              "text": "Таңгакты иштеп чыгууга жана тексттерди кыргыз, орус жана англис тилдерине которууга жардам беребиз."
-            },
-            {
-              "type": "cards",
-              "title": "Кызматтар",
-              "text": "",
+              "type": "checklist",
+              "title": "Даяр материалдарды белгилеңиз",
+              "text": "Жеткиликтүү документтерди гана белгилеңиз. Жетишпегендерди талкуу үчүн өзүнчө жазыңыз.",
               "items": [
-                {
-                  "title": "Досьенин даярдыгын текшерүү",
-                  "text": "Учурдагы материалдардын, жетишпеген маалыматтардын жана баштоого чейинки суроолордун тизмеси.",
-                  "path": "services/dossier-review"
-                },
-                {
-                  "title": "Досьени даярдоо",
-                  "text": "Өндүрүүчүнүн командасы менен түзүмдү макулдашуу, материалдарды чогултуу жана иреттөө.",
-                  "path": "services/dossier-preparation"
-                }
+                "Продуктунун аталышы, максаты, чыгаруу формасы же модели.",
+                "Өндүрүүчү, өлкө жана өндүрүш аянтчасы жөнүндө маалымат.",
+                "Долбоорго кирген продуктулардын жана варианттардын тизмеси.",
+                "Документтердин тили, датасы жана версиясы көрсөтүлгөн тизме.",
+                "Жеткиликтүү нускамалар, маркировка жана таңгак макеттери.",
+                "Учурдагы каттоолор жана жеткиликтүү ырастоочу документтер.",
+                "Мурунку эскертүүлөр жана долбоор боюнча кат алышуу, эгер болсо.",
+                "Жетишпеген материалдар, суроолор жана жооптуу байланыштар."
               ]
             },
             {
-              "type": "form",
-              "title": "Милдетиңиз тууралуу айтыңыз"
+              "type": "text",
+              "title": "Тизмени колдонуу",
+              "text": "Бул алгачкы баалоо үчүн тизме, тапшыруу үчүн милдеттүү топтом эмес. Так курам продуктуга жана милдетке жараша өзүнчө макулдашылат. Белгилер бет ачык турганда гана сакталат."
+            },
+            {
+              "type": "text",
+              "title": "Кийинки кадам",
+              "text": "Тизмени түзүп, жетишпегендерди белгилеп, суроолорду даярдаңыз. Ушул маалымат менен баалоонун көлөмүн жана кийинки кадамдарды талкууласа болот."
+            },
+            {
+              "type": "cards",
+              "title": "Практикалык колдонмолор",
+              "items": [
+                {
+                  "title": "Долбоорду баалоого кантип даярдануу керек",
+                  "text": "Алты кадам: продуктуну сүрөттөөдөн суроолорго жана материалдарды өткөрүүгө чейин.",
+                  "path": "knowledge/initial-assessment"
+                }
+              ]
             }
           ]
         },
@@ -3411,13 +3367,13 @@
               "text": "",
               "items": [
                 {
-                  "title": "Preparing for an initial assessment",
-                  "text": "First identify the product, manufacturer and project goal. Make an inventory of available materials and record any missing information. Note previous registrations, if any. Agree the transfer of a full dossier after responsibilities and confidential exchange are defined. This is an organisational guide, not a statutory document checklist.",
+                  "title": "How to prepare for a project assessment",
+                  "text": "Six steps from describing your product to preparing questions and sharing materials.",
                   "path": "knowledge/initial-assessment"
                 },
                 {
-                  "title": "Initial information checklist",
-                  "text": "Product and intended purpose; manufacturer and country; documentation status; project goal; responsible contact; questions and constraints. Do not include patients’ personal data.",
+                  "title": "Initial document checklist",
+                  "text": "What to gather for a first discussion and how to record missing materials.",
                   "path": "knowledge/checklist"
                 }
               ]
@@ -4447,53 +4403,21 @@
         },
         "knowledge": {
           "title": "Knowledge hub",
-          "lead": "",
+          "lead": "Practical resources for starting a regulatory project: assessment preparation and organising initial documents.",
           "blocks": [
             {
               "type": "search",
               "title": "Search the knowledge hub",
               "items": [
                 {
-                  "title": "Preparing for an initial assessment",
-                  "text": "First identify the product, manufacturer and project goal. Make an inventory of available materials and record any missing information. Note previous registrations, if any. Agree the transfer of a full dossier after responsibilities and confidential exchange are defined. This is an organisational guide, not a statutory document checklist.",
+                  "title": "How to prepare for a project assessment",
+                  "text": "Six steps from describing your product to preparing questions and sharing materials.",
                   "path": "knowledge/initial-assessment"
                 },
                 {
-                  "title": "Initial information checklist",
-                  "text": "Product and intended purpose; manufacturer and country; documentation status; project goal; responsible contact; questions and constraints. Do not include patients’ personal data.",
+                  "title": "Initial document checklist",
+                  "text": "What to gather for a first discussion and how to record missing materials.",
                   "path": "knowledge/checklist"
-                },
-                {
-                  "title": "Glossary",
-                  "text": "Dossier: a collection of product materials. Regulatory support: an agreed set of project activities. Pharmacovigilance: activities related to monitoring medicine safety. These are introductory explanations.",
-                  "path": "knowledge/glossary"
-                }
-              ]
-            },
-            {
-              "type": "cards",
-              "title": "Knowledge hub",
-              "text": "",
-              "items": [
-                {
-                  "title": "Practical guides",
-                  "text": "First identify the product, manufacturer and project goal. Make an inventory of available materials and record any missing information. Note previous registrations, if any. Agree the transfer of a full dossier after responsibilities and confidential exchange are defined. This is an organisational guide, not a statutory document checklist.",
-                  "path": "knowledge/guides"
-                },
-                {
-                  "title": "Documents & checklists",
-                  "text": "Product and intended purpose; manufacturer and country; documentation status; project goal; responsible contact; questions and constraints. Do not include patients’ personal data.",
-                  "path": "knowledge/documents"
-                },
-                {
-                  "title": "Regulatory updates",
-                  "text": "Regulatory updates are published after checking the primary source, effective date and applicability. No unverified updates are included in this prototype.",
-                  "path": "knowledge/updates"
-                },
-                {
-                  "title": "Glossary",
-                  "text": "Dossier: a collection of product materials. Regulatory support: an agreed set of project activities. Pharmacovigilance: activities related to monitoring medicine safety. These are introductory explanations.",
-                  "path": "knowledge/glossary"
                 }
               ]
             }
@@ -4509,8 +4433,8 @@
               "text": "",
               "items": [
                 {
-                  "title": "Preparing for an initial assessment",
-                  "text": "First identify the product, manufacturer and project goal. Make an inventory of available materials and record any missing information. Note previous registrations, if any. Agree the transfer of a full dossier after responsibilities and confidential exchange are defined. This is an organisational guide, not a statutory document checklist.",
+                  "title": "How to prepare for a project assessment",
+                  "text": "Six steps from describing your product to preparing questions and sharing materials.",
                   "path": "knowledge/initial-assessment"
                 }
               ]
@@ -4527,8 +4451,8 @@
               "text": "",
               "items": [
                 {
-                  "title": "Initial information checklist",
-                  "text": "Product and intended purpose; manufacturer and country; documentation status; project goal; responsible contact; questions and constraints. Do not include patients’ personal data.",
+                  "title": "Initial document checklist",
+                  "text": "What to gather for a first discussion and how to record missing materials.",
                   "path": "knowledge/checklist"
                 }
               ]
@@ -4552,81 +4476,91 @@
           "blocks": []
         },
         "knowledge/initial-assessment": {
-          "title": "Preparing for an initial assessment",
-          "lead": "First identify the product, manufacturer and project goal. Make an inventory of available materials and record any missing information. Note previous registrations, if any. Agree the transfer of a full dossier after responsibilities and confidential exchange are defined. This is an organisational guide, not a statutory document checklist.",
+          "title": "How to prepare for a project assessment",
+          "lead": "Six steps from describing your product to preparing questions and sharing materials.",
           "blocks": [
             {
               "type": "text",
-              "title": "What is needed to start",
-              "text": "Product name and type, manufacturer, country of manufacture, project goal and an inventory of available documents. An initial description is sufficient; do not send a confidential dossier at this stage."
+              "title": "1. Describe the product",
+              "text": "State its name, type, intended purpose, dosage form or model. List each product separately if several are involved."
             },
             {
               "type": "text",
-              "title": "Documents & checklists",
-              "text": "Product and intended purpose; manufacturer and country; documentation status; project goal; responsible contact; questions and constraints. Do not include patients’ personal data."
+              "title": "2. Define the task",
+              "text": "Explain whether you need to assess registration, a change, dossier readiness or the support scope. State the project country and desired start date."
             },
             {
               "type": "text",
-              "title": "Responsibilities and boundaries",
-              "text": "The client provides accurate information and approves materials. The provider works within the agreed contract. Decisions by competent authorities cannot be guaranteed by a company."
+              "title": "3. Inventory your materials",
+              "text": "List available documents with their language, date and version. Record missing items and who can provide them."
+            },
+            {
+              "type": "text",
+              "title": "4. Explain the current status",
+              "text": "Note existing registrations, earlier submissions and comments received, where applicable. Include available project correspondence."
+            },
+            {
+              "type": "text",
+              "title": "5. Prepare your questions",
+              "text": "List questions about scope, responsibilities, translations and the sequence of work. Mention known constraints."
+            },
+            {
+              "type": "text",
+              "title": "6. Agree how to share files",
+              "text": "Choose a contact person and agree a transfer method. A description and inventory are enough to start; the full set is clarified after discussion."
             },
             {
               "type": "cards",
-              "title": "Services",
-              "text": "",
+              "title": "Documents & checklists",
               "items": [
                 {
-                  "title": "Dossier readiness review",
-                  "text": "A map of available materials, gaps and questions to resolve before starting.",
-                  "path": "services/dossier-review"
+                  "title": "Initial document checklist",
+                  "text": "What to gather for a first discussion and how to record missing materials.",
+                  "path": "knowledge/checklist"
                 }
               ]
-            },
-            {
-              "type": "text",
-              "title": "Editorial policy",
-              "text": "Regulatory materials require sources, an author, a reviewer and a review date. Requirement changes trigger a review of related pages and translations. Prototype translations are drafts and require professional language review."
-            },
-            {
-              "type": "form",
-              "title": "Tell us about your project"
             }
           ]
         },
         "knowledge/checklist": {
-          "title": "Initial information checklist",
-          "lead": "Product and intended purpose; manufacturer and country; documentation status; project goal; responsible contact; questions and constraints. Do not include patients’ personal data.",
+          "title": "Initial document checklist",
+          "lead": "What to gather for a first discussion and how to record missing materials.",
           "blocks": [
             {
-              "type": "text",
-              "title": "What is needed to start",
-              "text": "Product name and type, manufacturer, country of manufacture, project goal and an inventory of available documents. An initial description is sufficient; do not send a confidential dossier at this stage."
-            },
-            {
-              "type": "text",
-              "title": "Packaging development and translation",
-              "text": "We help develop packaging and translate texts into Kyrgyz, Russian and English."
-            },
-            {
-              "type": "cards",
-              "title": "Services",
-              "text": "",
+              "type": "checklist",
+              "title": "Mark the materials you have prepared",
+              "text": "Check only available documents. Keep a separate list of missing items for discussion.",
               "items": [
-                {
-                  "title": "Dossier readiness review",
-                  "text": "A map of available materials, gaps and questions to resolve before starting.",
-                  "path": "services/dossier-review"
-                },
-                {
-                  "title": "Dossier preparation",
-                  "text": "Agree a structure and collect and organise materials with the manufacturer’s team.",
-                  "path": "services/dossier-preparation"
-                }
+                "Product description: name, intended purpose, dosage form or model.",
+                "Manufacturer, country and manufacturing site details.",
+                "List of products and variants included in the project.",
+                "Document inventory showing file language, date and version.",
+                "Available instructions, labelling and packaging artwork.",
+                "Existing registrations and available supporting documents.",
+                "Earlier comments and project correspondence, if applicable.",
+                "Missing materials, open questions and responsible contacts."
               ]
             },
             {
-              "type": "form",
-              "title": "Tell us about your project"
+              "type": "text",
+              "title": "Using this checklist",
+              "text": "This is for an initial assessment, not a mandatory submission checklist. The exact set depends on the product and task and is agreed separately. Checkmarks last while the page is open."
+            },
+            {
+              "type": "text",
+              "title": "Next step",
+              "text": "Prepare the inventory, record gaps and list your questions. Use these to discuss the assessment scope and next actions."
+            },
+            {
+              "type": "cards",
+              "title": "Practical guides",
+              "items": [
+                {
+                  "title": "How to prepare for a project assessment",
+                  "text": "Six steps from describing your product to preparing questions and sharing materials.",
+                  "path": "knowledge/initial-assessment"
+                }
+              ]
             }
           ]
         },
@@ -4999,13 +4933,13 @@
               "text": "",
               "items": [
                 {
-                  "title": "Förberedelser inför en första bedömning",
-                  "text": "Identifiera först produkt, tillverkare och projektmål. Gör en förteckning över tillgängligt material och notera saknade uppgifter. Ange tidigare registreringar, om sådana finns. Avtala om överföring av en fullständig dossier när ansvar och konfidentiellt utbyte har fastställts. Detta är en organisatorisk vägledning, inte en lagstadgad dokumentlista.",
+                  "title": "Så förbereder du en projektbedömning",
+                  "text": "Sex steg från produktbeskrivning till frågor och överföring av material.",
                   "path": "knowledge/initial-assessment"
                 },
                 {
-                  "title": "Checklista för inledande uppgifter",
-                  "text": "Produkt och avsedd användning; tillverkare och land; dokumentationsstatus; projektmål; ansvarig kontaktperson; frågor och begränsningar. Ta inte med patienters personuppgifter.",
+                  "title": "Checklista för inledande dokument",
+                  "text": "Vad du kan samla inför första samtalet och hur du noterar saknat material.",
                   "path": "knowledge/checklist"
                 }
               ]
@@ -6035,53 +5969,21 @@
         },
         "knowledge": {
           "title": "Kunskapsbank",
-          "lead": "",
+          "lead": "Praktiskt material inför ett regulatoriskt projekt: förberedelser för bedömning och ordning på underlaget.",
           "blocks": [
             {
               "type": "search",
               "title": "Sök i kunskapsbanken",
               "items": [
                 {
-                  "title": "Förberedelser inför en första bedömning",
-                  "text": "Identifiera först produkt, tillverkare och projektmål. Gör en förteckning över tillgängligt material och notera saknade uppgifter. Ange tidigare registreringar, om sådana finns. Avtala om överföring av en fullständig dossier när ansvar och konfidentiellt utbyte har fastställts. Detta är en organisatorisk vägledning, inte en lagstadgad dokumentlista.",
+                  "title": "Så förbereder du en projektbedömning",
+                  "text": "Sex steg från produktbeskrivning till frågor och överföring av material.",
                   "path": "knowledge/initial-assessment"
                 },
                 {
-                  "title": "Checklista för inledande uppgifter",
-                  "text": "Produkt och avsedd användning; tillverkare och land; dokumentationsstatus; projektmål; ansvarig kontaktperson; frågor och begränsningar. Ta inte med patienters personuppgifter.",
+                  "title": "Checklista för inledande dokument",
+                  "text": "Vad du kan samla inför första samtalet och hur du noterar saknat material.",
                   "path": "knowledge/checklist"
-                },
-                {
-                  "title": "Ordlista",
-                  "text": "Dossier: en samling produktmaterial. Regulatoriskt stöd: överenskomna projektaktiviteter. Farmakovigilans: verksamhet kopplad till övervakning av läkemedelssäkerhet. Detta är inledande förklaringar.",
-                  "path": "knowledge/glossary"
-                }
-              ]
-            },
-            {
-              "type": "cards",
-              "title": "Kunskapsbank",
-              "text": "",
-              "items": [
-                {
-                  "title": "Praktiska vägledningar",
-                  "text": "Identifiera först produkt, tillverkare och projektmål. Gör en förteckning över tillgängligt material och notera saknade uppgifter. Ange tidigare registreringar, om sådana finns. Avtala om överföring av en fullständig dossier när ansvar och konfidentiellt utbyte har fastställts. Detta är en organisatorisk vägledning, inte en lagstadgad dokumentlista.",
-                  "path": "knowledge/guides"
-                },
-                {
-                  "title": "Dokument och checklistor",
-                  "text": "Produkt och avsedd användning; tillverkare och land; dokumentationsstatus; projektmål; ansvarig kontaktperson; frågor och begränsningar. Ta inte med patienters personuppgifter.",
-                  "path": "knowledge/documents"
-                },
-                {
-                  "title": "Regulatoriska uppdateringar",
-                  "text": "Regulatoriska uppdateringar publiceras efter kontroll av primärkälla, ikraftträdande och tillämplighet. Prototypen innehåller inga obekräftade nyheter.",
-                  "path": "knowledge/updates"
-                },
-                {
-                  "title": "Ordlista",
-                  "text": "Dossier: en samling produktmaterial. Regulatoriskt stöd: överenskomna projektaktiviteter. Farmakovigilans: verksamhet kopplad till övervakning av läkemedelssäkerhet. Detta är inledande förklaringar.",
-                  "path": "knowledge/glossary"
                 }
               ]
             }
@@ -6097,8 +5999,8 @@
               "text": "",
               "items": [
                 {
-                  "title": "Förberedelser inför en första bedömning",
-                  "text": "Identifiera först produkt, tillverkare och projektmål. Gör en förteckning över tillgängligt material och notera saknade uppgifter. Ange tidigare registreringar, om sådana finns. Avtala om överföring av en fullständig dossier när ansvar och konfidentiellt utbyte har fastställts. Detta är en organisatorisk vägledning, inte en lagstadgad dokumentlista.",
+                  "title": "Så förbereder du en projektbedömning",
+                  "text": "Sex steg från produktbeskrivning till frågor och överföring av material.",
                   "path": "knowledge/initial-assessment"
                 }
               ]
@@ -6115,8 +6017,8 @@
               "text": "",
               "items": [
                 {
-                  "title": "Checklista för inledande uppgifter",
-                  "text": "Produkt och avsedd användning; tillverkare och land; dokumentationsstatus; projektmål; ansvarig kontaktperson; frågor och begränsningar. Ta inte med patienters personuppgifter.",
+                  "title": "Checklista för inledande dokument",
+                  "text": "Vad du kan samla inför första samtalet och hur du noterar saknat material.",
                   "path": "knowledge/checklist"
                 }
               ]
@@ -6140,81 +6042,91 @@
           "blocks": []
         },
         "knowledge/initial-assessment": {
-          "title": "Förberedelser inför en första bedömning",
-          "lead": "Identifiera först produkt, tillverkare och projektmål. Gör en förteckning över tillgängligt material och notera saknade uppgifter. Ange tidigare registreringar, om sådana finns. Avtala om överföring av en fullständig dossier när ansvar och konfidentiellt utbyte har fastställts. Detta är en organisatorisk vägledning, inte en lagstadgad dokumentlista.",
+          "title": "Så förbereder du en projektbedömning",
+          "lead": "Sex steg från produktbeskrivning till frågor och överföring av material.",
           "blocks": [
             {
               "type": "text",
-              "title": "Vad behövs för att börja",
-              "text": "Produktnamn och typ, tillverkare, tillverkningsland, projektmål och en förteckning över befintliga dokument. En inledande beskrivning räcker; skicka ingen konfidentiell dossier i detta skede."
+              "title": "1. Beskriv produkten",
+              "text": "Ange namn, typ, avsedd användning, beredningsform eller modell. Lista varje produkt separat."
             },
             {
               "type": "text",
-              "title": "Dokument och checklistor",
-              "text": "Produkt och avsedd användning; tillverkare och land; dokumentationsstatus; projektmål; ansvarig kontaktperson; frågor och begränsningar. Ta inte med patienters personuppgifter."
+              "title": "2. Definiera uppgiften",
+              "text": "Beskriv om bedömningen gäller registrering, en ändring, dossierberedskap eller stödets omfattning. Ange projektland och önskad start."
             },
             {
               "type": "text",
-              "title": "Ansvar och avgränsningar",
-              "text": "Kunden ansvarar för riktiga uppgifter och godkänner material. Leverantören arbetar inom avtalets ramar. Företaget kan inte garantera behöriga myndigheters beslut."
+              "title": "3. Inventera materialet",
+              "text": "Lista dokument med språk, datum och version. Notera vad som saknas och vem som kan tillhandahålla det."
+            },
+            {
+              "type": "text",
+              "title": "4. Beskriv nuläget",
+              "text": "Ange befintliga registreringar, tidigare ansökningar och mottagna kommentarer, om sådana finns. Bifoga tillgänglig korrespondens."
+            },
+            {
+              "type": "text",
+              "title": "5. Förbered frågor",
+              "text": "Skriv frågor om omfattning, ansvar, översättningar och arbetsordning. Ange kända begränsningar."
+            },
+            {
+              "type": "text",
+              "title": "6. Avtala om överföring",
+              "text": "Utse en kontaktperson och kom överens om filöverföringen. Börja med beskrivning och inventering; hela underlaget preciseras efter samtalet."
             },
             {
               "type": "cards",
-              "title": "Tjänster",
-              "text": "",
+              "title": "Dokument och checklistor",
               "items": [
                 {
-                  "title": "Granskning av dossierberedskap",
-                  "text": "En översikt över befintligt material, luckor och frågor att lösa före start.",
-                  "path": "services/dossier-review"
+                  "title": "Checklista för inledande dokument",
+                  "text": "Vad du kan samla inför första samtalet och hur du noterar saknat material.",
+                  "path": "knowledge/checklist"
                 }
               ]
-            },
-            {
-              "type": "text",
-              "title": "Redaktionell policy",
-              "text": "Regulatoriskt material ska ha källor, författare, granskare och granskningsdatum. Ändrade krav kräver översyn av relaterade sidor och översättningar. Prototypens översättningar är utkast och kräver professionell språkgranskning."
-            },
-            {
-              "type": "form",
-              "title": "Berätta om ditt projekt"
             }
           ]
         },
         "knowledge/checklist": {
-          "title": "Checklista för inledande uppgifter",
-          "lead": "Produkt och avsedd användning; tillverkare och land; dokumentationsstatus; projektmål; ansvarig kontaktperson; frågor och begränsningar. Ta inte med patienters personuppgifter.",
+          "title": "Checklista för inledande dokument",
+          "lead": "Vad du kan samla inför första samtalet och hur du noterar saknat material.",
           "blocks": [
             {
-              "type": "text",
-              "title": "Vad behövs för att börja",
-              "text": "Produktnamn och typ, tillverkare, tillverkningsland, projektmål och en förteckning över befintliga dokument. En inledande beskrivning räcker; skicka ingen konfidentiell dossier i detta skede."
-            },
-            {
-              "type": "text",
-              "title": "Förpackningsutveckling och översättning",
-              "text": "Vi hjälper till med förpackningsutveckling och översättning till kirgiziska, ryska och engelska."
-            },
-            {
-              "type": "cards",
-              "title": "Tjänster",
-              "text": "",
+              "type": "checklist",
+              "title": "Markera förberett material",
+              "text": "Markera bara tillgängliga dokument. Lista saknade delar separat inför samtalet.",
               "items": [
-                {
-                  "title": "Granskning av dossierberedskap",
-                  "text": "En översikt över befintligt material, luckor och frågor att lösa före start.",
-                  "path": "services/dossier-review"
-                },
-                {
-                  "title": "Sammanställning av dossier",
-                  "text": "Fastställ struktur och samla in och organisera material tillsammans med tillverkarens team.",
-                  "path": "services/dossier-preparation"
-                }
+                "Produktbeskrivning: namn, användning, beredningsform eller modell.",
+                "Tillverkare, land och tillverkningsställe.",
+                "Produkter och varianter som ingår i projektet.",
+                "Dokumentförteckning med språk, datum och version.",
+                "Tillgängliga instruktioner, märkning och förpackningsoriginal.",
+                "Befintliga registreringar och tillgängliga styrkande dokument.",
+                "Tidigare kommentarer och projektkorrespondens, om tillämpligt.",
+                "Saknat material, öppna frågor och ansvariga kontakter."
               ]
             },
             {
-              "type": "form",
-              "title": "Berätta om ditt projekt"
+              "type": "text",
+              "title": "Så använder du listan",
+              "text": "Listan gäller en första bedömning och är ingen obligatorisk lista för en ansökan. Exakt underlag beror på produkt och uppgift och avtalas separat. Markeringar gäller medan sidan är öppen."
+            },
+            {
+              "type": "text",
+              "title": "Nästa steg",
+              "text": "Gör en inventering, notera luckor och lista frågor. Använd detta för att diskutera bedömningens omfattning och nästa steg."
+            },
+            {
+              "type": "cards",
+              "title": "Praktiska vägledningar",
+              "items": [
+                {
+                  "title": "Så förbereder du en projektbedömning",
+                  "text": "Sex steg från produktbeskrivning till frågor och överföring av material.",
+                  "path": "knowledge/initial-assessment"
+                }
+              ]
             }
           ]
         },
@@ -6587,13 +6499,13 @@
               "text": "",
               "items": [
                 {
-                  "title": "Forberedelser til en første vurdering",
-                  "text": "Identifiser først produkt, produsent og prosjektmål. Lag en oversikt over tilgjengelig materiale og noter manglende opplysninger. Oppgi tidligere registreringer, hvis relevant. Avtal overføring av fullstendig dokumentasjon etter at ansvar og konfidensiell utveksling er avklart. Dette er en organisatorisk veiledning, ikke en lovpålagt dokumentliste.",
+                  "title": "Slik forbereder du en prosjektvurdering",
+                  "text": "Seks trinn fra produktbeskrivelse til spørsmål og deling av materiale.",
                   "path": "knowledge/initial-assessment"
                 },
                 {
-                  "title": "Sjekkliste for innledende opplysninger",
-                  "text": "Produkt og tiltenkt bruk; produsent og land; dokumentasjonsstatus; prosjektmål; ansvarlig kontaktperson; spørsmål og begrensninger. Ikke ta med pasienters personopplysninger.",
+                  "title": "Sjekkliste for innledende dokumenter",
+                  "text": "Hva du kan samle til første samtale og hvordan du noterer mangler.",
                   "path": "knowledge/checklist"
                 }
               ]
@@ -7623,53 +7535,21 @@
         },
         "knowledge": {
           "title": "Kunnskapsbase",
-          "lead": "",
+          "lead": "Praktisk materiale før et regulatorisk prosjekt: forberedelse til vurdering og oversikt over dokumenter.",
           "blocks": [
             {
               "type": "search",
               "title": "Søk i kunnskapsbasen",
               "items": [
                 {
-                  "title": "Forberedelser til en første vurdering",
-                  "text": "Identifiser først produkt, produsent og prosjektmål. Lag en oversikt over tilgjengelig materiale og noter manglende opplysninger. Oppgi tidligere registreringer, hvis relevant. Avtal overføring av fullstendig dokumentasjon etter at ansvar og konfidensiell utveksling er avklart. Dette er en organisatorisk veiledning, ikke en lovpålagt dokumentliste.",
+                  "title": "Slik forbereder du en prosjektvurdering",
+                  "text": "Seks trinn fra produktbeskrivelse til spørsmål og deling av materiale.",
                   "path": "knowledge/initial-assessment"
                 },
                 {
-                  "title": "Sjekkliste for innledende opplysninger",
-                  "text": "Produkt og tiltenkt bruk; produsent og land; dokumentasjonsstatus; prosjektmål; ansvarlig kontaktperson; spørsmål og begrensninger. Ikke ta med pasienters personopplysninger.",
+                  "title": "Sjekkliste for innledende dokumenter",
+                  "text": "Hva du kan samle til første samtale og hvordan du noterer mangler.",
                   "path": "knowledge/checklist"
-                },
-                {
-                  "title": "Ordliste",
-                  "text": "Dokumentasjon: en samling produktmateriale. Regulatorisk støtte: avtalte prosjektaktiviteter. Legemiddelovervåking: aktiviteter knyttet til overvåking av legemiddelsikkerhet. Dette er innledende forklaringer.",
-                  "path": "knowledge/glossary"
-                }
-              ]
-            },
-            {
-              "type": "cards",
-              "title": "Kunnskapsbase",
-              "text": "",
-              "items": [
-                {
-                  "title": "Praktiske veiledninger",
-                  "text": "Identifiser først produkt, produsent og prosjektmål. Lag en oversikt over tilgjengelig materiale og noter manglende opplysninger. Oppgi tidligere registreringer, hvis relevant. Avtal overføring av fullstendig dokumentasjon etter at ansvar og konfidensiell utveksling er avklart. Dette er en organisatorisk veiledning, ikke en lovpålagt dokumentliste.",
-                  "path": "knowledge/guides"
-                },
-                {
-                  "title": "Dokumenter og sjekklister",
-                  "text": "Produkt og tiltenkt bruk; produsent og land; dokumentasjonsstatus; prosjektmål; ansvarlig kontaktperson; spørsmål og begrensninger. Ikke ta med pasienters personopplysninger.",
-                  "path": "knowledge/documents"
-                },
-                {
-                  "title": "Regulatoriske oppdateringer",
-                  "text": "Regulatoriske oppdateringer publiseres etter kontroll av primærkilde, ikrafttredelse og relevans. Prototypen inneholder ingen ubekreftede nyheter.",
-                  "path": "knowledge/updates"
-                },
-                {
-                  "title": "Ordliste",
-                  "text": "Dokumentasjon: en samling produktmateriale. Regulatorisk støtte: avtalte prosjektaktiviteter. Legemiddelovervåking: aktiviteter knyttet til overvåking av legemiddelsikkerhet. Dette er innledende forklaringer.",
-                  "path": "knowledge/glossary"
                 }
               ]
             }
@@ -7685,8 +7565,8 @@
               "text": "",
               "items": [
                 {
-                  "title": "Forberedelser til en første vurdering",
-                  "text": "Identifiser først produkt, produsent og prosjektmål. Lag en oversikt over tilgjengelig materiale og noter manglende opplysninger. Oppgi tidligere registreringer, hvis relevant. Avtal overføring av fullstendig dokumentasjon etter at ansvar og konfidensiell utveksling er avklart. Dette er en organisatorisk veiledning, ikke en lovpålagt dokumentliste.",
+                  "title": "Slik forbereder du en prosjektvurdering",
+                  "text": "Seks trinn fra produktbeskrivelse til spørsmål og deling av materiale.",
                   "path": "knowledge/initial-assessment"
                 }
               ]
@@ -7703,8 +7583,8 @@
               "text": "",
               "items": [
                 {
-                  "title": "Sjekkliste for innledende opplysninger",
-                  "text": "Produkt og tiltenkt bruk; produsent og land; dokumentasjonsstatus; prosjektmål; ansvarlig kontaktperson; spørsmål og begrensninger. Ikke ta med pasienters personopplysninger.",
+                  "title": "Sjekkliste for innledende dokumenter",
+                  "text": "Hva du kan samle til første samtale og hvordan du noterer mangler.",
                   "path": "knowledge/checklist"
                 }
               ]
@@ -7728,81 +7608,91 @@
           "blocks": []
         },
         "knowledge/initial-assessment": {
-          "title": "Forberedelser til en første vurdering",
-          "lead": "Identifiser først produkt, produsent og prosjektmål. Lag en oversikt over tilgjengelig materiale og noter manglende opplysninger. Oppgi tidligere registreringer, hvis relevant. Avtal overføring av fullstendig dokumentasjon etter at ansvar og konfidensiell utveksling er avklart. Dette er en organisatorisk veiledning, ikke en lovpålagt dokumentliste.",
+          "title": "Slik forbereder du en prosjektvurdering",
+          "lead": "Seks trinn fra produktbeskrivelse til spørsmål og deling av materiale.",
           "blocks": [
             {
               "type": "text",
-              "title": "Hva trengs for å starte",
-              "text": "Produktnavn og type, produsent, produksjonsland, prosjektmål og en oversikt over tilgjengelige dokumenter. En innledende beskrivelse er nok; ikke send konfidensiell dokumentasjon på dette stadiet."
+              "title": "1. Beskriv produktet",
+              "text": "Oppgi navn, type, tiltenkt bruk, legemiddelform eller modell. Før opp hvert produkt separat."
             },
             {
               "type": "text",
-              "title": "Dokumenter og sjekklister",
-              "text": "Produkt og tiltenkt bruk; produsent og land; dokumentasjonsstatus; prosjektmål; ansvarlig kontaktperson; spørsmål og begrensninger. Ikke ta med pasienters personopplysninger."
+              "title": "2. Definer oppgaven",
+              "text": "Beskriv om vurderingen gjelder registrering, en endring, dokumentasjonsberedskap eller bistandens omfang. Oppgi prosjektland og ønsket oppstart."
             },
             {
               "type": "text",
-              "title": "Ansvar og avgrensninger",
-              "text": "Kunden sørger for korrekte opplysninger og godkjenner materiale. Leverandøren arbeider innenfor avtalen. Et selskap kan ikke garantere vedtak fra kompetente myndigheter."
+              "title": "3. Lag en materialoversikt",
+              "text": "List dokumenter med språk, dato og versjon. Noter hva som mangler og hvem som kan levere det."
+            },
+            {
+              "type": "text",
+              "title": "4. Beskriv dagens status",
+              "text": "Oppgi eksisterende registreringer, tidligere søknader og mottatte merknader der det er relevant. Legg ved tilgjengelig korrespondanse."
+            },
+            {
+              "type": "text",
+              "title": "5. Forbered spørsmål",
+              "text": "Skriv spørsmål om omfang, ansvar, oversettelser og rekkefølge. Oppgi kjente begrensninger."
+            },
+            {
+              "type": "text",
+              "title": "6. Avtal deling",
+              "text": "Velg en kontaktperson og avtal filoverføring. Start med beskrivelse og oversikt; det fullstendige settet avklares etter samtalen."
             },
             {
               "type": "cards",
-              "title": "Tjenester",
-              "text": "",
+              "title": "Dokumenter og sjekklister",
               "items": [
                 {
-                  "title": "Gjennomgang av dokumentasjon",
-                  "text": "En oversikt over tilgjengelig materiale, mangler og spørsmål som må avklares før oppstart.",
-                  "path": "services/dossier-review"
+                  "title": "Sjekkliste for innledende dokumenter",
+                  "text": "Hva du kan samle til første samtale og hvordan du noterer mangler.",
+                  "path": "knowledge/checklist"
                 }
               ]
-            },
-            {
-              "type": "text",
-              "title": "Redaksjonelle retningslinjer",
-              "text": "Regulatorisk innhold skal ha kilder, forfatter, faglig kontrollør og kontrolldato. Endrede krav krever gjennomgang av relaterte sider og oversettelser. Prototypens oversettelser er utkast og krever profesjonell språkvask."
-            },
-            {
-              "type": "form",
-              "title": "Fortell om prosjektet ditt"
             }
           ]
         },
         "knowledge/checklist": {
-          "title": "Sjekkliste for innledende opplysninger",
-          "lead": "Produkt og tiltenkt bruk; produsent og land; dokumentasjonsstatus; prosjektmål; ansvarlig kontaktperson; spørsmål og begrensninger. Ikke ta med pasienters personopplysninger.",
+          "title": "Sjekkliste for innledende dokumenter",
+          "lead": "Hva du kan samle til første samtale og hvordan du noterer mangler.",
           "blocks": [
             {
-              "type": "text",
-              "title": "Hva trengs for å starte",
-              "text": "Produktnavn og type, produsent, produksjonsland, prosjektmål og en oversikt over tilgjengelige dokumenter. En innledende beskrivelse er nok; ikke send konfidensiell dokumentasjon på dette stadiet."
-            },
-            {
-              "type": "text",
-              "title": "Utvikling av emballasje og oversettelse",
-              "text": "Vi bistår med utvikling av emballasje og oversettelse til kirgisisk, russisk og engelsk."
-            },
-            {
-              "type": "cards",
-              "title": "Tjenester",
-              "text": "",
+              "type": "checklist",
+              "title": "Merk materialet som er klart",
+              "text": "Kryss bare av tilgjengelige dokumenter. Lag en egen liste over mangler til samtalen.",
               "items": [
-                {
-                  "title": "Gjennomgang av dokumentasjon",
-                  "text": "En oversikt over tilgjengelig materiale, mangler og spørsmål som må avklares før oppstart.",
-                  "path": "services/dossier-review"
-                },
-                {
-                  "title": "Utarbeidelse av dokumentasjon",
-                  "text": "Avtal struktur og samle inn og organisere materiale med produsentens team.",
-                  "path": "services/dossier-preparation"
-                }
+                "Produktbeskrivelse: navn, tiltenkt bruk, legemiddelform eller modell.",
+                "Produsent, land og produksjonssted.",
+                "Produkter og varianter som inngår i prosjektet.",
+                "Dokumentoversikt med språk, dato og versjon.",
+                "Tilgjengelige instrukser, merking og emballasjeutkast.",
+                "Eksisterende registreringer og tilgjengelige støttedokumenter.",
+                "Tidligere merknader og prosjektkorrespondanse, hvis relevant.",
+                "Manglende materiale, åpne spørsmål og ansvarlige kontakter."
               ]
             },
             {
-              "type": "form",
-              "title": "Fortell om prosjektet ditt"
+              "type": "text",
+              "title": "Bruk av listen",
+              "text": "Listen gjelder en innledende vurdering, ikke et obligatorisk søknadssett. Nøyaktig innhold avhenger av produkt og oppgave og avtales separat. Avkryssingene gjelder mens siden er åpen."
+            },
+            {
+              "type": "text",
+              "title": "Neste trinn",
+              "text": "Lag oversikten, noter mangler og forbered spørsmål. Bruk dette til å diskutere vurderingens omfang og videre arbeid."
+            },
+            {
+              "type": "cards",
+              "title": "Praktiske veiledninger",
+              "items": [
+                {
+                  "title": "Slik forbereder du en prosjektvurdering",
+                  "text": "Seks trinn fra produktbeskrivelse til spørsmål og deling av materiale.",
+                  "path": "knowledge/initial-assessment"
+                }
+              ]
             }
           ]
         },
