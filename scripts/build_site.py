@@ -356,6 +356,7 @@ for file in files:
  assert len(a.ids)==len(set(a.ids)),(file,'duplicate IDs')
  assert set(a.alternates)==set(LANGS),(file,'language links')
  for link in a.links:
+  if link.startswith(('http://','https://','mailto:','tel:','//')):continue
   assert (file.parent/link).is_file(),(file,link)
 for lang in LANGS:
  assert set(T[lang])==set(T['ru']),lang
