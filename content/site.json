@@ -71,8 +71,8 @@
         "step4": "Подготовка материалов",
         "step5": "Сопровождение проекта",
         "step6": "Передача результатов",
-        "international": "Один проект. Понятная коммуникация.",
-        "internationalText": "Пять языковых версий: русский, кыргызский, английский, шведский и норвежский букмол. Язык сопровождения и документации согласуется отдельно с командой.",
+        "international": "Разработка упаковки и перевод",
+        "internationalText": "Помогаем в разработке упаковки и переводе текстов на кыргызский, русский и английский языки.",
         "faq": "Вопросы и ответы",
         "faqQ1": "Можно ли заранее назвать точную цену?",
         "faqA1": "Итоговый расчёт возможен после оценки продукта, документов и состава работ. Официальные и дополнительные расходы должны быть выделены отдельно.",
@@ -174,7 +174,7 @@
               ]
             },
             {
-              "type": "steps",
+              "type": "journey",
               "title": "Порядок работы",
               "items": [
                 "Исходная оценка",
@@ -226,8 +226,8 @@
             },
             {
               "type": "text",
-              "title": "Один проект. Понятная коммуникация.",
-              "text": "Пять языковых версий: русский, кыргызский, английский, шведский и норвежский букмол. Язык сопровождения и документации согласуется отдельно с командой."
+              "title": "Разработка упаковки и перевод",
+              "text": "Помогаем в разработке упаковки и переводе текстов на кыргызский, русский и английский языки."
             },
             {
               "type": "cards",
@@ -1054,8 +1054,8 @@
             },
             {
               "type": "text",
-              "title": "Один проект. Понятная коммуникация.",
-              "text": "Пять языковых версий: русский, кыргызский, английский, шведский и норвежский букмол. Язык сопровождения и документации согласуется отдельно с командой."
+              "title": "Разработка упаковки и перевод",
+              "text": "Помогаем в разработке упаковки и переводе текстов на кыргызский, русский и английский языки."
             },
             {
               "type": "form",
@@ -1101,8 +1101,8 @@
             },
             {
               "type": "text",
-              "title": "Один проект. Понятная коммуникация.",
-              "text": "Пять языковых версий: русский, кыргызский, английский, шведский и норвежский букмол. Язык сопровождения и документации согласуется отдельно с командой."
+              "title": "Разработка упаковки и перевод",
+              "text": "Помогаем в разработке упаковки и переводе текстов на кыргызский, русский и английский языки."
             },
             {
               "type": "form",
@@ -1153,8 +1153,8 @@
             },
             {
               "type": "text",
-              "title": "Один проект. Понятная коммуникация.",
-              "text": "Пять языковых версий: русский, кыргызский, английский, шведский и норвежский букмол. Язык сопровождения и документации согласуется отдельно с командой."
+              "title": "Разработка упаковки и перевод",
+              "text": "Помогаем в разработке упаковки и переводе текстов на кыргызский, русский и английский языки."
             },
             {
               "type": "form",
@@ -1190,8 +1190,8 @@
             },
             {
               "type": "text",
-              "title": "Один проект. Понятная коммуникация.",
-              "text": "Пять языковых версий: русский, кыргызский, английский, шведский и норвежский букмол. Язык сопровождения и документации согласуется отдельно с командой."
+              "title": "Разработка упаковки и перевод",
+              "text": "Помогаем в разработке упаковки и переводе текстов на кыргызский, русский и английский языки."
             },
             {
               "type": "form",
@@ -1428,8 +1428,8 @@
             },
             {
               "type": "text",
-              "title": "Один проект. Понятная коммуникация.",
-              "text": "Пять языковых версий: русский, кыргызский, английский, шведский и норвежский букмол. Язык сопровождения и документации согласуется отдельно с командой."
+              "title": "Разработка упаковки и перевод",
+              "text": "Помогаем в разработке упаковки и переводе текстов на кыргызский, русский и английский языки."
             },
             {
               "type": "cards",
@@ -1505,8 +1505,8 @@
             },
             {
               "type": "text",
-              "title": "Один проект. Понятная коммуникация.",
-              "text": "Пять языковых версий: русский, кыргызский, английский, шведский и норвежский букмол. Язык сопровождения и документации согласуется отдельно с командой."
+              "title": "Разработка упаковки и перевод",
+              "text": "Помогаем в разработке упаковки и переводе текстов на кыргызский, русский и английский языки."
             }
           ]
         },
@@ -1516,8 +1516,8 @@
           "blocks": [
             {
               "type": "text",
-              "title": "Один проект. Понятная коммуникация.",
-              "text": "Пять языковых версий: русский, кыргызский, английский, шведский и норвежский букмол. Язык сопровождения и документации согласуется отдельно с командой."
+              "title": "Разработка упаковки и перевод",
+              "text": "Помогаем в разработке упаковки и переводе текстов на кыргызский, русский и английский языки."
             },
             {
               "type": "form",
@@ -1536,8 +1536,8 @@
           "blocks": [
             {
               "type": "text",
-              "title": "Один проект. Понятная коммуникация.",
-              "text": "Пять языковых версий: русский, кыргызский, английский, шведский и норвежский букмол. Язык сопровождения и документации согласуется отдельно с командой."
+              "title": "Разработка упаковки и перевод",
+              "text": "Помогаем в разработке упаковки и переводе текстов на кыргызский, русский и английский языки."
             },
             {
               "type": "form",
@@ -1659,8 +1659,8 @@
         "step4": "Материалдарды даярдоо",
         "step5": "Долбоорду коштоо",
         "step6": "Жыйынтыктарды өткөрүү",
-        "international": "Бир долбоор. Түшүнүктүү байланыш.",
-        "internationalText": "Беш тилдеги версия: орус, кыргыз, англис, швед жана норвег букмол тилдери. Коштоо жана документтердин тили команда менен өзүнчө макулдашылат.",
+        "international": "Таңгакты иштеп чыгуу жана котормо",
+        "internationalText": "Таңгакты иштеп чыгууга жана тексттерди кыргыз, орус жана англис тилдерине которууга жардам беребиз.",
         "faq": "Суроолор жана жооптор",
         "faqQ1": "Так бааны алдын ала айтууга болобу?",
         "faqA1": "Акыркы эсеп продуктуну, документтерди жана иштердин курамын баалагандан кийин мүмкүн. Расмий жана кошумча чыгымдар өзүнчө көрсөтүлүшү керек.",
@@ -1762,7 +1762,7 @@
               ]
             },
             {
-              "type": "steps",
+              "type": "journey",
               "title": "Иштөө тартиби",
               "items": [
                 "Алгачкы баалоо",
@@ -1814,8 +1814,8 @@
             },
             {
               "type": "text",
-              "title": "Бир долбоор. Түшүнүктүү байланыш.",
-              "text": "Беш тилдеги версия: орус, кыргыз, англис, швед жана норвег букмол тилдери. Коштоо жана документтердин тили команда менен өзүнчө макулдашылат."
+              "title": "Таңгакты иштеп чыгуу жана котормо",
+              "text": "Таңгакты иштеп чыгууга жана тексттерди кыргыз, орус жана англис тилдерине которууга жардам беребиз."
             },
             {
               "type": "cards",
@@ -2642,8 +2642,8 @@
             },
             {
               "type": "text",
-              "title": "Бир долбоор. Түшүнүктүү байланыш.",
-              "text": "Беш тилдеги версия: орус, кыргыз, англис, швед жана норвег букмол тилдери. Коштоо жана документтердин тили команда менен өзүнчө макулдашылат."
+              "title": "Таңгакты иштеп чыгуу жана котормо",
+              "text": "Таңгакты иштеп чыгууга жана тексттерди кыргыз, орус жана англис тилдерине которууга жардам беребиз."
             },
             {
               "type": "form",
@@ -2689,8 +2689,8 @@
             },
             {
               "type": "text",
-              "title": "Бир долбоор. Түшүнүктүү байланыш.",
-              "text": "Беш тилдеги версия: орус, кыргыз, англис, швед жана норвег букмол тилдери. Коштоо жана документтердин тили команда менен өзүнчө макулдашылат."
+              "title": "Таңгакты иштеп чыгуу жана котормо",
+              "text": "Таңгакты иштеп чыгууга жана тексттерди кыргыз, орус жана англис тилдерине которууга жардам беребиз."
             },
             {
               "type": "form",
@@ -2741,8 +2741,8 @@
             },
             {
               "type": "text",
-              "title": "Бир долбоор. Түшүнүктүү байланыш.",
-              "text": "Беш тилдеги версия: орус, кыргыз, англис, швед жана норвег букмол тилдери. Коштоо жана документтердин тили команда менен өзүнчө макулдашылат."
+              "title": "Таңгакты иштеп чыгуу жана котормо",
+              "text": "Таңгакты иштеп чыгууга жана тексттерди кыргыз, орус жана англис тилдерине которууга жардам беребиз."
             },
             {
               "type": "form",
@@ -2778,8 +2778,8 @@
             },
             {
               "type": "text",
-              "title": "Бир долбоор. Түшүнүктүү байланыш.",
-              "text": "Беш тилдеги версия: орус, кыргыз, англис, швед жана норвег букмол тилдери. Коштоо жана документтердин тили команда менен өзүнчө макулдашылат."
+              "title": "Таңгакты иштеп чыгуу жана котормо",
+              "text": "Таңгакты иштеп чыгууга жана тексттерди кыргыз, орус жана англис тилдерине которууга жардам беребиз."
             },
             {
               "type": "form",
@@ -3016,8 +3016,8 @@
             },
             {
               "type": "text",
-              "title": "Бир долбоор. Түшүнүктүү байланыш.",
-              "text": "Беш тилдеги версия: орус, кыргыз, англис, швед жана норвег букмол тилдери. Коштоо жана документтердин тили команда менен өзүнчө макулдашылат."
+              "title": "Таңгакты иштеп чыгуу жана котормо",
+              "text": "Таңгакты иштеп чыгууга жана тексттерди кыргыз, орус жана англис тилдерине которууга жардам беребиз."
             },
             {
               "type": "cards",
@@ -3093,8 +3093,8 @@
             },
             {
               "type": "text",
-              "title": "Бир долбоор. Түшүнүктүү байланыш.",
-              "text": "Беш тилдеги версия: орус, кыргыз, англис, швед жана норвег букмол тилдери. Коштоо жана документтердин тили команда менен өзүнчө макулдашылат."
+              "title": "Таңгакты иштеп чыгуу жана котормо",
+              "text": "Таңгакты иштеп чыгууга жана тексттерди кыргыз, орус жана англис тилдерине которууга жардам беребиз."
             }
           ]
         },
@@ -3104,8 +3104,8 @@
           "blocks": [
             {
               "type": "text",
-              "title": "Бир долбоор. Түшүнүктүү байланыш.",
-              "text": "Беш тилдеги версия: орус, кыргыз, англис, швед жана норвег букмол тилдери. Коштоо жана документтердин тили команда менен өзүнчө макулдашылат."
+              "title": "Таңгакты иштеп чыгуу жана котормо",
+              "text": "Таңгакты иштеп чыгууга жана тексттерди кыргыз, орус жана англис тилдерине которууга жардам беребиз."
             },
             {
               "type": "form",
@@ -3124,8 +3124,8 @@
           "blocks": [
             {
               "type": "text",
-              "title": "Бир долбоор. Түшүнүктүү байланыш.",
-              "text": "Беш тилдеги версия: орус, кыргыз, англис, швед жана норвег букмол тилдери. Коштоо жана документтердин тили команда менен өзүнчө макулдашылат."
+              "title": "Таңгакты иштеп чыгуу жана котормо",
+              "text": "Таңгакты иштеп чыгууга жана тексттерди кыргыз, орус жана англис тилдерине которууга жардам беребиз."
             },
             {
               "type": "form",
@@ -3247,8 +3247,8 @@
         "step4": "Material preparation",
         "step5": "Project coordination",
         "step6": "Delivery of results",
-        "international": "One project. Clear communication.",
-        "internationalText": "Five website languages: Russian, Kyrgyz, English, Swedish and Norwegian Bokmål. Project communication and documentation languages are agreed separately with the team.",
+        "international": "Packaging development and translation",
+        "internationalText": "We help develop packaging and translate texts into Kyrgyz, Russian and English.",
         "faq": "Questions & answers",
         "faqQ1": "Can an exact price be given in advance?",
         "faqA1": "A final estimate requires an assessment of the product, documentation and scope. Official fees and additional costs should be listed separately.",
@@ -3350,7 +3350,7 @@
               ]
             },
             {
-              "type": "steps",
+              "type": "journey",
               "title": "How it works",
               "items": [
                 "Initial assessment",
@@ -3402,8 +3402,8 @@
             },
             {
               "type": "text",
-              "title": "One project. Clear communication.",
-              "text": "Five website languages: Russian, Kyrgyz, English, Swedish and Norwegian Bokmål. Project communication and documentation languages are agreed separately with the team."
+              "title": "Packaging development and translation",
+              "text": "We help develop packaging and translate texts into Kyrgyz, Russian and English."
             },
             {
               "type": "cards",
@@ -4230,8 +4230,8 @@
             },
             {
               "type": "text",
-              "title": "One project. Clear communication.",
-              "text": "Five website languages: Russian, Kyrgyz, English, Swedish and Norwegian Bokmål. Project communication and documentation languages are agreed separately with the team."
+              "title": "Packaging development and translation",
+              "text": "We help develop packaging and translate texts into Kyrgyz, Russian and English."
             },
             {
               "type": "form",
@@ -4277,8 +4277,8 @@
             },
             {
               "type": "text",
-              "title": "One project. Clear communication.",
-              "text": "Five website languages: Russian, Kyrgyz, English, Swedish and Norwegian Bokmål. Project communication and documentation languages are agreed separately with the team."
+              "title": "Packaging development and translation",
+              "text": "We help develop packaging and translate texts into Kyrgyz, Russian and English."
             },
             {
               "type": "form",
@@ -4329,8 +4329,8 @@
             },
             {
               "type": "text",
-              "title": "One project. Clear communication.",
-              "text": "Five website languages: Russian, Kyrgyz, English, Swedish and Norwegian Bokmål. Project communication and documentation languages are agreed separately with the team."
+              "title": "Packaging development and translation",
+              "text": "We help develop packaging and translate texts into Kyrgyz, Russian and English."
             },
             {
               "type": "form",
@@ -4366,8 +4366,8 @@
             },
             {
               "type": "text",
-              "title": "One project. Clear communication.",
-              "text": "Five website languages: Russian, Kyrgyz, English, Swedish and Norwegian Bokmål. Project communication and documentation languages are agreed separately with the team."
+              "title": "Packaging development and translation",
+              "text": "We help develop packaging and translate texts into Kyrgyz, Russian and English."
             },
             {
               "type": "form",
@@ -4604,8 +4604,8 @@
             },
             {
               "type": "text",
-              "title": "One project. Clear communication.",
-              "text": "Five website languages: Russian, Kyrgyz, English, Swedish and Norwegian Bokmål. Project communication and documentation languages are agreed separately with the team."
+              "title": "Packaging development and translation",
+              "text": "We help develop packaging and translate texts into Kyrgyz, Russian and English."
             },
             {
               "type": "cards",
@@ -4681,8 +4681,8 @@
             },
             {
               "type": "text",
-              "title": "One project. Clear communication.",
-              "text": "Five website languages: Russian, Kyrgyz, English, Swedish and Norwegian Bokmål. Project communication and documentation languages are agreed separately with the team."
+              "title": "Packaging development and translation",
+              "text": "We help develop packaging and translate texts into Kyrgyz, Russian and English."
             }
           ]
         },
@@ -4692,8 +4692,8 @@
           "blocks": [
             {
               "type": "text",
-              "title": "One project. Clear communication.",
-              "text": "Five website languages: Russian, Kyrgyz, English, Swedish and Norwegian Bokmål. Project communication and documentation languages are agreed separately with the team."
+              "title": "Packaging development and translation",
+              "text": "We help develop packaging and translate texts into Kyrgyz, Russian and English."
             },
             {
               "type": "form",
@@ -4712,8 +4712,8 @@
           "blocks": [
             {
               "type": "text",
-              "title": "One project. Clear communication.",
-              "text": "Five website languages: Russian, Kyrgyz, English, Swedish and Norwegian Bokmål. Project communication and documentation languages are agreed separately with the team."
+              "title": "Packaging development and translation",
+              "text": "We help develop packaging and translate texts into Kyrgyz, Russian and English."
             },
             {
               "type": "form",
@@ -4835,8 +4835,8 @@
         "step4": "Framtagning av material",
         "step5": "Projektsamordning",
         "step6": "Överlämning av resultat",
-        "international": "Ett projekt. Tydlig kommunikation.",
-        "internationalText": "Fem webbplatsspråk: ryska, kirgiziska, engelska, svenska och norskt bokmål. Språk för projektkommunikation och dokumentation avtalas separat med teamet.",
+        "international": "Förpackningsutveckling och översättning",
+        "internationalText": "Vi hjälper till med förpackningsutveckling och översättning till kirgiziska, ryska och engelska.",
         "faq": "Frågor och svar",
         "faqQ1": "Kan ett exakt pris anges i förväg?",
         "faqA1": "En slutlig bedömning kräver granskning av produkten, dokumentationen och omfattningen. Myndighetsavgifter och tilläggskostnader ska anges separat.",
@@ -4938,7 +4938,7 @@
               ]
             },
             {
-              "type": "steps",
+              "type": "journey",
               "title": "Så arbetar vi",
               "items": [
                 "Inledande bedömning",
@@ -4990,8 +4990,8 @@
             },
             {
               "type": "text",
-              "title": "Ett projekt. Tydlig kommunikation.",
-              "text": "Fem webbplatsspråk: ryska, kirgiziska, engelska, svenska och norskt bokmål. Språk för projektkommunikation och dokumentation avtalas separat med teamet."
+              "title": "Förpackningsutveckling och översättning",
+              "text": "Vi hjälper till med förpackningsutveckling och översättning till kirgiziska, ryska och engelska."
             },
             {
               "type": "cards",
@@ -5818,8 +5818,8 @@
             },
             {
               "type": "text",
-              "title": "Ett projekt. Tydlig kommunikation.",
-              "text": "Fem webbplatsspråk: ryska, kirgiziska, engelska, svenska och norskt bokmål. Språk för projektkommunikation och dokumentation avtalas separat med teamet."
+              "title": "Förpackningsutveckling och översättning",
+              "text": "Vi hjälper till med förpackningsutveckling och översättning till kirgiziska, ryska och engelska."
             },
             {
               "type": "form",
@@ -5865,8 +5865,8 @@
             },
             {
               "type": "text",
-              "title": "Ett projekt. Tydlig kommunikation.",
-              "text": "Fem webbplatsspråk: ryska, kirgiziska, engelska, svenska och norskt bokmål. Språk för projektkommunikation och dokumentation avtalas separat med teamet."
+              "title": "Förpackningsutveckling och översättning",
+              "text": "Vi hjälper till med förpackningsutveckling och översättning till kirgiziska, ryska och engelska."
             },
             {
               "type": "form",
@@ -5917,8 +5917,8 @@
             },
             {
               "type": "text",
-              "title": "Ett projekt. Tydlig kommunikation.",
-              "text": "Fem webbplatsspråk: ryska, kirgiziska, engelska, svenska och norskt bokmål. Språk för projektkommunikation och dokumentation avtalas separat med teamet."
+              "title": "Förpackningsutveckling och översättning",
+              "text": "Vi hjälper till med förpackningsutveckling och översättning till kirgiziska, ryska och engelska."
             },
             {
               "type": "form",
@@ -5954,8 +5954,8 @@
             },
             {
               "type": "text",
-              "title": "Ett projekt. Tydlig kommunikation.",
-              "text": "Fem webbplatsspråk: ryska, kirgiziska, engelska, svenska och norskt bokmål. Språk för projektkommunikation och dokumentation avtalas separat med teamet."
+              "title": "Förpackningsutveckling och översättning",
+              "text": "Vi hjälper till med förpackningsutveckling och översättning till kirgiziska, ryska och engelska."
             },
             {
               "type": "form",
@@ -6192,8 +6192,8 @@
             },
             {
               "type": "text",
-              "title": "Ett projekt. Tydlig kommunikation.",
-              "text": "Fem webbplatsspråk: ryska, kirgiziska, engelska, svenska och norskt bokmål. Språk för projektkommunikation och dokumentation avtalas separat med teamet."
+              "title": "Förpackningsutveckling och översättning",
+              "text": "Vi hjälper till med förpackningsutveckling och översättning till kirgiziska, ryska och engelska."
             },
             {
               "type": "cards",
@@ -6269,8 +6269,8 @@
             },
             {
               "type": "text",
-              "title": "Ett projekt. Tydlig kommunikation.",
-              "text": "Fem webbplatsspråk: ryska, kirgiziska, engelska, svenska och norskt bokmål. Språk för projektkommunikation och dokumentation avtalas separat med teamet."
+              "title": "Förpackningsutveckling och översättning",
+              "text": "Vi hjälper till med förpackningsutveckling och översättning till kirgiziska, ryska och engelska."
             }
           ]
         },
@@ -6280,8 +6280,8 @@
           "blocks": [
             {
               "type": "text",
-              "title": "Ett projekt. Tydlig kommunikation.",
-              "text": "Fem webbplatsspråk: ryska, kirgiziska, engelska, svenska och norskt bokmål. Språk för projektkommunikation och dokumentation avtalas separat med teamet."
+              "title": "Förpackningsutveckling och översättning",
+              "text": "Vi hjälper till med förpackningsutveckling och översättning till kirgiziska, ryska och engelska."
             },
             {
               "type": "form",
@@ -6300,8 +6300,8 @@
           "blocks": [
             {
               "type": "text",
-              "title": "Ett projekt. Tydlig kommunikation.",
-              "text": "Fem webbplatsspråk: ryska, kirgiziska, engelska, svenska och norskt bokmål. Språk för projektkommunikation och dokumentation avtalas separat med teamet."
+              "title": "Förpackningsutveckling och översättning",
+              "text": "Vi hjälper till med förpackningsutveckling och översättning till kirgiziska, ryska och engelska."
             },
             {
               "type": "form",
@@ -6423,8 +6423,8 @@
         "step4": "Utarbeidelse av materiale",
         "step5": "Prosjektoppfølging",
         "step6": "Overlevering av resultater",
-        "international": "Ett prosjekt. Tydelig kommunikasjon.",
-        "internationalText": "Fem nettsidespråk: russisk, kirgisisk, engelsk, svensk og norsk bokmål. Språk for prosjektkommunikasjon og dokumentasjon avtales separat med teamet.",
+        "international": "Utvikling av emballasje og oversettelse",
+        "internationalText": "Vi bistår med utvikling av emballasje og oversettelse til kirgisisk, russisk og engelsk.",
         "faq": "Spørsmål og svar",
         "faqQ1": "Kan en nøyaktig pris oppgis på forhånd?",
         "faqA1": "Et endelig estimat krever vurdering av produktet, dokumentasjonen og omfanget. Offentlige gebyrer og tilleggskostnader skal oppgis separat.",
@@ -6526,7 +6526,7 @@
               ]
             },
             {
-              "type": "steps",
+              "type": "journey",
               "title": "Slik jobber vi",
               "items": [
                 "Innledende vurdering",
@@ -6578,8 +6578,8 @@
             },
             {
               "type": "text",
-              "title": "Ett prosjekt. Tydelig kommunikasjon.",
-              "text": "Fem nettsidespråk: russisk, kirgisisk, engelsk, svensk og norsk bokmål. Språk for prosjektkommunikasjon og dokumentasjon avtales separat med teamet."
+              "title": "Utvikling av emballasje og oversettelse",
+              "text": "Vi bistår med utvikling av emballasje og oversettelse til kirgisisk, russisk og engelsk."
             },
             {
               "type": "cards",
@@ -7406,8 +7406,8 @@
             },
             {
               "type": "text",
-              "title": "Ett prosjekt. Tydelig kommunikasjon.",
-              "text": "Fem nettsidespråk: russisk, kirgisisk, engelsk, svensk og norsk bokmål. Språk for prosjektkommunikasjon og dokumentasjon avtales separat med teamet."
+              "title": "Utvikling av emballasje og oversettelse",
+              "text": "Vi bistår med utvikling av emballasje og oversettelse til kirgisisk, russisk og engelsk."
             },
             {
               "type": "form",
@@ -7453,8 +7453,8 @@
             },
             {
               "type": "text",
-              "title": "Ett prosjekt. Tydelig kommunikasjon.",
-              "text": "Fem nettsidespråk: russisk, kirgisisk, engelsk, svensk og norsk bokmål. Språk for prosjektkommunikasjon og dokumentasjon avtales separat med teamet."
+              "title": "Utvikling av emballasje og oversettelse",
+              "text": "Vi bistår med utvikling av emballasje og oversettelse til kirgisisk, russisk og engelsk."
             },
             {
               "type": "form",
@@ -7505,8 +7505,8 @@
             },
             {
               "type": "text",
-              "title": "Ett prosjekt. Tydelig kommunikasjon.",
-              "text": "Fem nettsidespråk: russisk, kirgisisk, engelsk, svensk og norsk bokmål. Språk for prosjektkommunikasjon og dokumentasjon avtales separat med teamet."
+              "title": "Utvikling av emballasje og oversettelse",
+              "text": "Vi bistår med utvikling av emballasje og oversettelse til kirgisisk, russisk og engelsk."
             },
             {
               "type": "form",
@@ -7542,8 +7542,8 @@
             },
             {
               "type": "text",
-              "title": "Ett prosjekt. Tydelig kommunikasjon.",
-              "text": "Fem nettsidespråk: russisk, kirgisisk, engelsk, svensk og norsk bokmål. Språk for prosjektkommunikasjon og dokumentasjon avtales separat med teamet."
+              "title": "Utvikling av emballasje og oversettelse",
+              "text": "Vi bistår med utvikling av emballasje og oversettelse til kirgisisk, russisk og engelsk."
             },
             {
               "type": "form",
@@ -7780,8 +7780,8 @@
             },
             {
               "type": "text",
-              "title": "Ett prosjekt. Tydelig kommunikasjon.",
-              "text": "Fem nettsidespråk: russisk, kirgisisk, engelsk, svensk og norsk bokmål. Språk for prosjektkommunikasjon og dokumentasjon avtales separat med teamet."
+              "title": "Utvikling av emballasje og oversettelse",
+              "text": "Vi bistår med utvikling av emballasje og oversettelse til kirgisisk, russisk og engelsk."
             },
             {
               "type": "cards",
@@ -7857,8 +7857,8 @@
             },
             {
               "type": "text",
-              "title": "Ett prosjekt. Tydelig kommunikasjon.",
-              "text": "Fem nettsidespråk: russisk, kirgisisk, engelsk, svensk og norsk bokmål. Språk for prosjektkommunikasjon og dokumentasjon avtales separat med teamet."
+              "title": "Utvikling av emballasje og oversettelse",
+              "text": "Vi bistår med utvikling av emballasje og oversettelse til kirgisisk, russisk og engelsk."
             }
           ]
         },
@@ -7868,8 +7868,8 @@
           "blocks": [
             {
               "type": "text",
-              "title": "Ett prosjekt. Tydelig kommunikasjon.",
-              "text": "Fem nettsidespråk: russisk, kirgisisk, engelsk, svensk og norsk bokmål. Språk for prosjektkommunikasjon og dokumentasjon avtales separat med teamet."
+              "title": "Utvikling av emballasje og oversettelse",
+              "text": "Vi bistår med utvikling av emballasje og oversettelse til kirgisisk, russisk og engelsk."
             },
             {
               "type": "form",
@@ -7888,8 +7888,8 @@
           "blocks": [
             {
               "type": "text",
-              "title": "Ett prosjekt. Tydelig kommunikasjon.",
-              "text": "Fem nettsidespråk: russisk, kirgisisk, engelsk, svensk og norsk bokmål. Språk for prosjektkommunikasjon og dokumentasjon avtales separat med teamet."
+              "title": "Utvikling av emballasje og oversettelse",
+              "text": "Vi bistår med utvikling av emballasje og oversettelse til kirgisisk, russisk og engelsk."
             },
             {
               "type": "form",

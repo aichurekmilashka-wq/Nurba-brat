@@ -1,3 +1,4 @@
+import ProjectJourney from '@/components/ui/project-journey'
 import { Component as Button7 } from "@/components/ui/button-7"
 import ThemeToggle from "@/components/theme-toggle"
 import { useEffect, useState, type FormEvent } from 'react'
@@ -72,6 +73,7 @@ function ContentBlock({ block, index, locale }: { block: Block; index: number; l
       {block.type === 'text' && <p className="body-copy">{block.text}</p>}
       {block.type === 'cards' && <>{block.text && <p className="section-lead">{block.text}</p>}<Cards items={block.items} locale={locale} more={t.more} /></>}
       {block.type === 'search' && <Search block={block} locale={locale} />}
+      {block.type === 'journey' && <ProjectJourney items={block.items} locale={locale} title={block.title} />}
       {block.type === 'steps' && <ol className="steps">{block.items.map(item => <li key={item}>{item}</li>)}</ol>}
       {block.type === 'faq' && <div className="faq-list">{block.items.map(item => <details key={item.question}><summary>{item.question}</summary><p>{item.answer}</p></details>)}</div>}
     </>}

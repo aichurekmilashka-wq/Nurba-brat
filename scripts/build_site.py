@@ -3,6 +3,7 @@ from pathlib import Path
 from html import escape
 import json, re
 from social_metadata import social_metadata
+from journey_export import render_journey
 
 ROOT=Path(__file__).resolve().parent.parent
 LANGS=['ru','ky','en','sv','nb']
@@ -74,8 +75,8 @@ tr('step3','Договор и ответственность','Келишим ж
 tr('step4','Подготовка материалов','Материалдарды даярдоо','Material preparation','Framtagning av material','Utarbeidelse av materiale')
 tr('step5','Сопровождение проекта','Долбоорду коштоо','Project coordination','Projektsamordning','Prosjektoppfølging')
 tr('step6','Передача результатов','Жыйынтыктарды өткөрүү','Delivery of results','Överlämning av resultat','Overlevering av resultater')
-tr('international','Один проект. Понятная коммуникация.','Бир долбоор. Түшүнүктүү байланыш.','One project. Clear communication.','Ett projekt. Tydlig kommunikation.','Ett prosjekt. Tydelig kommunikasjon.')
-tr('internationalText','Пять языковых версий: русский, кыргызский, английский, шведский и норвежский букмол. Язык сопровождения и документации согласуется отдельно с командой.','Беш тилдеги версия: орус, кыргыз, англис, швед жана норвег букмол тилдери. Коштоо жана документтердин тили команда менен өзүнчө макулдашылат.','Five website languages: Russian, Kyrgyz, English, Swedish and Norwegian Bokmål. Project communication and documentation languages are agreed separately with the team.','Fem webbplatsspråk: ryska, kirgiziska, engelska, svenska och norskt bokmål. Språk för projektkommunikation och dokumentation avtalas separat med teamet.','Fem nettsidespråk: russisk, kirgisisk, engelsk, svensk og norsk bokmål. Språk for prosjektkommunikasjon og dokumentasjon avtales separat med teamet.')
+tr('international','Разработка упаковки и перевод','Таңгакты иштеп чыгуу жана котормо','Packaging development and translation','Förpackningsutveckling och översättning','Utvikling av emballasje og oversettelse')
+tr('internationalText','Помогаем в разработке упаковки и переводе текстов на кыргызский, русский и английский языки.','Таңгакты иштеп чыгууга жана тексттерди кыргыз, орус жана англис тилдерине которууга жардам беребиз.','We help develop packaging and translate texts into Kyrgyz, Russian and English.','Vi hjälper till med förpackningsutveckling och översättning till kirgiziska, ryska och engelska.','Vi bistår med utvikling av emballasje og oversettelse til kirgisisk, russisk og engelsk.')
 tr('faq','Вопросы и ответы','Суроолор жана жооптор','Questions & answers','Frågor och svar','Spørsmål og svar')
 tr('faqQ1','Можно ли заранее назвать точную цену?','Так бааны алдын ала айтууга болобу?','Can an exact price be given in advance?','Kan ett exakt pris anges i förväg?','Kan en nøyaktig pris oppgis på forhånd?')
 tr('faqA1','Итоговый расчёт возможен после оценки продукта, документов и состава работ. Официальные и дополнительные расходы должны быть выделены отдельно.','Акыркы эсеп продуктуну, документтерди жана иштердин курамын баалагандан кийин мүмкүн. Расмий жана кошумча чыгымдар өзүнчө көрсөтүлүшү керек.','A final estimate requires an assessment of the product, documentation and scope. Official fees and additional costs should be listed separately.','En slutlig bedömning kräver granskning av produkten, dokumentationen och omfattningen. Myndighetsavgifter och tilläggskostnader ska anges separat.','Et endelig estimat krever vurdering av produktet, dokumentasjonen og omfanget. Offentlige gebyrer og tilleggskostnader skal oppgis separat.')
@@ -144,7 +145,7 @@ def build_pages(t):
  knowledge_cards=[card('startGuide','guideText','knowledge/initial-assessment'),card('checklist','checklistText','knowledge/checklist')]
  pages={}
  def page(path,title,lead,blocks):pages[path]={'title':t[title],'lead':t.get(lead,''),'blocks':blocks}
- page('','heroTitle','heroText',[cards('choose',service_cards),steps,costs,cards('projects',[card('projects','projectsEmpty','projects'),card('team','teamEmpty','about/team')]),block('international','internationalText'),cards('knowledge',knowledge_cards),faq,form])
+ page('','heroTitle','heroText',[cards('choose',service_cards),{**steps,'type':'journey'},costs,cards('projects',[card('projects','projectsEmpty','projects'),card('team','teamEmpty','about/team')]),block('international','internationalText'),cards('knowledge',knowledge_cards),faq,form])
  page('services','services','chooseText',[cards('allServices',service_cards)])
  for slug,k in SERVICES:
   page('services/'+slug,k,k+'Text',[block('scope',k+'Text'),block('inputs','inputsText'),block('outputs','outputsText'),steps,block('responsibility','responsibilityText'),block('timeline','timelineText'),costs,cards('team',[card('team','teamEmpty','about/team')]),faq,form])
@@ -179,7 +180,7 @@ print('Content model:',len(DATA['locales']['ru']['pages']),'pages ×',len(LANGS)
 import os
 from html.parser import HTMLParser
 from folder_export import render_service_folders, runtime as folder_runtime
-CSS=(ROOT/'styles/site.css').read_text()+'\n'+(ROOT/'styles/glass-folder.css').read_text()+'\n'+(ROOT/'styles/brand.css').read_text()+'\n'+(ROOT/'styles/hero-editorial.css').read_text()+'\n'+(ROOT/'styles/liquid-glass-button.css').read_text()+'\n'+(ROOT/'styles/glyph-portal.css').read_text()+'\n'+(ROOT/'styles/button-7.css').read_text()+'\n'+(ROOT/'styles/theme.css').read_text()+'\n'+(ROOT/'styles/action-buttons.css').read_text()+'\n'+(ROOT/'styles/shifting-dropdown.css').read_text()+'\n'+(ROOT/'styles/mobile.css').read_text()
+CSS=(ROOT/'styles/site.css').read_text()+'\n'+(ROOT/'styles/glass-folder.css').read_text()+'\n'+(ROOT/'styles/brand.css').read_text()+'\n'+(ROOT/'styles/hero-editorial.css').read_text()+'\n'+(ROOT/'styles/liquid-glass-button.css').read_text()+'\n'+(ROOT/'styles/glyph-portal.css').read_text()+'\n'+(ROOT/'styles/button-7.css').read_text()+'\n'+(ROOT/'styles/theme.css').read_text()+'\n'+(ROOT/'styles/action-buttons.css').read_text()+'\n'+(ROOT/'styles/shifting-dropdown.css').read_text()+'\n'+(ROOT/'styles/mobile.css').read_text()+'\n'+(ROOT/'styles/project-journey.css').read_text()
 EXPORT=ROOT/'prototype'
 NAV=[('services','services'),('pricing','pricing'),('projects','projects'),('knowledge','knowledge'),('about','about'),('contacts','contacts')]
 FOOTER=[['services','pricing','how-we-work','projects','faq'],['for-manufacturers','for-importers','for-partners','knowledge','knowledge/documents'],['about','about/team','about/editorial-policy','contacts','request']]
@@ -220,6 +221,8 @@ def render(lang,path,destination):
    elif b['type']=='cards':
     if b.get('text'):content+=f'<p class="section-lead">{escape(b["text"])}</p>'
     content+=render_cards(b['items'])
+   elif b['type']=='journey':
+    content+=render_journey(b['items'],lang,b['title'],lambda stage:os.path.relpath(ROOT/f'public/assets/journey-stage-{stage}.svg',destination.parent).replace(os.sep,'/'))
    elif b['type']=='steps':content+='<ol class="steps">'+''.join(f'<li>{escape(item)}</li>' for item in b['items'])+'</ol>'
    elif b['type']=='faq':content+='<div class="faq-list">'+''.join(f'<details><summary>{escape(item["question"])}</summary><p>{escape(item["answer"])}</p></details>' for item in b['items'])+'</div>'
    elif b['type']=='search':content+=f'<div class="knowledge-search"><label><span class="eyebrow">{escape(t["search"])}</span><input class="search-field" type="search" placeholder="{escape(t["search"],quote=True)}"></label>'+render_cards(b['items'])+f'<p class="search-empty" role="status" hidden>{escape(t["noResults"])}</p></div>'
@@ -300,6 +303,8 @@ def render(lang,path,destination):
  '''.replace('CONFIG',config)
  script+='\n;(function(){\n'+(ROOT/'lib/dropdown-navigation.js').read_text().replace('export ','')+'\nmountDropdownNavigation(document.querySelector(\'.site-nav\'));mountDropdownNavigation(document.querySelector(\'.language-switcher\'));\n})();'
  script+=folder_runtime(ROOT)
+ if not path:
+  script+='\n;(function(){\n'+(ROOT/'lib/project-journey.js').read_text().replace('export ','')+'\ndocument.querySelectorAll(\'[data-project-journey]\').forEach(mountProjectJourney);\n})();'
  script+='\n;(function(){\n'+(ROOT/'lib/theme-toggle.js').read_text().replace('export ','')+'\nmountThemeToggle(document.querySelector(\'[data-theme-toggle]\'),'+json.dumps(theme_labels,ensure_ascii=False)+');\n})();'
  if not path:
   script+='\n;(function(){\n'+(ROOT/'lib/glyph-portal.js').read_text().replace('export ','')+'\nmountGlyphPortal(document.querySelector(\'.nurba-glyph-hero\'),{typographyOnly:true,interactive:false});\n})();'

@@ -28,3 +28,5 @@ import './styles/action-buttons.css'
 import './styles/shifting-dropdown.css'
 
 import './styles/mobile.css'
+
+import './styles/project-journey.css'

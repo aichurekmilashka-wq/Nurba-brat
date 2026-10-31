@@ -2,7 +2,7 @@
 from html import escape
 
 SITE_URL = 'https://aichurekmilashka-wq.github.io/Nurba-brat/'
-IMAGE_URL = SITE_URL + 'public/assets/og-nurba.png'
+IMAGE_URL = SITE_URL + 'public/assets/og-nurba-poppies.png'
 LOCALES = {'ru':'ru_RU','ky':'ky_KG','en':'en_US','sv':'sv_SE','nb':'nb_NO'}
 
 def social_metadata(lang, path, title, description):
@@ -13,7 +13,7 @@ def social_metadata(lang, path, title, description):
         ('og:type','website'), ('og:site_name','Nurba'), ('og:title',full_title),
         ('og:description',description), ('og:url',url), ('og:locale',LOCALES[lang]),
         ('og:image',IMAGE_URL), ('og:image:secure_url',IMAGE_URL),
-        ('og:image:type','image/png'), ('og:image:width','1200'), ('og:image:height','630'),
+        ('og:image:type','image/png'), ('og:image:width','1731'), ('og:image:height','909'),
         ('og:image:alt','Nurba — Регуляторный консалтинг'),
     ]
     output = ''.join(f'<meta property="{key}" content="{escape(value, quote=True)}">' for key,value in tags)
