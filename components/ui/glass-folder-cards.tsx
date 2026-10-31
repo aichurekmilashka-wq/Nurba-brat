@@ -3,6 +3,7 @@
 import * as React from 'react'
 import { ART_PRESETS, createArtJob, fanSlot, hashString, rng, type ArtJob, type ArtPreset, type ArtRecipe } from '@/lib/folder-art'
 import '@/styles/glass-folder.css'
+import { mountFolderHover } from '@/lib/folder-hover'
 
 export { ART_PRESETS, createArtJob, fanSlot, hashString, rng, hexToRgb } from '@/lib/folder-art'
 export type { ArtJob, ArtPreset, ArtRecipe } from '@/lib/folder-art'
@@ -16,6 +17,7 @@ export type GlassFolderProps = {
   onFilesChange?: (files: FolderFile[]) => void; menu?: FolderMenuItem[]
   labelPlacement?: 'bottom-left' | 'top-left' | 'top-right'
   open?: boolean; defaultOpen?: boolean; onOpenChange?: (open: boolean) => void
+  openOnHover?: boolean
   onFileSelect?: (file: FolderFile, index: number) => void
   width?: number; appear?: boolean; appearDelay?: number; className?: string; style?: React.CSSProperties
   /** Optional translated interface labels; content always comes from the caller. */
@@ -88,7 +90,7 @@ const BACK_PATH = 'M0 56A22 22 0 0 1 22 34L146 34C170 34 172 0 198 0L318 0A22 22
 const FRONT_PATH = 'M0 22A22 22 0 0 1 22 0L118 0C144 0 146 32 172 32L318 32A22 22 0 0 1 340 54L340 176A22 22 0 0 1 318 198L22 198A22 22 0 0 1 0 176Z'
 const SAMPLE_FILES: FolderFile[] = [{ name: 'Cover — final', meta: 'PNG · 4.8 MB', art: 'ember' }, { name: 'Moodboard', meta: '24 images', art: 'dusk' }, { name: 'Brief.pdf', meta: 'PDF · 1.2 MB' }]
 
-export default function GlassFolder({ label = 'My Files', meta, tone = 'light', art = 'aurora', seed = 3, image, files: initialFiles = SAMPLE_FILES, action = 'add', onAdd, onFilesChange, menu = [], labelPlacement = 'bottom-left', open: openProp, defaultOpen = false, onOpenChange, onFileSelect, width = 340, appear = true, appearDelay = 0, className, style, labels }: GlassFolderProps) {
+export default function GlassFolder({ label = 'My Files', meta, tone = 'light', art = 'aurora', seed = 3, image, files: initialFiles = SAMPLE_FILES, action = 'add', onAdd, onFilesChange, menu = [], labelPlacement = 'bottom-left', open: openProp, defaultOpen = false, onOpenChange, onFileSelect, openOnHover = false, width = 340, appear = true, appearDelay = 0, className, style, labels }: GlassFolderProps) {
   const words = { ...DEFAULT_LABELS, ...labels }
   const uid = React.useId().replace(/:/g, '')
   const rootRef = React.useRef<HTMLDivElement>(null)
@@ -106,6 +108,9 @@ export default function GlassFolder({ label = 'My Files', meta, tone = 'light', 
     if (openProp === undefined) setOpenState(next)
     onOpenChange?.(next)
   }, [openProp, onOpenChange])
+  React.useEffect(() => {
+    if (openOnHover) return mountFolderHover(rootRef.current, setOpen)
+  }, [openOnHover, setOpen])
   const [menuOpen, setMenuOpen] = React.useState(false)
   const [entered, setEntered] = React.useState(!appear)
   const k = Math.max(1, width) / W
@@ -195,8 +200,8 @@ export default function GlassFolder({ label = 'My Files', meta, tone = 'light', 
             {picture ? file.image ? <img className="gf-sheet-art" src={file.image} alt="" width={SHEET_W} height={SHEET_H} draggable={false} /> : <ArtCanvas className="gf-sheet-art" art={file.art as ArtPreset | ArtRecipe} seed={hashString(file.name) % 997} w={SHEET_W} h={SHEET_H} density={Math.min(density, 1.25)} priority={1} /> : <span className="gf-lines" aria-hidden="true">{['86%', '92%', '64%', '88%', '42%'].map(value => <i key={value} style={{ width: value }} />)}</span>}
             <span className="gf-sheet-head"><span className="gf-sheet-name">{file.name}</span>{file.meta && <span className="gf-sheet-meta">{file.meta}</span>}</span>
           </>
-          const common = { className: `gf-sheet${picture ? ' gf-sheet--art' : ''}${id === dropped ? ' gf-sheet--drop' : ''}`, style: { '--gf-slot': fanSlot(v, visible.length), '--gf-depth': visible.length - 1 - v, '--gf-jx': `${((jitter() - .5) * 10).toFixed(2)}px`, '--gf-jr': `${((jitter() - .5) * 3.2).toFixed(2)}deg`, zIndex: v + 1 } as React.CSSProperties, onAnimationEnd: id === dropped ? () => setDropped(null) : undefined }
-          return <div key={id} role="listitem" className="gf-sheet-slot">{file.href ? <a {...common} href={file.href} onClick={() => onFileSelect?.(file, start + v)}>{inner}</a> : <button {...common} type="button" onClick={() => onFileSelect?.(file, start + v)}>{inner}</button>}</div>
+          const common = { className: `gf-sheet${picture ? ' gf-sheet--art' : ''}${id === dropped ? ' gf-sheet--drop' : ''}`, style: { '--gf-slot': fanSlot(v, visible.length), '--gf-depth': visible.length - 1 - v, '--gf-jx': `${((jitter() - .5) * 10).toFixed(2)}px`, '--gf-jr': `${((jitter() - .5) * 3.2).toFixed(2)}deg`, '--gf-order': v + 1 } as React.CSSProperties, onAnimationEnd: id === dropped ? () => setDropped(null) : undefined }
+          return <div key={id} role="listitem" className="gf-sheet-slot">{file.href ? <a {...common} href={file.href} aria-label={`${file.name} — ${label}`} onClick={() => onFileSelect?.(file, start + v)}>{inner}</a> : <button {...common} type="button" onClick={() => onFileSelect?.(file, start + v)}>{inner}</button>}</div>
         })}
       </div>
       {action !== 'none' && <button ref={keyRef} type="button" className={`gf-key gf-key--${action}`} aria-label={`${action === 'add' ? words.addFile : words.options}: ${label}`} aria-haspopup={action === 'more' ? 'menu' : undefined} aria-expanded={action === 'more' ? menuOpen : undefined} aria-controls={action === 'more' ? `gf-menu-${uid}` : undefined} onClick={() => action === 'add' ? addFile() : setMenuOpen(value => !value)}>

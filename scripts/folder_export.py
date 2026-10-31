@@ -20,8 +20,8 @@ def render_service_folders(items,t,url,prefix,locale):
   out+=f'<div class="gf-files" id="{uid}-files" role="list" aria-label="{title}: {e(t["folderContents"])}" inert>'
   for j,(name,path) in enumerate(files):
    slot=j-1;depth=2-j
-   out+=f'<div role="listitem" class="gf-sheet-slot"><a class="gf-sheet" href="{e(url(path))}" style="--gf-slot:{slot};--gf-depth:{depth};--gf-jx:{j-1}px;--gf-jr:{(j-1)*.7}deg;z-index:{j+1}"><span class="gf-lines" aria-hidden="true">'+''.join(f'<i style="width:{w}%"></i>' for w in [86,92,64,88,42])+f'</span><span class="gf-sheet-head"><span class="gf-sheet-name">{e(name)}</span></span></a></div>'
-  out+=f'</div></div></div></div></div><div class="service-folder-copy"><h3><a class="service-title-link" href="{e(url(item["path"]))}">{title}</a></h3><p>{e(item["text"])}</p></div></article>'
+   out+=f'<div role="listitem" class="gf-sheet-slot"><a class="gf-sheet" href="{e(url(path))}" aria-label="{e(name)} — {title}" style="--gf-slot:{slot};--gf-depth:{depth};--gf-jx:{j-1}px;--gf-jr:{(j-1)*.7}deg;--gf-order:{j+1}"><span class="gf-lines" aria-hidden="true">'+''.join(f'<i style="width:{w}%"></i>' for w in [86,92,64,88,42])+f'</span><span class="gf-sheet-head"><span class="gf-sheet-name">{e(name)}</span></span></a></div>'
+  out+=f'</div></div></div></div></div><div class="service-folder-copy"><h3>{title}</h3><p>{e(item["text"])}</p></div></article>'
  return out+'</div>'
 
 RUNTIME=r'''
@@ -60,6 +60,7 @@ roots.forEach(root=>{
  const resize=()=>{const width=Math.max(1,Math.min(window.innerWidth<=760?260:340,root.parentElement.clientWidth));const k=width/340;root.style.width=width+'px';root.style.height=326*k+'px';root.querySelector('.gf-stage').style.transform='translateY('+(54*k)+'px) scale('+k+')';};
  resize();if(typeof ResizeObserver!=='undefined')new ResizeObserver(resize).observe(root.parentElement);else window.addEventListener('resize',resize);
  root.querySelector('.gf-hit').addEventListener('click',()=>setOpen(root,!root.hasAttribute('data-open')));
+ mountFolderHover(root,open=>setOpen(root,open));
  root.addEventListener('keydown',event=>{if(event.key==='Escape'&&root.hasAttribute('data-open')){event.stopPropagation();setOpen(root,false,true);}});
  let raf=0,px=0,py=0;
  const write=()=>{raf=0;root.style.setProperty('--gf-px',px.toFixed(3));root.style.setProperty('--gf-py',py.toFixed(3));};
@@ -75,4 +76,5 @@ if(typeof IntersectionObserver!=='undefined'){
 
 def runtime(root:Path):
  source=(root/'lib/folder-art.js').read_text().replace('export ','')
- return '\n;(function(){\n'+source+'\n'+RUNTIME+'\n})();\n'
+ hover=(root/'lib/folder-hover.js').read_text().replace('export ','')
+ return '\n;(function(){\n'+source+'\n'+hover+'\n'+RUNTIME+'\n})();\n'

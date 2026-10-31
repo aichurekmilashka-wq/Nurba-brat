@@ -17,10 +17,11 @@ canvas.gf-art{opacity:0;filter:blur(14px) saturate(.6)}canvas.gf-art[data-ready]
 .gf-root[data-tone=dark] .gf-back-rim path{stroke:#ffffff29}
 .gf-files{position:absolute;inset:0;z-index:5;pointer-events:none;clip-path:inset(-400px -400px 10px -400px)}
 .gf-sheet-slot{display:contents}
+.gf-sheet{z-index:var(--gf-order,1)}
 .gf-sheet{all:unset;box-sizing:border-box;position:absolute;left:34px;top:96px;width:272px;height:184px;border-radius:16px;overflow:hidden;cursor:pointer;pointer-events:auto;background:linear-gradient(180deg,#fff,#f2f2f0);box-shadow:inset 0 1px 0 #ffffffe6,0 0 0 .5px #0000001a,0 10px 26px -8px #0a0c1447;transform-origin:50% 100%;transform:translate(calc(var(--gf-jx) + var(--gf-slot)*var(--gf-spread)),calc(var(--gf-lift) + var(--gf-depth)*var(--gf-stack)*-1)) rotate(calc(var(--gf-jr) + var(--gf-slot)*var(--gf-fan)));transition:transform .75s var(--gf-spring) calc(var(--gf-depth)*40ms),box-shadow .4s var(--gf-ease),translate .9s var(--gf-ease),opacity .9s var(--gf-ease)}
 .gf-root[data-tone=dark] .gf-sheet{background:linear-gradient(180deg,#2c2c30,#1c1c1f);box-shadow:inset 0 1px 0 #ffffff24,0 0 0 .5px #ffffff14,0 12px 28px -8px #000b}
 .gf-sheet--art{background:#1a1a1d}
-.gf-root[data-open] .gf-sheet:hover,.gf-root[data-open] .gf-sheet:focus-visible{transform:translate(calc(var(--gf-jx) + var(--gf-slot)*var(--gf-spread)),calc(var(--gf-lift) + var(--gf-depth)*var(--gf-stack)*-1 - 18px)) rotate(calc(var(--gf-slot)*var(--gf-fan)*.6));box-shadow:inset 0 1px 0 #ffffffe6,0 0 0 .5px #0000001a,0 22px 40px -12px #0a0c146b;transition-delay:0s}
+.gf-root[data-open] .gf-sheet:hover,.gf-root[data-open] .gf-sheet:focus-visible{z-index:6;transform:translate(calc(var(--gf-jx) + var(--gf-slot)*var(--gf-spread)),calc(var(--gf-lift) + var(--gf-depth)*var(--gf-stack)*-1 - 18px)) rotate(calc(var(--gf-slot)*var(--gf-fan)*.6));box-shadow:inset 0 1px 0 #ffffffe6,0 0 0 .5px #0000001a,0 22px 40px -12px #0a0c146b;transition-delay:0s}
 .gf-sheet:focus-visible{outline:2px solid #9b4b5c;outline-offset:2px}
 .gf-sheet-art{position:absolute;left:0;top:0;width:272px;height:184px;max-width:none;object-fit:cover;transition:opacity .9s var(--gf-ease),filter .9s var(--gf-ease)}canvas.gf-sheet-art{opacity:0;filter:blur(10px)}canvas.gf-sheet-art[data-ready]{opacity:1;filter:none}
 .gf-sheet--art:after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(180deg,#0000006b,transparent 34%);box-shadow:inset 0 0 0 1px #ffffff33;pointer-events:none}

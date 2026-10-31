@@ -2,7 +2,7 @@ import ProjectJourney from '@/components/ui/project-journey'
 import { Component as Button7 } from "@/components/ui/button-7"
 import ThemeToggle from "@/components/theme-toggle"
 import { useEffect, useState, type FormEvent } from 'react'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Phone } from 'lucide-react'
 import source from '@/content/site.json'
 import type { Block, Card, Locale, SiteData } from '@/content/types'
 import BrandHero from '@/components/ui/hero'
@@ -102,8 +102,8 @@ export default function Website() {
   }, [locale, page, t.brandName])
   const href = (target: string) => `#/${locale}/${target}`
   return <>
+    <a className="header-contact" href={href('contacts')} aria-label={t.contactAction} title={t.contactAction}><Phone size={22} aria-hidden="true" /></a>
     <header className="site-header"><div className="shell header-inner">
-      <a className="header-contact" href={href('contacts')}>{t.contactAction}<ArrowRight size={16} aria-hidden="true" /></a>
       <DropdownNavigation locale={locale} path={path} ui={t} pages={pages} />
       <LanguageSwitcher locale={locale} path={path} languages={data.languages} />
       <ThemeToggle locale={locale} />
