@@ -12,7 +12,7 @@ function ServiceFolder({ item, index, locale, ui }: { item: Card; index: number;
   useEffect(() => {
     const element = ref.current
     if (!element) return
-    const resize = () => setWidth(Math.max(1, Math.min(340, element.clientWidth)))
+    const resize = () => setWidth(Math.max(1, Math.min(window.innerWidth <= 760 ? 260 : 340, element.clientWidth)))
     resize()
     if (typeof ResizeObserver === 'undefined') {
       window.addEventListener('resize', resize)
@@ -34,5 +34,5 @@ function ServiceFolder({ item, index, locale, ui }: { item: Card; index: number;
   </article>
 }
 export default function ServiceFolders({ items, locale, ui }: { items: Card[]; locale: Locale; ui: Record<string, string> }) {
-  return <><p className="folder-hint">{ui.folderHint}</p><div className={`folder-grid${items.length === 7 ? ' folder-grid--seven' : ''}`}>{items.map((item, index) => <ServiceFolder key={item.path} item={item} index={index} locale={locale} ui={ui} />)}</div></>
+  return <><div className={`folder-grid${items.length === 7 ? ' folder-grid--seven' : ''}`}>{items.map((item, index) => <ServiceFolder key={item.path} item={item} index={index} locale={locale} ui={ui} />)}</div></>
 }

@@ -26,3 +26,5 @@ import './styles/theme.css'
 import './styles/action-buttons.css'
 
 import './styles/shifting-dropdown.css'
+
+import './styles/mobile.css'

@@ -26,7 +26,7 @@
         "heroTitle": "Регуляторный консалтинг",
         "heroText": "Регистрация лекарств и медицинских изделий в Кыргызстане. Проверка документов, подготовка досье и сопровождение проекта.",
         "how": "Порядок работы",
-        "choose": "С чего начинается ваш проект?",
+        "choose": "Виды услуг",
         "chooseText": "Выберите задачу — посмотрите состав работы, исходные данные и следующий шаг.",
         "audiences": "Для кого этот сайт",
         "manufacturers": "Производителям",
@@ -133,8 +133,8 @@
           "blocks": [
             {
               "type": "cards",
-              "title": "С чего начинается ваш проект?",
-              "text": "Выберите задачу — посмотрите состав работы, исходные данные и следующий шаг.",
+              "title": "Виды услуг",
+              "text": "",
               "items": [
                 {
                   "title": "Регистрация лекарств",
@@ -1614,7 +1614,7 @@
         "heroTitle": "Регулятордук консалтинг",
         "heroText": "Кыргызстанда дары-дармектерди жана медициналык буюмдарды каттоо. Документтерди текшерүү, досьени даярдоо жана долбоорду коштоо.",
         "how": "Иштөө тартиби",
-        "choose": "Долбооруңуз эмнеден башталат?",
+        "choose": "Кызматтардын түрлөрү",
         "chooseText": "Милдетти тандаңыз — иштердин курамын, баштапкы маалыматтарды жана кийинки кадамды көрүңүз.",
         "audiences": "Бул сайт кимдер үчүн",
         "manufacturers": "Өндүрүүчүлөргө",
@@ -1721,8 +1721,8 @@
           "blocks": [
             {
               "type": "cards",
-              "title": "Долбооруңуз эмнеден башталат?",
-              "text": "Милдетти тандаңыз — иштердин курамын, баштапкы маалыматтарды жана кийинки кадамды көрүңүз.",
+              "title": "Кызматтардын түрлөрү",
+              "text": "",
               "items": [
                 {
                   "title": "Дары-дармектерди каттоо",
@@ -3202,7 +3202,7 @@
         "heroTitle": "Regulatory consulting",
         "heroText": "Medicine and medical device registration in Kyrgyzstan. Document review, dossier preparation and project coordination.",
         "how": "How it works",
-        "choose": "Where does your project begin?",
+        "choose": "Our services",
         "chooseText": "Choose your task to see the scope, initial information and next step.",
         "audiences": "Who this is for",
         "manufacturers": "For manufacturers",
@@ -3309,8 +3309,8 @@
           "blocks": [
             {
               "type": "cards",
-              "title": "Where does your project begin?",
-              "text": "Choose your task to see the scope, initial information and next step.",
+              "title": "Our services",
+              "text": "",
               "items": [
                 {
                   "title": "Medicine registration",
@@ -4790,7 +4790,7 @@
         "heroTitle": "Regulatorisk rådgivning",
         "heroText": "Registrering av läkemedel och medicintekniska produkter i Kirgizistan. Dokumentgranskning, sammanställning av dossier och projektsamordning.",
         "how": "Så arbetar vi",
-        "choose": "Var börjar ditt projekt?",
+        "choose": "Våra tjänster",
         "chooseText": "Välj din uppgift för att se omfattning, inledande information och nästa steg.",
         "audiences": "Vem webbplatsen riktar sig till",
         "manufacturers": "För tillverkare",
@@ -4897,8 +4897,8 @@
           "blocks": [
             {
               "type": "cards",
-              "title": "Var börjar ditt projekt?",
-              "text": "Välj din uppgift för att se omfattning, inledande information och nästa steg.",
+              "title": "Våra tjänster",
+              "text": "",
               "items": [
                 {
                   "title": "Läkemedelsregistrering",
@@ -6378,7 +6378,7 @@
         "heroTitle": "Regulatorisk rådgivning",
         "heroText": "Registrering av legemidler og medisinsk utstyr i Kirgisistan. Dokumentgjennomgang, utarbeidelse av dokumentasjon og prosjektoppfølging.",
         "how": "Slik jobber vi",
-        "choose": "Hvor begynner prosjektet ditt?",
+        "choose": "Våre tjenester",
         "chooseText": "Velg oppgave for å se omfang, innledende informasjon og neste steg.",
         "audiences": "Hvem dette er for",
         "manufacturers": "For produsenter",
@@ -6485,8 +6485,8 @@
           "blocks": [
             {
               "type": "cards",
-              "title": "Hvor begynner prosjektet ditt?",
-              "text": "Velg oppgave for å se omfang, innledende informasjon og neste steg.",
+              "title": "Våre tjenester",
+              "text": "",
               "items": [
                 {
                   "title": "Legemiddelregistrering",

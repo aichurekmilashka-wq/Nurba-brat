@@ -1,0 +1,35 @@
+/* Lightweight mobile view: compact controls, smaller folder art, no backdrop blur. */
+@media(max-width:760px) {
+ html,body { max-width:100%; }
+ .shell { padding-left:20px; padding-right:20px; }
+ .site-header { -webkit-backdrop-filter:none; backdrop-filter:none; }
+ .site-header .header-inner { min-height:80px; gap:8px; padding-left:16px; padding-right:16px; }
+ .site-header .main-menu-dropdown > .nav-trigger.button-7,
+ .site-header .language-dropdown > .language-trigger.button-7,
+ .site-header .theme-toggle.button-7 {
+  --button-7-current:48px!important;
+  width:48px; min-width:48px; max-width:48px; height:48px; padding:0;
+ }
+ .site-header .main-menu-dropdown > .button-7 .button-7-label,
+ .site-header .theme-toggle .button-7-label { display:none; }
+ .site-header .language-trigger.button-7 .button-7-label { opacity:0!important; }
+ .site-header .language-trigger.button-7 .button-7-arrow { opacity:1!important; }
+ .site-header .nav-panel { -webkit-backdrop-filter:none; backdrop-filter:none; max-width:calc(100vw - 32px); }
+ .site-header .main-menu-panel { position:fixed; top:96px; right:16px; left:auto; width:min(320px,calc(100vw - 32px)); max-height:calc(100svh - 116px); }
+ .site-header .main-menu-dropdown[open]::after { display:none; }
+ .content-section { padding-top:40px; padding-bottom:40px; }
+ .section-title { font-size:28px; line-height:1.2; }
+ .folder-grid { row-gap:32px; padding-top:8px; }
+ .folder-visual { max-width:260px; margin-left:auto; margin-right:auto; }
+ .service-folder-copy { max-width:100%; padding-left:0; padding-right:0; }
+ .service-folder-card h3 { font-size:20px; line-height:1.3; }
+ .service-folder-copy p { font-size:14px; line-height:1.65; margin-bottom:0; }
+ .gf-tilt { transform:none; }
+ .gf-front { -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px); }
+ .gf-shadow { filter:blur(12px); }
+ .gf-sheet,.gf-front { transition-duration:.35s; }
+ .nurba-glyph-hero .hero-botanical-art .botanical-bloom::before { background-image:var(--poppy-image-mobile,var(--poppy-image)); }
+ .card { padding:22px; min-width:0; }
+ .request-layout,.field,.form-bottom { min-width:0; }
+ .form-bottom { flex-wrap:wrap; }
+}

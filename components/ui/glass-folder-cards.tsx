@@ -109,7 +109,7 @@ export default function GlassFolder({ label = 'My Files', meta, tone = 'light', 
   const [menuOpen, setMenuOpen] = React.useState(false)
   const [entered, setEntered] = React.useState(!appear)
   const k = Math.max(1, width) / W
-  const density = Math.min(1.5, Math.max(1, typeof window === 'undefined' ? 1 : window.devicePixelRatio || 1)) * k
+  const density = Math.min(typeof window !== 'undefined' && window.innerWidth <= 760 ? 1 : 1.5, Math.max(1, typeof window === 'undefined' ? 1 : window.devicePixelRatio || 1)) * k
   React.useEffect(() => {
     const el = rootRef.current
     if (!appear || !el || typeof IntersectionObserver === 'undefined') { setEntered(true); return }

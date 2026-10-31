@@ -2,6 +2,7 @@
 from pathlib import Path
 from html import escape
 import json, re
+from social_metadata import social_metadata
 
 ROOT=Path(__file__).resolve().parent.parent
 LANGS=['ru','ky','en','sv','nb']
@@ -28,7 +29,7 @@ tr('request','Оценить проект','Долбоорду баалоо','As
 tr('heroTitle','Регуляторный консалтинг','Регулятордук консалтинг','Regulatory consulting','Regulatorisk rådgivning','Regulatorisk rådgivning')
 tr('heroText','Регистрация лекарств и медицинских изделий в Кыргызстане. Проверка документов, подготовка досье и сопровождение проекта.','Кыргызстанда дары-дармектерди жана медициналык буюмдарды каттоо. Документтерди текшерүү, досьени даярдоо жана долбоорду коштоо.','Medicine and medical device registration in Kyrgyzstan. Document review, dossier preparation and project coordination.','Registrering av läkemedel och medicintekniska produkter i Kirgizistan. Dokumentgranskning, sammanställning av dossier och projektsamordning.','Registrering av legemidler og medisinsk utstyr i Kirgisistan. Dokumentgjennomgang, utarbeidelse av dokumentasjon og prosjektoppfølging.')
 tr('how','Порядок работы','Иштөө тартиби','How it works','Så arbetar vi','Slik jobber vi')
-tr('choose','С чего начинается ваш проект?','Долбооруңуз эмнеден башталат?','Where does your project begin?','Var börjar ditt projekt?','Hvor begynner prosjektet ditt?')
+tr('choose','Виды услуг','Кызматтардын түрлөрү','Our services','Våra tjänster','Våre tjenester')
 tr('chooseText','Выберите задачу — посмотрите состав работы, исходные данные и следующий шаг.','Милдетти тандаңыз — иштердин курамын, баштапкы маалыматтарды жана кийинки кадамды көрүңүз.','Choose your task to see the scope, initial information and next step.','Välj din uppgift för att se omfattning, inledande information och nästa steg.','Velg oppgave for å se omfang, innledende informasjon og neste steg.')
 tr('audiences','Для кого этот сайт','Бул сайт кимдер үчүн','Who this is for','Vem webbplatsen riktar sig till','Hvem dette er for')
 tr('manufacturers','Производителям','Өндүрүүчүлөргө','For manufacturers','För tillverkare','For produsenter')
@@ -143,7 +144,7 @@ def build_pages(t):
  knowledge_cards=[card('startGuide','guideText','knowledge/initial-assessment'),card('checklist','checklistText','knowledge/checklist')]
  pages={}
  def page(path,title,lead,blocks):pages[path]={'title':t[title],'lead':t.get(lead,''),'blocks':blocks}
- page('','heroTitle','heroText',[cards('choose',service_cards,'chooseText'),steps,costs,cards('projects',[card('projects','projectsEmpty','projects'),card('team','teamEmpty','about/team')]),block('international','internationalText'),cards('knowledge',knowledge_cards),faq,form])
+ page('','heroTitle','heroText',[cards('choose',service_cards),steps,costs,cards('projects',[card('projects','projectsEmpty','projects'),card('team','teamEmpty','about/team')]),block('international','internationalText'),cards('knowledge',knowledge_cards),faq,form])
  page('services','services','chooseText',[cards('allServices',service_cards)])
  for slug,k in SERVICES:
   page('services/'+slug,k,k+'Text',[block('scope',k+'Text'),block('inputs','inputsText'),block('outputs','outputsText'),steps,block('responsibility','responsibilityText'),block('timeline','timelineText'),costs,cards('team',[card('team','teamEmpty','about/team')]),faq,form])
@@ -178,7 +179,7 @@ print('Content model:',len(DATA['locales']['ru']['pages']),'pages ×',len(LANGS)
 import os
 from html.parser import HTMLParser
 from folder_export import render_service_folders, runtime as folder_runtime
-CSS=(ROOT/'styles/site.css').read_text()+'\n'+(ROOT/'styles/glass-folder.css').read_text()+'\n'+(ROOT/'styles/brand.css').read_text()+'\n'+(ROOT/'styles/hero-editorial.css').read_text()+'\n'+(ROOT/'styles/liquid-glass-button.css').read_text()+'\n'+(ROOT/'styles/glyph-portal.css').read_text()+'\n'+(ROOT/'styles/button-7.css').read_text()+'\n'+(ROOT/'styles/theme.css').read_text()+'\n'+(ROOT/'styles/action-buttons.css').read_text()+'\n'+(ROOT/'styles/shifting-dropdown.css').read_text()
+CSS=(ROOT/'styles/site.css').read_text()+'\n'+(ROOT/'styles/glass-folder.css').read_text()+'\n'+(ROOT/'styles/brand.css').read_text()+'\n'+(ROOT/'styles/hero-editorial.css').read_text()+'\n'+(ROOT/'styles/liquid-glass-button.css').read_text()+'\n'+(ROOT/'styles/glyph-portal.css').read_text()+'\n'+(ROOT/'styles/button-7.css').read_text()+'\n'+(ROOT/'styles/theme.css').read_text()+'\n'+(ROOT/'styles/action-buttons.css').read_text()+'\n'+(ROOT/'styles/shifting-dropdown.css').read_text()+'\n'+(ROOT/'styles/mobile.css').read_text()
 EXPORT=ROOT/'prototype'
 NAV=[('services','services'),('pricing','pricing'),('projects','projects'),('knowledge','knowledge'),('about','about'),('contacts','contacts')]
 FOOTER=[['services','pricing','how-we-work','projects','faq'],['for-manufacturers','for-importers','for-partners','knowledge','knowledge/documents'],['about','about/team','about/editorial-policy','contacts','request']]
@@ -246,7 +247,8 @@ def render(lang,path,destination):
   for i in (1,3,4,6):
    asset=f'poppy-blossom-{i}.png'
    flower_url=os.path.relpath(ROOT/'public/assets'/asset,destination.parent).replace(os.sep,'/')
-   blooms+=f'<span class="botanical-bloom bloom-{i}" style="--poppy-image:url({escape(flower_url,quote=True)})"></span>' 
+   mobile_url=os.path.relpath(ROOT/'public/assets'/f'poppy-blossom-{i}-mobile.png',destination.parent).replace(os.sep,'/')
+   blooms+=f'<span class="botanical-bloom bloom-{i}" style="--poppy-image:url({escape(flower_url,quote=True)});--poppy-image-mobile:url({escape(mobile_url,quote=True)})"></span>' 
   heading=f'''<section id="gp-home" class="glyph-portal nurba-glyph-hero" data-gp-word="Nurba" data-gp-typography="true" aria-label="Nurba" style="--gp-paper:#fff;--gp-ink:#000;--gp-field:#fff"><div data-gp-viewport aria-hidden="true"></div><div data-gp-pin><div data-gp-field aria-hidden="true" inert><div class="hero-botanical-art">{blooms}</div></div><svg data-gp-art aria-hidden="true" focusable="false"><text data-gp-glyph x="0" y="0" style="font-family:'Glyph Portal Jakarta',Arial,sans-serif;font-size:100px;font-weight:700;font-kerning:none;font-variant-ligatures:none;letter-spacing:0">Nurba</text><g data-gp-marks style="visibility:hidden"><path/></g></svg><div data-gp-front><h1 id="hero-title">{escape(p["title"])}</h1></div><span data-gp-fallback aria-hidden="true" style="font-family:'Glyph Portal Jakarta',Arial,sans-serif;font-weight:700">Nurba</span></div></section>'''
  else:heading=f'<div class="page-heading"><div class="shell"><nav class="breadcrumbs" aria-label="{escape(t["home"],quote=True)}">{a("",t["home"])}<span aria-hidden="true">/</span><span>{escape(p["title"])}</span></nav><h1>{escape(p["title"])}</h1>'+ (f'<p>{escape(p["lead"])}</p>' if p['lead'] else '')+'</div></div>'
  def expanding_control(match):
@@ -303,8 +305,9 @@ def render(lang,path,destination):
   script+='\n;(function(){\n'+(ROOT/'lib/glyph-portal.js').read_text().replace('export ','')+'\nmountGlyphPortal(document.querySelector(\'.nurba-glyph-hero\'),{typographyOnly:true,interactive:false});\n})();'
  script+='\n;(function(){\n'+(ROOT/'lib/scroll-reveal.js').read_text().replace('export ','')+'\nmountScrollReveal();\n})();'
  alternates=''.join(f'<link rel="alternate" hreflang="{other}" href="{escape(url(path,other),quote=True)}">' for other in LANGS)
+ social=social_metadata(lang,path,p['title'],p['lead'] or p['title'])
  theme_boot='<script>(function(){var t="light";try{var s=localStorage.getItem("nurba-theme");if(s==="dark"||s==="light")t=s}catch(e){}document.documentElement.classList.toggle("dark",t==="dark");document.documentElement.dataset.theme=t})();</script>'
- return '<!doctype html>\n'+f'<html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="description" content="{escape(p["lead"] or p["title"],quote=True)}"><title>{escape(p["title"])} | {escape(t["brandName"])}</title>{alternates}{theme_boot}<style>{CSS}</style></head><body>{header}<main id="main">{snake_rail}{heading}{"".join(blocks)}</main>{footer}<script>{script}</script></body></html>'
+ return '<!doctype html>\n'+f'<html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="description" content="{escape(p["lead"] or p["title"],quote=True)}"><title>{escape(p["title"])} | {escape(t["brandName"])}</title>{alternates}{social}{theme_boot}<style>{CSS}</style></head><body>{header}<main id="main">{snake_rail}{heading}{"".join(blocks)}</main>{footer}<script>{script}</script></body></html>'
 
 for lang in LANGS:
  for path in DATA['locales'][lang]['pages']:

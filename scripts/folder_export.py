@@ -10,7 +10,7 @@ FRONT='M0 22A22 22 0 0 1 22 0L118 0C144 0 146 32 172 32L318 32A22 22 0 0 1 340 5
 PRESETS=['glacier','aurora','dusk','ember','verdant','glacier','aurora']
 def render_service_folders(items,t,url,prefix,locale):
  e=lambda value:escape(str(value),quote=True)
- out=f'<p class="folder-hint">{e(t["folderHint"])}</p><div class="folder-grid'+(' folder-grid--seven' if len(items)==7 else '')+'">'
+ out='<div class="folder-grid'+(' folder-grid--seven' if len(items)==7 else '')+'">'
  for i,item in enumerate(items):
   uid=f'{prefix}-{i}';title=e(item['title']);art=PRESETS[i%len(PRESETS)];tone='dark' if i in [3,4] else 'light';meta=e('3 '+t['folderItems'])
   files=[(file['name'][locale],item['path']) for file in SERVICE_FILES[item['path']]]
@@ -46,8 +46,8 @@ function pump(){
 }
 function paint(root){
  const canvas=root.querySelector('canvas.gf-art');if(!canvas)return;
- const preset=root.dataset.art,seed=Number(root.dataset.seed),key=preset+':'+seed;
- if(!cache.has(key))cache.set(key,new Promise(done=>{queue.push({job:createArtJob(364,296,ART_PRESETS[preset],seed),done});pump();}));
+ const preset=root.dataset.art,seed=Number(root.dataset.seed),quality=window.innerWidth<=760?.72:1,key=preset+':'+seed+':'+quality;
+ if(!cache.has(key))cache.set(key,new Promise(done=>{queue.push({job:createArtJob(Math.round(364*quality),Math.round(296*quality),ART_PRESETS[preset],seed),done});pump();}));
  cache.get(key).then(source=>{canvas.width=source.width;canvas.height=source.height;const context=canvas.getContext('2d');if(context){context.drawImage(source,0,0);canvas.dataset.ready='true';}});
 }
 function setOpen(root,open,restoreFocus=false){
@@ -57,7 +57,7 @@ function setOpen(root,open,restoreFocus=false){
  if(restoreFocus)button.focus();
 }
 roots.forEach(root=>{
- const resize=()=>{const width=Math.max(1,Math.min(340,root.parentElement.clientWidth));const k=width/340;root.style.width=width+'px';root.style.height=326*k+'px';root.querySelector('.gf-stage').style.transform='translateY('+(54*k)+'px) scale('+k+')';};
+ const resize=()=>{const width=Math.max(1,Math.min(window.innerWidth<=760?260:340,root.parentElement.clientWidth));const k=width/340;root.style.width=width+'px';root.style.height=326*k+'px';root.querySelector('.gf-stage').style.transform='translateY('+(54*k)+'px) scale('+k+')';};
  resize();if(typeof ResizeObserver!=='undefined')new ResizeObserver(resize).observe(root.parentElement);else window.addEventListener('resize',resize);
  root.querySelector('.gf-hit').addEventListener('click',()=>setOpen(root,!root.hasAttribute('data-open')));
  root.addEventListener('keydown',event=>{if(event.key==='Escape'&&root.hasAttribute('data-open')){event.stopPropagation();setOpen(root,false,true);}});
