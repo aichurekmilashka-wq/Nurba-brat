@@ -1,0 +1,255 @@
+/* One coherent opening: centered type, full-width botanical artwork, compact signature. */
+.hero-editorial { min-height: 0; display: block; overflow: hidden; background: #fff; }
+.hero-editorial .hero-inner { position: relative; padding-top: 48px; padding-bottom: 30px; }
+.hero-editorial .hero-grid { display: flex; flex-direction: column; gap: 20px; }
+.hero-editorial .hero-copy { width: 100%; max-width: 1020px; padding: 0; margin: 0 auto; text-align: center; }
+.hero-editorial .eyebrow { justify-content: center; font-size: 11px; letter-spacing: .8px; }
+.hero-editorial h1 { width: 100%; max-width: 1020px; margin: 22px auto; font-size: clamp(38px,5.7vw,78px); font-weight: 400; line-height: 1.08; letter-spacing: -.045em; color: #352a2d; text-shadow: none; }
+.hero-editorial .hero-copy > p { max-width: 650px; margin: 0 auto 26px; font-size: 16px; line-height: 1.8; color: #706169; text-shadow: none; }
+.hero-editorial .hero-actions { justify-content: center; gap: 12px; }
+.hero-editorial .hero-brand-visual { position: relative; display: block; width: calc(100% + 112px); max-width: none; height: auto; min-height: 0; padding: 0; margin: 0 -56px; overflow: visible; background: none; transform: translate3d(var(--hero-x,0px),var(--hero-y,0px),0); transition: transform 1s cubic-bezier(.2,.8,.2,1); }
+.hero-editorial .hero-poppies { position: relative; inset: auto; display: block; width: 100%; height: auto; max-width: none; aspect-ratio: 1983/793; object-fit: contain; object-position: center; opacity: 1; z-index: auto; border: 0; border-radius: 0; box-shadow: none; pointer-events: none; }
+.hero-editorial .hero-bottom { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 20px; width: 100%; margin: 10px 0 0; padding: 0; border: 0; font-size: 11px; color: #7c6870; }
+.hero-editorial .hero-logo-frame { position: relative; inset: auto; width: 180px; max-width: 180px; aspect-ratio: 3; margin: 0; }
+.hero-editorial .hero-bottom > .hero-logo-frame { display: block; }
+@media(prefers-reduced-motion:no-preference) {
+  .hero-editorial .eyebrow { animation: editorial-arrive .7s both; }
+  .hero-editorial h1 { animation: editorial-arrive .8s .08s both; }
+  .hero-editorial .hero-copy > p { animation: editorial-arrive .8s .16s both; }
+  .hero-editorial .hero-actions { animation: editorial-arrive .8s .24s both; }
+  .hero-editorial .hero-poppies { animation: petals-arrive 1.2s .12s both, petals-breathe 15s 1.4s ease-in-out infinite; }
+  .hero-editorial[data-hero-paused] .hero-poppies { animation-play-state: paused; }
+}
+@keyframes editorial-arrive { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@keyframes petals-arrive { from { opacity: 0; filter: blur(5px); } to { opacity: 1; filter: none; } }
+@keyframes petals-breathe { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@media(max-width:1250px) {
+  .hero-editorial .hero-brand-visual { width: calc(100% + 72px); margin-left: -36px; margin-right: -36px; }
+}
+@media(max-width:760px) {
+  .hero-editorial .hero-inner { padding-top: 32px; padding-bottom: 22px; }
+  .hero-editorial .hero-grid { gap: 24px; }
+  .hero-editorial .hero-copy { width: 100%; padding: 0; }
+  .hero-editorial h1 { font-size: clamp(36px,9vw,58px); line-height: 1.13; letter-spacing: -.035em; margin-top: 20px; }
+  .hero-editorial .hero-copy > p { font-size: 15px; line-height: 1.75; }
+  .hero-editorial .hero-brand-visual { width: calc(100% + 48px); margin: 0 -24px; }
+  .hero-editorial .hero-poppies { position: relative; width: 100%; height: auto; opacity: 1; object-position: center; }
+  .hero-editorial .hero-bottom { width: 100%; margin-top: 16px; }
+  .hero-editorial .hero-logo-frame { width: 145px; max-width: 145px; }
+}
+@media(max-width:380px) {
+  .hero-editorial .hero-brand-visual { width: calc(100% + 40px); margin: 0 -20px; }
+  .hero-editorial .hero-bottom { flex-wrap: wrap; justify-content: center; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .hero-editorial *, .hero-editorial .hero-brand-visual { animation: none !important; transition: none !important; transform: none !important; }
+}
+
+/* The wordmark replaces the geographic eyebrow as the hero's leading element. */
+.hero-editorial .hero-copy .hero-brand-heading { position: relative; inset: auto; display: block; width: min(420px,72vw); max-width: 420px; aspect-ratio: 3; margin: 0 auto 25px; background: #a00810; isolation: isolate; }
+.hero-editorial .hero-brand-heading img { display: block; position: static; width: 100%; height: 100%; object-fit: contain; filter: grayscale(1) contrast(3) invert(1); mix-blend-mode: screen; }
+@media(prefers-reduced-motion:no-preference) { .hero-editorial .hero-brand-heading { animation: editorial-arrive .8s both; } }
+@media(max-width:760px) { .hero-editorial .hero-copy .hero-brand-heading { width: min(310px,82vw); margin-bottom: 22px; } }
+
+/* Flowers follow the client's marked positions, leaving the centre unobstructed. */
+.hero-botanical { position: relative; isolation: isolate; display: flex; align-items: center; min-height: 740px; }
+.hero-botanical .hero-inner { position: relative; z-index: 1; width: 100%; padding-top: 42px; padding-bottom: 42px; }
+.hero-botanical .hero-grid { display: block; }
+.hero-botanical .hero-copy { width: 100%; max-width: 720px; }
+.hero-botanical .hero-copy .hero-brand-heading { width: min(440px,70vw); max-width: 440px; margin-bottom: 22px; aspect-ratio: 3; background: transparent; }
+.hero-botanical .hero-brand-heading img { filter: none; mix-blend-mode: normal; image-rendering: auto; }
+.hero-botanical h1 { font-family: "PT Serif", Georgia, serif; font-size: clamp(25px,2.85vw,39px); font-weight: 400; line-height: 1.25; letter-spacing: -.015em; color: #927026; text-shadow: 0 0 14px #d7b45445, 0 1px 1px #f4e9c4; margin: 18px auto 22px; }
+.hero-botanical .hero-copy > p { max-width: 570px; font-size: 15px; line-height: 1.8; margin-bottom: 25px; }
+.hero-botanical .hero-bottom { max-width: 720px; margin: 34px auto 0; justify-content: center; }
+.hero-botanical-art { position: absolute; inset: 0; z-index: 0; pointer-events: none; transform: translate3d(var(--hero-x,0px),var(--hero-y,0px),0); transition: transform 1.2s ease; }
+.botanical-bloom { position: absolute; display: block; width: clamp(140px,17vw,240px); aspect-ratio: 1; background-image: var(--poppy-atlas); background-repeat: no-repeat; background-size: 300% 300%; transform: rotate(var(--bloom-rotation,0deg)); }
+.bloom-1 { left: 10%; top: 0; width: clamp(150px,17vw,245px); background-position: 0 0; --bloom-rotation: -22deg; }
+.bloom-2 { left: -2%; top: 31%; width: clamp(130px,15vw,210px); background-position: 50% 0; --bloom-rotation: 12deg; }
+.bloom-3 { left: 8%; bottom: 2%; width: clamp(160px,20vw,280px); background-position: 100% 0; --bloom-rotation: -15deg; }
+.bloom-4 { right: -1%; top: 0; background-position: 0 50%; --bloom-rotation: 20deg; }
+.bloom-5 { right: -1%; top: 37%; width: clamp(140px,16vw,230px); background-position: 50% 50%; --bloom-rotation: -12deg; }
+.bloom-6 { right: 10%; bottom: 1%; width: clamp(160px,19vw,270px); background-position: 100% 50%; --bloom-rotation: -28deg; }
+.bloom-7 { left: 44%; bottom: -2%; width: clamp(120px,14vw,195px); background-position: 0 100%; --bloom-rotation: 8deg; }
+@media(prefers-reduced-motion:no-preference) {
+  .botanical-bloom { animation: botanical-sway 13s ease-in-out infinite; }
+  .bloom-2,.bloom-5 { animation-delay: -4s; }
+  .bloom-3,.bloom-6 { animation-delay: -8s; }
+  .hero-botanical[data-hero-paused] .botanical-bloom { animation-play-state: paused; }
+}
+@keyframes botanical-sway { 0%,100% { transform: translateY(0) rotate(var(--bloom-rotation)); } 50% { transform: translateY(-6px) rotate(calc(var(--bloom-rotation) + 2deg)); } }
+@media(max-width:1100px) and (min-width:761px) {
+  .hero-botanical .hero-copy { max-width: 620px; }
+  .hero-botanical .hero-copy > p { max-width: 460px; }
+  .bloom-1 { left: 2%; }
+  .bloom-3 { left: 1%; }
+  .bloom-6 { right: 1%; }
+}
+@media(max-width:760px) {
+  .hero-botanical { min-height: 0; flex-direction: column; }
+  .hero-botanical .hero-inner { order: 1; padding-top: 22px; padding-bottom: 20px; }
+  .hero-botanical .hero-copy .hero-brand-heading { width: min(330px,82vw); margin-bottom: 15px; }
+  .hero-botanical h1 { font-size: clamp(24px,5vw,30px); margin-top: 12px; }
+  .hero-botanical .hero-copy > p { font-size: 14px; }
+  .hero-botanical-art { position: relative; inset: auto; order: 2; display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); width: calc(100% - 32px); gap: 0; margin: 0 auto 20px; transform: none; }
+  .hero-botanical-art .botanical-bloom { position: relative; inset: auto; width: 100%; max-width: 120px; margin: auto; }
+  .hero-botanical .hero-bottom { margin-top: 24px; }
+}
+@media(prefers-reduced-motion:reduce) { .hero-botanical-art,.botanical-bloom { animation: none !important; transition: none !important; } }
+
+/* Quiet botanical framing: smaller flowers, softened colour, no drawn extensions. */
+.hero-botanical-art .botanical-bloom { scale: .72; filter: none; opacity: 1; }
+.bloom-1 { left: 5%; }
+.bloom-3 { left: 3%; }
+.bloom-6 { right: 4%; }
+.bloom-7 { bottom: -7%; }
+@media(max-width:760px) {
+  .hero-botanical-art .botanical-bloom { scale: .85; }
+}
+
+/* Two larger blooms balance the smaller pair on the opposite diagonal. */
+.hero-botanical-art .bloom-1,
+.hero-botanical-art .bloom-6 { scale: 1.3; }
+@media(max-width:760px) {
+  .hero-botanical-art .bloom-1,
+  .hero-botanical-art .bloom-6 { scale: 1.3; }
+}
+
+/* Each bloom is now a whole raster flower and stalk, not a drawn extension. */
+.hero-botanical-art .botanical-bloom { background-image: none; }
+.botanical-bloom::before { content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 300%; pointer-events: none; background-image: var(--poppy-atlas); background-repeat: no-repeat; background-size: 400% 100%; }
+.bloom-1::before { background-position: 0 0; }
+.bloom-3::before { background-position: 33.333333% 0; }
+.bloom-4::before { background-position: 66.666667% 0; }
+.bloom-6::before { background-position: 100% 0; }
+@media(max-width:760px) {
+ .hero-botanical-art { overflow: hidden; padding-bottom: 65px; }
+}
+
+/* Glossy transparent pill buttons for both hero actions. */
+.hero-botanical .hero-actions .button,
+.site-header .nav-trigger,
+.site-header .header-cta {
+ position: relative;
+ overflow: hidden;
+ border-radius: 999px;
+ padding: 17px 28px;
+ color: #931b2c;
+ border: 1px solid rgba(173,94,111,.22);
+ background: linear-gradient(165deg,rgba(255,255,255,.62) 0%,rgba(255,255,255,.10) 46%,rgba(222,192,202,.13) 100%);
+ -webkit-backdrop-filter: blur(18px) saturate(1.35);
+ backdrop-filter: blur(18px) saturate(1.35);
+ box-shadow: inset 0 1px 1px rgba(255,255,255,.95), inset 0 -1px 2px rgba(157,92,112,.10), 0 6px 22px rgba(114,53,73,.06);
+ transition: background .25s ease, box-shadow .25s ease, transform .25s ease;
+}
+.hero-botanical .hero-actions .button::before,
+.site-header .nav-trigger::before,
+.site-header .header-cta::before {
+ content: "";
+ position: absolute;
+ top: 2px;
+ left: 13%;
+ width: 74%;
+ height: 42%;
+ border-radius: 999px;
+ background: linear-gradient(180deg,rgba(255,255,255,.85),rgba(255,255,255,0));
+ pointer-events: none;
+}
+.hero-botanical .hero-actions .button:hover,
+.site-header .nav-trigger:hover,
+.site-header .header-cta:hover {
+ color: #831326;
+ background: linear-gradient(165deg,rgba(255,255,255,.76),rgba(255,255,255,.22) 48%,rgba(222,192,202,.20));
+ box-shadow: inset 0 1px 1px #fff, inset 0 -1px 2px rgba(157,92,112,.12), 0 9px 25px rgba(114,53,73,.10);
+ transform: translateY(-2px);
+}
+.hero-botanical .hero-actions .button:focus-visible,
+.site-header .nav-trigger:focus-visible,
+.site-header .header-cta:focus-visible { outline: 2px solid #931b2c; outline-offset: 4px; }
+.hero-botanical .hero-actions .button:active,
+.site-header .nav-trigger:active,
+.site-header .header-cta:active { transform: translateY(0); }
+
+/* Compact glass pills in the hero and the three-control header. */
+.hero-botanical .hero-actions .button { padding: 12px 23px; font-size: 13px; min-height: 44px; }
+.site-header .nav-trigger,
+.site-header .language-trigger,
+.site-header .header-cta { border-radius: 999px; min-height: 42px; padding: 10px 19px; font-size: 13px; }
+.site-header .main-menu-dropdown > .nav-trigger { min-width: 112px; }
+.site-header .language-trigger { min-width: 112px; }
+@media(max-width:480px) {
+ .site-header .nav-trigger,
+ .site-header .language-trigger,
+ .site-header .header-cta { padding: 9px 13px; font-size: 12px; min-height: 40px; }
+ .site-header .main-menu-dropdown > .nav-trigger,
+ .site-header .language-trigger { min-width: 96px; }
+}
+
+
+/* Refined editorial typography for the approved direction. */
+.hero-botanical .hero-copy {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ max-width: 720px;
+}
+.hero-botanical .hero-copy .hero-brand-heading {
+ width: min(390px,70vw);
+ max-width: 390px;
+ margin: 0 auto 19px;
+}
+.hero-botanical h1 {
+ font-family: Baskerville, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+ font-size: clamp(28px,2.65vw,36px);
+ font-weight: 400;
+ line-height: 1.25;
+ letter-spacing: -.025em;
+ text-wrap: balance;
+ margin: 0 auto 23px;
+ color: #927026;
+ text-shadow: 0 0 14px rgba(215,180,84,.12);
+}
+.hero-botanical .hero-copy > p {
+ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+ max-width: 525px;
+ font-size: 14px;
+ font-weight: 400;
+ line-height: 1.85;
+ letter-spacing: .01em;
+ text-wrap: pretty;
+ color: #746c6e;
+ margin: 0 auto 29px;
+}
+.hero-botanical .hero-actions { justify-content: center; gap: 12px; }
+.hero-botanical .hero-bottom { margin-top: 30px; font-size: 10px; letter-spacing: .08em; }
+@media(min-width:761px) { .hero-botanical .hero-inner { top: -15px; } }
+@media(max-width:760px) {
+ .hero-botanical .hero-copy .hero-brand-heading { width: min(310px,78vw); margin-bottom: 17px; }
+ .hero-botanical h1 { font-size: clamp(25px,5.7vw,30px); margin-bottom: 18px; }
+ .hero-botanical .hero-copy > p { max-width: 440px; font-size: 14px; margin-bottom: 24px; }
+ .hero-botanical .hero-bottom { margin-top: 23px; }
+}
+
+/* Red-on-white signature follows the supplied three-line artwork. */
+.hero-botanical .hero-copy .hero-brand-heading { width: min(470px,76vw); max-width: 470px; aspect-ratio: 1942 / 809; margin-bottom: 20px; }
+.hero-botanical .hero-brand-heading img { filter: none; mix-blend-mode: multiply; }
+@media(max-width:760px) { .hero-botanical .hero-copy .hero-brand-heading { width: min(350px,86vw); margin-bottom: 18px; } }
+
+.hero-botanical .hero-copy .hero-brand-heading { aspect-ratio: 3; }
+
+/* Separate clean cutout prevents neighbouring atlas petals from appearing. */
+.bloom-3::before { background-image: var(--poppy-clean); background-size: 100% 100%; background-position: center top; }
+
+/* Independent flower cutouts: no neighbouring fragments and no movement. */
+.hero-botanical-art { transform: none !important; transition: none !important; }
+.hero-botanical-art .botanical-bloom {
+ animation: none !important;
+ transition: none !important;
+ transform: rotate(var(--bloom-rotation,0deg));
+}
+.hero-botanical-art .botanical-bloom::before {
+ background-image: var(--poppy-image);
+ background-size: 100% 100%;
+ background-position: center top;
+ animation: none !important;
+ transition: none !important;
+}

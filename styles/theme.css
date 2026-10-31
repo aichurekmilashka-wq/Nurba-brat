@@ -1,0 +1,57 @@
+/* Right-aligned header controls and a persistent, unfiltered dark palette. */
+.site-header .header-inner { max-width:none; justify-content:flex-end; flex-wrap:nowrap; gap:12px; padding-left:clamp(16px,4vw,56px); padding-right:clamp(16px,4vw,56px); }
+.site-header .site-nav { order:0; }
+.site-header .language-switcher { order:1; }
+.site-header .theme-toggle { order:2; flex:none; }
+.site-header .main-menu-panel,.site-header .language-panel { right:0; left:auto; transform:none; max-width:calc(100vw - 32px); }
+:root.dark { color-scheme:dark; --ink:#f2f0ef; --muted:#b5afb2; --line:#353137; --background:#111214; --foreground:#f2f0ef; --card:#1a1b1e; --card-foreground:#f2f0ef; background:#111214; color:#f2f0ef; }
+.dark body { background:#111214; color:#f2f0ef; }
+.dark .site-header { background:#111214; color:#f2f0ef; border-color:#353137; -webkit-backdrop-filter:none; backdrop-filter:none; }
+.dark .nurba-glyph-hero { --gp-paper:#111214; --gp-ink:#f4f1ef; --gp-field:#111214; background:#111214; }
+.dark .nurba-glyph-hero [data-gp-field] { background:#111214; }
+.dark .nurba-glyph-hero h1 { color:#f4f1ef; }
+.dark .content-section { background:#111214; border-color:#353137; }
+.dark .content-section:nth-child(even),.dark .page-heading { background:#17181b; }
+.dark h1,.dark h2,.dark h3,.dark .section-head { color:#f2f0ef; }
+.dark .section-lead,.dark .body-copy,.dark .page-heading p,.dark .card p,.dark .steps p,.dark .faq-list p { color:#b5afb2; }
+.dark .card,.dark .steps li,.dark .faq-list details { background:#1c1d20; border-color:#3b353a; color:#f2f0ef; }
+.dark .card:hover { border-color:#9a7c85; }
+.dark .card-link,.dark .service-folder-link,.dark .text-link { color:#edacb7; }
+.dark .nav-panel { background:#1c1d20; border-color:#444047; color:#f4f1ef; box-shadow:0 18px 50px #0005; -webkit-backdrop-filter:none; backdrop-filter:none; }
+.dark .nav-panel a,.dark .nav-group-trigger,.dark .site-nav a { color:#eee9eb; }
+.dark .nav-panel a:hover,.dark .nav-group-trigger:hover { background:#303035; color:#fff; }
+.dark .nav-panel a[aria-current] { color:#f1b8c2; }
+.dark .nav-subpanel { border-color:#474047; }
+.dark .site-header .button-7 { border-color:#66636b; background:#000; color:#fff; }
+.dark .site-footer { background:#17181b; color:#c2bac0; border-color:#353137; }
+.dark .footer-grid h2 { color:#f2f0ef; }
+.dark .footer-links a:hover { color:#f1b8c2; }
+.dark .field,.dark .breadcrumbs,.dark .folder-hint,.dark .form-bottom { color:#b5afb2; }
+.dark .field input,.dark .field select,.dark .field textarea,.dark .search-field { color:#f2f0ef; background:#1c1d20; border-color:#51454d; }
+.dark .field input::placeholder,.dark .field textarea::placeholder,.dark .search-field::placeholder { color:#aaa0a7; }
+.dark .button-secondary { background:#1c1d20; color:#f1b8c2; border-color:#67505b; }
+@media(max-width:480px) { .site-header .header-inner { min-height:88px; gap:10px; } .site-header .main-menu-panel { position:fixed; top:80px; right:16px; left:auto; width:calc(100vw - 32px); } }
+
+/* Neutral outline, and a theme label revealed by the expanding control. */
+.site-header .nav-panel { border:1px solid #000; }
+.dark .site-header .nav-panel { border-color:#8a858c; }
+.theme-toggle .theme-icon-moon { display:none; }
+.theme-toggle[aria-pressed=true] .theme-icon-sun { display:none; }
+.theme-toggle[aria-pressed=true] .theme-icon-moon { display:block; }
+.theme-toggle .button-7-arrow { color:#fff; }
+
+/* Explicit glyph fill also overrides the hero's inline black ink variable. */
+.dark .nurba-glyph-hero [data-gp-glyph] { fill:#ff0000; }
+.dark .nurba-glyph-hero [data-gp-fallback] { color:#ff0000; }
+
+/* Equal border specificity for menu, language and theme controls. */
+.dark .site-header .main-menu-dropdown > .nav-trigger.button-7,
+.dark .site-header .language-dropdown > .language-trigger.button-7,
+.dark .site-header .theme-toggle.button-7 {
+ border:2px solid #66636b;
+ background:#000;
+ color:#fff;
+}
+
+/* Botanical artwork is shown only in the light theme. */
+.dark .nurba-glyph-hero .hero-botanical-art { display:none; }

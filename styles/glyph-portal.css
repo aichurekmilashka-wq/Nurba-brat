@@ -1,0 +1,76 @@
+/* Glyph Portal © 2026 Christian Katzmann. MIT. https://ktzm.dk */
+@font-face { font-family: "Glyph Portal Jakarta"; src: url("https://cdn.21st.dev/assets/mirror/15/153fc85b70298beeb1d61a5f723331649e7f23bb77302a66e61cb3e2fbdb5e79.woff2") format("woff2"); font-weight: 400 700; font-style: normal; font-display: optional; }
+.glyph-portal { --gp-paper:#fff; --gp-ink:#0c1212; --gp-field:#0b3b2a; --gp-foreground:#fbfbfa; position:relative; isolation:isolate; background:var(--gp-paper); color:var(--gp-ink); font-family:Arial,sans-serif; }
+.glyph-portal > [data-gp-viewport] { position:absolute; inset:0 auto auto 0; height:100vh; height:100svh; width:0; pointer-events:none; visibility:hidden; }
+.glyph-portal [data-gp-pin] { position:relative; height:var(--gp-height,100svh); overflow:clip; isolation:isolate; container-type:size; }
+.glyph-portal [data-gp-field] { position:absolute; inset:0; background:var(--gp-field); opacity:0; pointer-events:none; }
+.glyph-portal[data-gp-ready] [data-gp-field] { opacity:1; }
+.glyph-portal [data-gp-default-field] { position:absolute; inset:0; transform:scale(var(--gp-field-scale,1)); background:radial-gradient(circle at 18% 8%,#447d62b8,transparent 34%),linear-gradient(135deg,#0b3b2a,#14573f 48%,#082d22); }
+.glyph-portal [data-gp-art] { position:absolute; inset:0; width:100%; height:100%; overflow:visible; pointer-events:none; fill:var(--gp-ink); }
+.glyph-portal [data-gp-marks] { fill:none; stroke:var(--gp-ink); opacity:.6; }
+.glyph-portal [data-gp-choices] { position:absolute; inset:0; visibility:hidden; pointer-events:none; }
+.glyph-portal[data-gp-choosing=true] [data-gp-choices] { visibility:visible; }
+.glyph-portal [data-gp-letter] { box-sizing:border-box; position:absolute; border:0; padding:0; margin:0; background:transparent; cursor:pointer; pointer-events:auto; touch-action:pan-y; }
+.glyph-portal [data-gp-letter]:disabled { pointer-events:none; }
+.glyph-portal [data-gp-letter]:focus-visible { outline:2px solid var(--gp-field); outline-offset:5px; }
+.glyph-portal [data-gp-touch-picker] { display:none; position:absolute; top:calc(var(--gp-word-bottom,50%) + 42px); left:50%; transform:translateX(-50%); font:12px/1.4 Arial,sans-serif; align-items:center; gap:12px; visibility:hidden; }
+.glyph-portal[data-gp-choosing=true] [data-gp-touch-picker] { visibility:visible; }
+.glyph-portal [data-gp-select] { min-height:44px; min-width:90px; border:1px solid #d8deda; border-radius:4px; background:var(--gp-paper); color:var(--gp-ink); padding:0 10px; font:inherit; }
+.gp-sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
+@media(any-pointer:coarse) { .glyph-portal [data-gp-touch-picker] { display:flex; } }
+.glyph-portal [data-gp-fallback] { position:absolute; inset:0; display:grid; place-items:center; font-size:min(calc(100cqw / var(--gp-characters)),38cqh); line-height:1; color:var(--gp-ink); pointer-events:none; }
+.glyph-portal[data-gp-ready] [data-gp-fallback] { visibility:hidden; }
+.glyph-portal [data-gp-caption] { position:absolute; inset:auto 8% 9%; display:flex; align-items:center; justify-content:space-between; gap:1rem; font:12px/1.4 Arial,sans-serif; opacity:var(--gp-caption,1); }
+.glyph-portal [data-gp-front] { position:absolute; inset:0; opacity:var(--gp-caption,1); pointer-events:none; }
+.glyph-portal [data-gp-front] a,.glyph-portal [data-gp-front] button { pointer-events:auto; }
+.glyph-portal [data-gp-front]:focus-within { opacity:1; }
+.glyph-portal [data-gp-hint] { max-width:30ch; color:var(--gp-ink); }
+.glyph-portal [data-gp-enter] { display:inline-flex; align-items:center; gap:16px; min-height:44px; color:inherit; font:inherit; text-decoration:none; }
+.glyph-portal [data-gp-enter]:focus-visible { outline:2px solid currentColor; outline-offset:5px; }
+.glyph-portal [data-gp-content] { box-sizing:border-box; position:relative; min-height:var(--gp-height,100svh); padding:clamp(32px,7%,100px); display:grid; align-content:center; color:var(--gp-foreground); background:var(--gp-field); overflow-wrap:anywhere; }
+.glyph-portal[data-gp-motion=on] [data-gp-pin] { position:sticky; top:0; }
+.glyph-portal[data-gp-motion=off] [data-gp-hint] { display:none; }
+.glyph-portal[data-gp-motion=on] [data-gp-content] { margin-top:calc((var(--gp-length) - 1) * var(--gp-height)); background:transparent; opacity:var(--gp-reveal,0); pointer-events:none; }
+.glyph-portal[data-gp-motion=on][data-gp-entered=true] [data-gp-content] { pointer-events:auto; }
+.glyph-portal:has([data-gp-content]:focus-within) [data-gp-field] { clip-path:none!important; }
+.glyph-portal [data-gp-content]:focus-within { opacity:1!important; pointer-events:auto; }
+.glyph-portal [data-gp-default-title] { color:inherit; font:400 clamp(32px,5vw,72px)/1.05 Georgia,serif; letter-spacing:-.035em; max-width:13ch; margin:0 0 24px; }
+.glyph-portal [data-gp-default-copy] { color:inherit; font:16px/1.6 Arial,sans-serif; max-width:36ch; margin:0; }
+@media(prefers-reduced-motion:reduce) { .glyph-portal [data-gp-pin] { position:relative!important; } .glyph-portal [data-gp-content] { margin-top:0!important; opacity:1!important; background:var(--gp-field)!important; min-height:0; padding-block:64px; } .glyph-portal [data-gp-hint] { display:none; } }
+/* Main page adopts only the requested lettering and framing. Flowers stay still. */
+.nurba-glyph-hero { --gp-paper:#fff; --gp-ink:#000; --gp-field:#fff; font-family:"Glyph Portal Jakarta",Arial,sans-serif; }
+.nurba-glyph-hero [data-gp-pin] { height:var(--gp-height,min(720px,100svh)); }
+.nurba-glyph-hero [data-gp-field] { opacity:1; background:#fff; }
+.nurba-glyph-hero [data-gp-art] { z-index:1; }
+.nurba-glyph-hero [data-gp-front] { z-index:2; opacity:1; }
+.nurba-glyph-hero [data-gp-glyph] { font-family:"Glyph Portal Jakarta",Arial,sans-serif; font-weight:700; }
+.nurba-glyph-hero .hero-botanical-art { inset:0; z-index:auto; transform:none!important; animation:none!important; }
+.nurba-glyph-hero .botanical-bloom { opacity:1; filter:none; animation:none!important; transition:none!important; }
+.nurba-glyph-hero h1 { position:absolute; inset:calc(var(--gp-word-bottom,62%) + 32px) 24px auto; margin:0; max-width:none; text-align:center; font:400 16px/1.5 "Glyph Portal Jakarta",Arial,sans-serif; letter-spacing:0; color:#000; text-shadow:none; }
+.nurba-glyph-hero .hero-bottom { position:absolute; inset:auto 24px 7%; display:block; margin:0; padding:0; border:0; text-align:center; color:#7c817b; font:400 11px/1.5 "Glyph Portal Jakarta",Arial,sans-serif; letter-spacing:.01em; }
+@media(max-width:760px) {
+ .nurba-glyph-hero .hero-botanical-art { position:absolute; display:block; width:100%; margin:0; padding:0; overflow:hidden; }
+ .nurba-glyph-hero .hero-botanical-art .botanical-bloom { position:absolute; margin:0; max-width:none; }
+ .nurba-glyph-hero .bloom-1 { left:-8%; top:5%; width:120px; }
+ .nurba-glyph-hero .bloom-4 { right:-7%; top:10%; width:100px; }
+ .nurba-glyph-hero .bloom-3 { left:-10%; top:auto; bottom:7%; width:100px; }
+ .nurba-glyph-hero .bloom-6 { right:-14%; top:auto; bottom:4%; width:135px; }
+ .nurba-glyph-hero h1 { font-size:14px; }
+}
+
+/* Upper flowers follow the two positions marked by the client. */
+@media(min-width:761px) {
+ .nurba-glyph-hero .bloom-1 { left:27%; top:0; }
+ .nurba-glyph-hero .bloom-4 { right:17%; top:0; }
+}
+
+/* Stemless flower heads use square cutouts, preserving the existing positions. */
+.nurba-glyph-hero .hero-botanical-art .botanical-bloom::before { height:100%; background-size:contain; background-position:center; }
+
+/* Allow for the enlarged flower's rotated bounds above its square box. */
+@media(min-width:761px) {
+ .nurba-glyph-hero .hero-botanical-art .bloom-1 { scale:1.5; top:clamp(100px,10vw,140px); }
+}
+@media(max-width:760px) {
+ .nurba-glyph-hero .hero-botanical-art .bloom-1 { scale:1.5; top:72px; }
+}

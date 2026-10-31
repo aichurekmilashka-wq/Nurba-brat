@@ -1,0 +1,205 @@
+{
+  "services/medicines-registration": [
+    {
+      "name": {
+        "ru": "Документы на препарат",
+        "ky": "Дары боюнча документтер",
+        "en": "Medicine documents",
+        "sv": "Läkemedelsdokument",
+        "nb": "Legemiddeldokumenter"
+      }
+    },
+    {
+      "name": {
+        "ru": "Проверка досье",
+        "ky": "Досьени текшерүү",
+        "en": "Dossier review",
+        "sv": "Granskning av dossier",
+        "nb": "Gjennomgang av dossier"
+      }
+    },
+    {
+      "name": {
+        "ru": "Этапы регистрации",
+        "ky": "Каттоо этаптары",
+        "en": "Registration stages",
+        "sv": "Registreringssteg",
+        "nb": "Registreringstrinn"
+      }
+    }
+  ],
+  "services/medical-devices-registration": [
+    {
+      "name": {
+        "ru": "Назначение изделия",
+        "ky": "Буюмдун багыты",
+        "en": "Intended purpose",
+        "sv": "Avsedd användning",
+        "nb": "Tiltenkt formål"
+      }
+    },
+    {
+      "name": {
+        "ru": "Техническая документация",
+        "ky": "Техникалык документтер",
+        "en": "Technical documentation",
+        "sv": "Teknisk dokumentation",
+        "nb": "Teknisk dokumentasjon"
+      }
+    },
+    {
+      "name": {
+        "ru": "Регистрационный маршрут",
+        "ky": "Каттоо жолу",
+        "en": "Registration pathway",
+        "sv": "Registreringsväg",
+        "nb": "Registreringsløp"
+      }
+    }
+  ],
+  "services/dossier-review": [
+    {
+      "name": {
+        "ru": "Исходное досье",
+        "ky": "Баштапкы досье",
+        "en": "Initial dossier",
+        "sv": "Befintlig dossier",
+        "nb": "Opprinnelig dossier"
+      }
+    },
+    {
+      "name": {
+        "ru": "Пробелы в документах",
+        "ky": "Документтердеги кемчиликтер",
+        "en": "Documentation gaps",
+        "sv": "Dokumentationsluckor",
+        "nb": "Mangler i dokumentasjonen"
+      }
+    },
+    {
+      "name": {
+        "ru": "План доработки",
+        "ky": "Толуктоо планы",
+        "en": "Revision plan",
+        "sv": "Kompletteringsplan",
+        "nb": "Plan for komplettering"
+      }
+    }
+  ],
+  "services/dossier-preparation": [
+    {
+      "name": {
+        "ru": "Структура досье",
+        "ky": "Досьенин түзүмү",
+        "en": "Dossier structure",
+        "sv": "Dossierstruktur",
+        "nb": "Dossierstruktur"
+      }
+    },
+    {
+      "name": {
+        "ru": "Комплект документов",
+        "ky": "Документтер топтому",
+        "en": "Document package",
+        "sv": "Dokumentpaket",
+        "nb": "Dokumentpakke"
+      }
+    },
+    {
+      "name": {
+        "ru": "Контроль готовности",
+        "ky": "Даярдыкты текшерүү",
+        "en": "Readiness check",
+        "sv": "Beredskapskontroll",
+        "nb": "Kontroll av beredskap"
+      }
+    }
+  ],
+  "services/variations": [
+    {
+      "name": {
+        "ru": "Перечень изменений",
+        "ky": "Өзгөртүүлөр тизмеси",
+        "en": "List of changes",
+        "sv": "Ändringsförteckning",
+        "nb": "Oversikt over endringer"
+      }
+    },
+    {
+      "name": {
+        "ru": "Документы по изменениям",
+        "ky": "Өзгөртүү документтери",
+        "en": "Variation documents",
+        "sv": "Ändringsdokument",
+        "nb": "Endringsdokumenter"
+      }
+    },
+    {
+      "name": {
+        "ru": "План сопровождения",
+        "ky": "Коштоо планы",
+        "en": "Support plan",
+        "sv": "Plan för stöd",
+        "nb": "Oppfølgingsplan"
+      }
+    }
+  ],
+  "services/pharmacovigilance": [
+    {
+      "name": {
+        "ru": "Организация фармаконадзора",
+        "ky": "Фармакокөзөмөлдү уюштуруу",
+        "en": "Pharmacovigilance setup",
+        "sv": "Organisation av farmakovigilans",
+        "nb": "Organisering av legemiddelovervåking"
+      }
+    },
+    {
+      "name": {
+        "ru": "Информация по безопасности",
+        "ky": "Коопсуздук маалыматы",
+        "en": "Safety information",
+        "sv": "Säkerhetsinformation",
+        "nb": "Sikkerhetsinformasjon"
+      }
+    },
+    {
+      "name": {
+        "ru": "Распределение обязанностей",
+        "ky": "Милдеттерди бөлүштүрүү",
+        "en": "Responsibilities",
+        "sv": "Ansvarsfördelning",
+        "nb": "Ansvarsfordeling"
+      }
+    }
+  ],
+  "services/regulatory-consulting": [
+    {
+      "name": {
+        "ru": "Вопросы по проекту",
+        "ky": "Долбоор боюнча суроолор",
+        "en": "Project questions",
+        "sv": "Projektfrågor",
+        "nb": "Prosjektspørsmål"
+      }
+    },
+    {
+      "name": {
+        "ru": "Разбор исходных данных",
+        "ky": "Баштапкы маалыматты талдоо",
+        "en": "Initial data review",
+        "sv": "Analys av underlag",
+        "nb": "Gjennomgang av grunnlagsdata"
+      }
+    },
+    {
+      "name": {
+        "ru": "Рекомендации по шагам",
+        "ky": "Кийинки кадамдар",
+        "en": "Recommended next steps",
+        "sv": "Rekommenderade nästa steg",
+        "nb": "Anbefalte neste steg"
+      }
+    }
+  ]
+}

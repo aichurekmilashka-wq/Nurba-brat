@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Local caches and private source materials are not part of the public site.
+__pycache__/
+*.pyc
+/public/assets/nurayim-portrait.jpeg
+/Спецификация_сайта.docx
+/Спецификация_сайта.md
+/Сопоставление_со_скелетом.md
+
+_site/

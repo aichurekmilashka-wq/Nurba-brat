@@ -1,0 +1,48 @@
+/* Shared styling for React and the offline HTML export. */
+.liquid-glass-control {
+ position: relative; isolation: isolate; display: inline-flex; align-items: center; justify-content: center;
+ cursor: pointer; border-radius: 999px; white-space: nowrap; gap: 8px;
+}
+.liquid-glass-refraction,.liquid-glass-rim { position: absolute; inset: 0; border-radius: inherit; pointer-events: none; }
+.liquid-glass-refraction { z-index: -1; overflow: hidden; background: rgba(255,255,255,.06); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+@supports (backdrop-filter: url("#glass-test")) {
+ .liquid-glass-refraction { backdrop-filter: var(--liquid-filter, url("#offline-liquid-glass")) blur(4px); }
+}
+.liquid-glass-rim { z-index: 0; box-shadow: 0 0 6px rgba(0,0,0,.03),0 2px 6px rgba(0,0,0,.08),inset 3px 3px .5px -3px rgba(0,0,0,.9),inset -3px -3px .5px -3px rgba(0,0,0,.85),inset 1px 1px 1px -.5px rgba(0,0,0,.6),inset -1px -1px 1px -.5px rgba(0,0,0,.6),inset 0 0 6px 6px rgba(0,0,0,.12),inset 0 0 2px 2px rgba(0,0,0,.06),0 0 12px rgba(255,255,255,.15); }
+.liquid-glass-content { position: relative; z-index: 1; display: inline-flex; align-items: center; justify-content: inherit; gap: inherit; width: 100%; pointer-events: none; }
+.site-header .liquid-glass-control,.hero-botanical .hero-actions .liquid-glass-control {
+ background: transparent; border: 1px solid rgba(160,8,16,.10); box-shadow: none; color: #931b2c;
+ transition: transform .25s ease, color .25s ease;
+}
+.site-header .liquid-glass-control::before,.hero-botanical .hero-actions .liquid-glass-control::before { content: none; }
+.site-header .liquid-glass-control:hover,.hero-botanical .hero-actions .liquid-glass-control:hover { background: transparent; box-shadow: none; transform: scale(1.035); }
+.site-header .nav-dropdown[open] > .liquid-glass-control { background: rgba(255,255,255,.10); }
+.liquid-glass-control:focus-visible { outline: 2px solid #931b2c; outline-offset: 4px; }
+.liquid-glass-control:active { transform: scale(.98); }
+.liquid-glass-control:disabled { opacity: .5; pointer-events: none; }
+.dark .liquid-glass-rim { box-shadow: 0 2px 6px #00000014,inset 1px 1px 1px -.5px #ffffff99,inset -1px -1px 1px -.5px #ffffff99,inset 0 0 6px 6px #ffffff1f; }
+@media(prefers-reduced-motion:reduce) { .liquid-glass-control { transition: none !important; } .liquid-glass-control:hover { transform: none !important; } }
+
+/* Match text-sm font-medium from the supplied component. */
+.liquid-glass-control,
+.site-header .liquid-glass-control,
+.site-header .language-trigger.liquid-glass-control,
+.hero-botanical .hero-actions .liquid-glass-control {
+ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+ font-size: 14px;
+ font-weight: 500;
+ line-height: 1.25rem;
+ letter-spacing: normal;
+}
+@media(max-width:480px) {
+ .site-header .liquid-glass-control,
+ .site-header .language-trigger.liquid-glass-control { font-size: 12px; }
+}
+
+/* Black labels in the glass controls, including hover and open states. */
+.site-header .liquid-glass-control,
+.site-header .liquid-glass-control:hover,
+.site-header .liquid-glass-control:focus-visible,
+.site-header .nav-dropdown[open] > .liquid-glass-control,
+.hero-botanical .hero-actions .liquid-glass-control,
+.hero-botanical .hero-actions .liquid-glass-control:hover { color: #000; }

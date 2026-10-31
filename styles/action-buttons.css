@@ -1,0 +1,41 @@
+/* Shared action style: no glass, burgundy fill or separate red link treatment. */
+.button-7.site-action,.button.button-7,.service-folder-link.button-7,.card-link.button-7,
+.dark .button-7.site-action,.dark .service-folder-link.button-7,.dark .card-link.button-7 {
+ position:relative; display:inline-flex; align-items:center; justify-content:center; flex:none;
+ width:var(--button-7-current,48px); min-width:48px; height:48px; min-height:48px;
+ padding:0; border:2px solid #000; border-radius:999px; background:#000; color:#fff;
+ box-shadow:none; -webkit-backdrop-filter:none; backdrop-filter:none; text-decoration:none;
+ font:500 14px/1.25 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+ transition:width .3s ease; overflow:hidden;
+}
+.button-7.site-action:hover,.button-7.site-action:focus-visible,
+.card:hover .card-link.button-7,.card:focus-visible .card-link.button-7 {
+ --button-7-current:var(--button-7-width,180px); background:#000; color:#fff; border-color:#000; box-shadow:none;
+}
+.card:hover .card-link.button-7 .button-7-label,.card:focus-visible .card-link.button-7 .button-7-label { opacity:1; transform:translateX(-3px); }
+.button-7.site-action::before,.button-7.site-action::after { content:none; }
+.dark .button-7.site-action { border-color:#666; }
+.dark .button-7:focus-visible { outline-color:#fff; }
+.faq-list summary { padding:14px 24px; background:#000; color:#fff; border-radius:999px; }
+.faq-list summary:hover { background:#202020; color:#fff; }
+.gf-key { border-radius:999px; color:#fff!important; background:#000!important; box-shadow:none!important; -webkit-backdrop-filter:none!important; backdrop-filter:none!important; }
+/* Override the older pink active-language selector, not just the panel surface. */
+.dark .site-header .nav-panel,
+.dark .site-header .main-menu-panel,
+.dark .site-header .language-panel { background:#1c1d20; color:#f4f1ef; border-color:#777; -webkit-backdrop-filter:none; backdrop-filter:none; }
+.dark .site-header .nav-panel a,
+.dark .site-header .nav-panel .nav-group-trigger { color:#eee; background:transparent; border-color:#444; }
+.dark .site-header .nav-panel a:hover,
+.dark .site-header .nav-panel a:focus-visible,
+.dark .site-header .nav-panel a[aria-current],
+.dark .site-header .nav-panel .nav-group-trigger:hover,
+.dark .site-header .nav-panel .nav-group-trigger:focus-visible,
+.dark .site-header .nav-panel .nav-subgroup[open] > .nav-group-trigger { background:#333; color:#fff; border-color:#777; }
+.dark .site-header .nav-panel .nav-subpanel { background:transparent; border-color:#444; }
+.dark .gf-menu { background:#1c1d20; color:#fff; -webkit-backdrop-filter:none; backdrop-filter:none; }
+.dark .gf-menu-item { color:#eee; }
+.dark .gf-menu-item:hover,.dark .gf-menu-item:focus-visible { background:#333; color:#fff; }
+@media(hover:none),(any-pointer:coarse) {
+ .button-7.site-action,.button.button-7,.service-folder-link.button-7,.card-link.button-7 { --button-7-current:var(--button-7-width,180px); }
+}
+@media(prefers-reduced-motion:reduce) { .button-7.site-action { transition:none; } }

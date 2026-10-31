@@ -1,0 +1,5 @@
+<svg class="snake-scroll-trail" xmlns="http://www.w3.org/2000/svg" width="64" height="900" viewBox="0 0 64 900" fill="none" focusable="false" aria-hidden="true">
+  <defs><mask id="snake-scroll-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="900"><path class="snake-trail-reveal" stroke="white" stroke-width="8" fill="none"/></mask></defs>
+  <path class="snake-trail-guide" fill="none" stroke="none"/>
+  <path class="snake-trail-line" fill="none" stroke="#9b4354" stroke-opacity=".42" stroke-width="1.5" stroke-dasharray="2 9" stroke-linecap="round" mask="url(#snake-scroll-mask)"/>
+</svg>

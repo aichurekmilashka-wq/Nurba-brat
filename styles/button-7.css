@@ -1,0 +1,53 @@
+/* Expanding circular controls; also used by the offline HTML export. */
+.button-7,.site-header .nav-trigger.button-7,.site-header .header-cta.button-7,
+.site-header .main-menu-dropdown > .nav-trigger.button-7,.site-header .language-trigger.button-7 {
+ position:relative; display:inline-flex; align-items:center; justify-content:center;
+ box-sizing:border-box; width:var(--button-7-current,48px); min-width:48px; height:48px; min-height:48px;
+ padding:0; overflow:hidden; border-radius:999px; border:2px solid #000;
+ -webkit-backdrop-filter:none; backdrop-filter:none; filter:none; opacity:1;
+ background:#000; color:#fff;
+ font:500 14px/1.25 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+ text-decoration:none; cursor:pointer; white-space:nowrap; gap:0; box-shadow:none;
+ transition:width .3s ease,background .3s ease; transform:none;
+}
+.button-7-label { display:inline-flex; white-space:nowrap; opacity:0; transform:translateX(0); transition:opacity .2s ease,transform .2s ease; padding:0 32px 0 16px; }
+.button-7-arrow { position:absolute; right:12px; top:50%; transform:translateY(-50%); display:grid; place-items:center; width:20px; height:20px; pointer-events:none; }
+.button-7-arrow svg { display:block; width:20px; height:20px; transition:transform .2s ease; }
+.button-7:hover,.button-7:focus-visible,.site-header .button-7:hover,.site-header .button-7:focus-visible,
+.site-header .nav-dropdown[open] > .button-7 { width:var(--button-7-width,128px); background:#000; color:#fff; box-shadow:none; transform:none; }
+.button-7:hover .button-7-label,.button-7:focus-visible .button-7-label,.nav-dropdown[open] > .button-7 .button-7-label { opacity:1; transform:translateX(-3px); }
+.button-7:focus-visible { outline:2px solid #111; outline-offset:4px; }
+.button-7:disabled { opacity:.5; pointer-events:none; }
+.site-header .nav-dropdown[open] > .button-7 .button-7-arrow svg { transform:rotate(90deg); }
+.dark .button-7 { background:#000; color:#fff; }
+@media(hover:none),(any-pointer:coarse) {
+ .button-7,.site-header .nav-trigger.button-7,.site-header .header-cta.button-7,
+ .site-header .main-menu-dropdown > .nav-trigger.button-7,.site-header .language-trigger.button-7 { width:var(--button-7-width,128px); }
+ .button-7 .button-7-label { opacity:1; transform:translateX(-3px); }
+}
+@media(prefers-reduced-motion:reduce) { .button-7,.button-7 * { transition:none!important; } }
+
+/* The variable also reaches the more specific native summary selectors. */
+.button-7:hover,.button-7:focus-visible,.nav-dropdown[open] > .button-7 { --button-7-current:var(--button-7-width,128px); }
+@media(hover:none),(any-pointer:coarse) { .button-7 { --button-7-current:var(--button-7-width,128px); } }
+
+/* Remove the old glass highlight inherited by header controls. */
+.site-header .button-7::before,
+.site-header .button-7::after { content:none; display:none; }
+
+.site-header .nav-dropdown[open] > .button-7 .button-7-menu svg { transform:none; }
+
+/* Language control names the action, not the current selection. */
+.site-header .language-trigger.button-7 { min-width:48px; width:var(--button-7-current,48px); }
+.site-header .language-trigger.button-7 .button-7-label { opacity:0; transform:none; padding:0 12px; }
+.site-header .language-trigger.button-7 .button-7-arrow { display:flex; align-items:center; justify-content:center; inset:0; width:auto; height:auto; transform:none; opacity:1; transition:opacity .15s ease; }
+.site-header .language-trigger.button-7:hover .button-7-label,
+.site-header .language-trigger.button-7:focus-visible .button-7-label,
+.site-header .nav-dropdown[open] > .language-trigger.button-7 .button-7-label { opacity:1; }
+.site-header .language-trigger.button-7:hover .button-7-arrow,
+.site-header .language-trigger.button-7:focus-visible .button-7-arrow,
+.site-header .nav-dropdown[open] > .language-trigger.button-7 .button-7-arrow { opacity:0; }
+@media(hover:none),(any-pointer:coarse) {
+ .site-header .language-trigger.button-7 .button-7-label { opacity:1; }
+ .site-header .language-trigger.button-7 .button-7-arrow { opacity:0; }
+}
