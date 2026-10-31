@@ -11,6 +11,7 @@ LABELS={'ru':'Русский','ky':'Кыргызча','en':'English','sv':'Svens
 LANGUAGE_BUTTON={'ru':'Язык','ky':'Тил','en':'Language','sv':'Språk','nb':'Språk'}
 LANGUAGE_SHORT={'ru':'Рус','ky':'Кыр','en':'Eng','sv':'Sve','nb':'Nor'}
 T={}
+CONTACTS=json.loads((ROOT/'content/contacts.json').read_text())
 def tr(key,ru,ky,en,sv,nb):
  for lang,value in zip(LANGS,[ru,ky,en,sv,nb]):T.setdefault(lang,{})[key]=value
 tr('portraitAlt','Четыре красных мака','Төрт кызыл мак','Four red poppies','Fyra röda vallmoblommor','Fire røde valmuer')
@@ -98,7 +99,7 @@ tr('projectsEmpty','Реальные проекты будут опублико�
 tr('caseFormat','Задача → выполненные работы → результат → ограничения','Милдет → аткарылган иштер → жыйынтык → чектөөлөр','Challenge → work delivered → result → limitations','Uppgift → utfört arbete → resultat → avgränsningar','Oppgave → utført arbeid → resultat → avgrensninger')
 tr('team','Команда и эксперты','Команда жана эксперттер','Team & experts','Team och experter','Team og eksperter')
 tr('teamEmpty','Профили специалистов будут добавлены после подтверждения имён, опыта, квалификаций и языков сопровождения.','Адистердин профилдери аты-жөнү, тажрыйбасы, квалификациясы жана коштоо тилдери такталгандан кийин кошулат.','Specialist profiles will be added after names, experience, qualifications and service languages are confirmed.','Specialistprofiler läggs till när namn, erfarenhet, kvalifikationer och servicespråk har bekräftats.','Spesialistprofiler legges til etter at navn, erfaring, kvalifikasjoner og tjenestespråk er bekreftet.')
-tr('aboutText','Структура сайта предназначена для компании, сопровождающей регуляторные проекты в Кыргызстане. Название юридического лица, реквизиты и подтверждённый перечень услуг должны быть добавлены перед публикацией.','Сайттын түзүмү Кыргызстандагы регулятордук долбоорлорду коштогон компания үчүн даярдалган. Юридикалык аталышы, реквизиттери жана тастыкталган кызматтары жарыялоого чейин кошулушу керек.','This site structure is intended for a company supporting regulatory projects in Kyrgyzstan. Its legal name, company details and confirmed service list must be added before publication.','Webbplatsstrukturen är avsedd för ett företag som stöder regulatoriska projekt i Kirgizistan. Juridiskt namn, företagsuppgifter och bekräftade tjänster måste läggas till före publicering.','Nettsidestrukturen er ment for et selskap som bistår med regulatoriske prosjekter i Kirgisistan. Juridisk navn, firmaopplysninger og bekreftede tjenester må legges til før publisering.')
+
 tr('editorial','Проверка материалов','Материалдарды текшерүү','Editorial policy','Redaktionell policy','Redaksjonelle retningslinjer')
 tr('editorialText','Регуляторные материалы должны иметь источник, автора, проверяющего и дату проверки. Изменения требований требуют пересмотра связанных страниц и переводов. Переводы прототипа являются черновыми и требуют профессиональной языковой проверки.','Регулятордук материалдарда булак, автор, текшерүүчү жана текшерүү датасы болушу керек. Талаптар өзгөргөндө тиешелүү беттер жана котормолор кайра каралат. Прототиптин котормолору долбоордук болуп, кесипкөй тилдик текшерүүнү талап кылат.','Regulatory materials require sources, an author, a reviewer and a review date. Requirement changes trigger a review of related pages and translations. Prototype translations are drafts and require professional language review.','Regulatoriskt material ska ha källor, författare, granskare och granskningsdatum. Ändrade krav kräver översyn av relaterade sidor och översättningar. Prototypens översättningar är utkast och kräver professionell språkgranskning.','Regulatorisk innhold skal ha kilder, forfatter, faglig kontrollør og kontrolldato. Endrede krav krever gjennomgang av relaterte sider og oversettelser. Prototypens oversettelser er utkast og krever profesjonell språkvask.')
 tr('updatesEmpty','Нормативные новости публикуются после проверки первоисточника, даты вступления в силу и применимости к конкретному продукту. Непроверенных новостей в прототипе нет.','Ченемдик жаңылыктар баштапкы булагы, күчүнө кирүү датасы жана тиешелүү продуктуга колдонулушу текшерилгенден кийин жарыяланат. Прототипте текшерилбеген жаңылыктар жок.','Regulatory updates are published after checking the primary source, effective date and applicability. No unverified updates are included in this prototype.','Regulatoriska uppdateringar publiceras efter kontroll av primärkälla, ikraftträdande och tillämplighet. Prototypen innehåller inga obekräftade nyheter.','Regulatoriske oppdateringer publiseres etter kontroll av primærkilde, ikrafttredelse og relevans. Prototypen inneholder ingen ubekreftede nyheter.')
@@ -123,13 +124,19 @@ tr('termsText','Содержание является проектом сайт�
 tr('more','Подробнее','Кененирээк','Learn more','Läs mer','Les mer')
 tr('allServices','Все услуги','Бардык кызматтар','All services','Alla tjänster','Alle tjenester')
 tr('notFound','Страница не найдена','Бет табылган жок','Page not found','Sidan hittades inte','Siden ble ikke funnet')
-tr('footerText','Сопровождение регуляторных проектов в Кыргызстане. Проект структуры и содержания.','Кыргызстандагы регулятордук долбоорлорду коштоо. Түзүмдүн жана мазмундун долбоору.','Regulatory project support in Kyrgyzstan. A structure and content prototype.','Stöd för regulatoriska projekt i Kirgizistan. En struktur- och innehållsprototyp.','Bistand med regulatoriske prosjekter i Kirgisistan. En struktur- og innholdsprototype.')
+
 
 tr('folderOpen','Открыть','Ачуу','Open','Öppna','Åpne')
 tr('folderClose','Закрыть','Жабуу','Close','Stäng','Lukk')
 tr('folderContents','Материалы папки','Папканын материалдары','Folder contents','Mappinnehåll','Mappeinnhold')
 tr('folderItems','материала','материал','resources','dokument','dokumenter')
 tr('folderHint','Нажмите на папку, чтобы открыть материалы. Ссылка под ней ведёт к описанию услуги.','Материалдарды ачуу үчүн папканы басыңыз. Төмөнкү шилтеме кызматтын сүрөттөлүшүнө алып барат.','Click a folder to reveal its resources. The link below opens the service details.','Klicka på en mapp för att visa materialet. Länken nedanför öppnar tjänstens beskrivning.','Klikk på en mappe for å vise innholdet. Lenken under åpner tjenestebeskrivelsen.')
+
+tr('contactAction','Связаться','Байланышуу','Get in touch','Kontakta oss','Kontakt oss')
+tr('phoneLabel','Телефон','Телефон','Phone','Telefon','Telefon')
+tr('contactIntro','Напишите нам в WhatsApp или Telegram, позвоните или отправьте письмо. Для начала достаточно кратко описать ваш вопрос.','WhatsApp же Telegram аркылуу жазыңыз, чалыңыз же электрондук кат жөнөтүңүз. Баштоо үчүн сурооңузду кыскача сүрөттөп бериңиз.','Message us on WhatsApp or Telegram, call, or email. Start with a short description of your question.','Skriv via WhatsApp eller Telegram, ring eller mejla. Börja med att kort beskriva din fråga.','Skriv på WhatsApp eller Telegram, ring eller send en e-post. Begynn med en kort beskrivelse av spørsmålet ditt.')
+tr('footerText','Регуляторное сопровождение в Кыргызстане.','Кыргызстандагы регулятордук коштоо.','Regulatory support in Kyrgyzstan.','Regulatoriskt stöd i Kirgizistan.','Regulatorisk bistand i Kirgisistan.')
+tr('aboutText','Регистрация лекарств и медицинских изделий, проверка документов и сопровождение проектов в Кыргызстане.','Кыргызстанда дары-дармектерди жана медициналык буюмдарды каттоо, документтерди текшерүү жана долбоорлорду коштоо.','Medicine and medical device registration, document review and project support in Kyrgyzstan.','Registrering av läkemedel och medicintekniska produkter, dokumentgranskning och projektstöd i Kirgizistan.','Registrering av legemidler og medisinsk utstyr, dokumentgjennomgang og prosjektbistand i Kirgisistan.')
 
 SERVICES=[('medicines-registration','medicines'),('medical-devices-registration','devices'),('dossier-review','review'),('dossier-preparation','preparation'),('variations','variations'),('pharmacovigilance','pv'),('regulatory-consulting','consulting')]
 KNOWLEDGE=json.loads((ROOT/'content/knowledge-articles.json').read_text())
@@ -142,33 +149,33 @@ def build_pages(t):
  costs=cards('pricing',[card('fees','feesText','pricing'),card('official','officialText','pricing'),card('external','externalText','pricing')],'costIntro')
  steps={'type':'steps','title':t['how'],'items':[t['step'+str(i)] for i in range(1,7)]}
  faq={'type':'faq','title':t['faq'],'items':[{'question':t['faqQ'+str(i)],'answer':t['faqA'+str(i)]} for i in range(1,4)]}
- form={'type':'form','title':t['formTitle']}
+ contact_block={'type':'contacts','title':t['contactAction'],'text':t['contactIntro']}
  knowledge_cards=[card('startGuide','guideText','knowledge/initial-assessment'),card('checklist','checklistText','knowledge/checklist')]
  pages={}
  def page(path,title,lead,blocks):pages[path]={'title':t[title],'lead':t.get(lead,''),'blocks':blocks}
- page('','heroTitle','heroText',[cards('choose',service_cards),{**steps,'type':'journey'},block('international','internationalText'),cards('knowledge',knowledge_cards),faq,form])
+ page('','heroTitle','heroText',[{**cards('choose',service_cards[:3]),'morePath':'services','moreLabel':t['allServices']},{**steps,'type':'journey'},contact_block])
  page('services','services','chooseText',[cards('allServices',service_cards)])
  for slug,k in SERVICES:
-  page('services/'+slug,k,k+'Text',[block('scope',k+'Text'),block('inputs','inputsText'),block('outputs','outputsText'),steps,block('responsibility','responsibilityText'),block('timeline','timelineText'),costs,cards('team',[card('team','teamEmpty','about/team')]),faq,form])
+  page('services/'+slug,k,k+'Text',[block('inputs','inputsText'),block('outputs','outputsText'),block('responsibility','responsibilityText'),contact_block])
  for slug,k in [('manufacturers','manufacturers'),('importers','importers'),('partners','partners')]:
   relevant=service_cards[:4] if k=='manufacturers' else [service_cards[i] for i in ([0,1,2] if k=='importers' else [2,3,4,6])]
-  page('for-'+slug,k,k+'Text',[block('inputs','inputsText'),cards('services',relevant),block('responsibility','responsibilityText'),block('international','internationalText'),form])
- page('how-we-work','how','heroText',[steps,block('outputs','outputsText'),block('responsibility','responsibilityText'),block('international','internationalText'),form])
- page('pricing','pricing','costIntro',[costs,block('timeline','timelineText'),faq,form])
- page('projects','projects','projectsEmpty',[{'type':'text','title':t['caseFormat'],'text':t['projectsEmpty']},form])
+  page('for-'+slug,k,k+'Text',[block('inputs','inputsText'),cards('services',relevant),block('responsibility','responsibilityText'),block('international','internationalText'),contact_block])
+ page('how-we-work','how','heroText',[steps,block('outputs','outputsText'),block('responsibility','responsibilityText'),block('international','internationalText'),contact_block])
+ page('pricing','pricing','costIntro',[costs,block('timeline','timelineText'),faq,contact_block])
+ page('projects','projects','projectsEmpty',[{'type':'text','title':t['caseFormat'],'text':t['projectsEmpty']},contact_block])
  page('knowledge','knowledge','',[{'type':'search','title':t['search'],'items':knowledge_cards+ [card('glossary','glossaryText','knowledge/glossary')]},cards('knowledge',[card('guides','guideText','knowledge/guides'),card('documents','checklistText','knowledge/documents'),card('updates','updatesEmpty','knowledge/updates'),card('glossary','glossaryText','knowledge/glossary')])])
  page('knowledge/guides','guides','',[cards('guides',[knowledge_cards[0]])])
  page('knowledge/documents','documents','',[cards('documents',[knowledge_cards[1]])])
  page('knowledge/updates','updates','updatesEmpty',[block('editorial','editorialText')])
  page('knowledge/glossary','glossary','glossaryText',[])
- page('knowledge/initial-assessment','startGuide','guideText',[block('inputs','inputsText'),block('documents','checklistText'),block('responsibility','responsibilityText'),cards('services',[service_cards[2]]),block('editorial','editorialText'),form])
- page('knowledge/checklist','checklist','checklistText',[block('inputs','inputsText'),block('international','internationalText'),cards('services',[service_cards[2],service_cards[3]]),form])
- page('faq','faq','',[faq,form])
- page('about','about','aboutText',[cards('about',[card('team','teamEmpty','about/team'),card('editorial','editorialText','about/editorial-policy')]),block('international','internationalText')])
- page('about/team','team','teamEmpty',[block('international','internationalText'),form])
+ page('knowledge/initial-assessment','startGuide','guideText',[block('inputs','inputsText'),block('documents','checklistText'),block('responsibility','responsibilityText'),cards('services',[service_cards[2]]),block('editorial','editorialText'),contact_block])
+ page('knowledge/checklist','checklist','checklistText',[block('inputs','inputsText'),block('international','internationalText'),cards('services',[service_cards[2],service_cards[3]]),contact_block])
+ page('faq','faq','',[faq,contact_block])
+ page('about','about','aboutText',[block('international','internationalText'),contact_block])
+ page('about/team','team','teamEmpty',[block('international','internationalText'),contact_block])
  page('about/editorial-policy','editorial','editorialText',[])
- page('contacts','contacts','contactEmpty',[block('international','internationalText'),form])
- page('request','request','',[form])
+ page('contacts','contacts','contactIntro',[{'type':'contacts','title':t['contactAction']}])
+ page('request','request','',[contact_block])
  for k in ['privacy','cookies','terms']:page(k,k,k+'Text',[])
  page('404','notFound','',[cards('services',service_cards[:2])])
  k=KNOWLEDGE[next(lang for lang in LANGS if T[lang] is t)]
@@ -178,9 +185,6 @@ def build_pages(t):
  pages['knowledge/documents']['blocks']=[cards('documents',[knowledge_cards[1]])]
  pages['knowledge/initial-assessment']={'title':k['guideTitle'],'lead':k['guideSummary'],'blocks':[{'type':'text','title':title,'text':text} for title,text in k['guide']]+[{'type':'cards','title':t['documents'],'items':[knowledge_cards[1]]}]}
  pages['knowledge/checklist']={'title':k['checkTitle'],'lead':k['checkSummary'],'blocks':[{'type':'checklist','title':k['checkHeading'],'text':k['checkIntro'],'items':k['items']},{'type':'text','title':k['noteTitle'],'text':k['note']},{'type':'text','title':k['next'],'text':k['nextText']},{'type':'cards','title':t['guides'],'items':[knowledge_cards[0]]}]}
- # Home cards use the same concise summaries as the knowledge index.
- for b in pages['']['blocks']:
-  if b['type']=='cards' and b['title']==t['knowledge']:b['items']=knowledge_cards
  return pages
 
 DATA={'languages':LABELS,'locales':{lang:{'ui':T[lang],'pages':build_pages(T[lang])} for lang in LANGS}}
@@ -191,12 +195,12 @@ print('Content model:',len(DATA['locales']['ru']['pages']),'pages ×',len(LANGS)
 import os
 from html.parser import HTMLParser
 from folder_export import render_service_folders, runtime as folder_runtime
-CSS=(ROOT/'styles/site.css').read_text()+'\n'+(ROOT/'styles/glass-folder.css').read_text()+'\n'+(ROOT/'styles/brand.css').read_text()+'\n'+(ROOT/'styles/hero-editorial.css').read_text()+'\n'+(ROOT/'styles/liquid-glass-button.css').read_text()+'\n'+(ROOT/'styles/glyph-portal.css').read_text()+'\n'+(ROOT/'styles/button-7.css').read_text()+'\n'+(ROOT/'styles/theme.css').read_text()+'\n'+(ROOT/'styles/action-buttons.css').read_text()+'\n'+(ROOT/'styles/shifting-dropdown.css').read_text()+'\n'+(ROOT/'styles/mobile.css').read_text()+'\n'+(ROOT/'styles/project-journey.css').read_text()+'\n'+(ROOT/'styles/knowledge.css').read_text()
+CSS=(ROOT/'styles/site.css').read_text()+'\n'+(ROOT/'styles/glass-folder.css').read_text()+'\n'+(ROOT/'styles/brand.css').read_text()+'\n'+(ROOT/'styles/hero-editorial.css').read_text()+'\n'+(ROOT/'styles/liquid-glass-button.css').read_text()+'\n'+(ROOT/'styles/glyph-portal.css').read_text()+'\n'+(ROOT/'styles/button-7.css').read_text()+'\n'+(ROOT/'styles/theme.css').read_text()+'\n'+(ROOT/'styles/action-buttons.css').read_text()+'\n'+(ROOT/'styles/shifting-dropdown.css').read_text()+'\n'+(ROOT/'styles/mobile.css').read_text()+'\n'+(ROOT/'styles/project-journey.css').read_text()+'\n'+(ROOT/'styles/knowledge.css').read_text()+'\n'+(ROOT/'styles/contacts.css').read_text()
 CSS+='\n.cookie-notice{position:fixed;z-index:1000;left:20px;bottom:20px;width:min(440px,calc(100vw - 40px));padding:22px;border:1px solid #e1e7ee;border-radius:16px;background:#fff;color:#162a40;box-shadow:0 16px 48px #162a4030;font:14px/1.6 var(--font-site)}.cookie-notice[hidden]{display:none}.cookie-notice p{margin:0 0 14px}.cookie-notice a{text-decoration:underline}.cookie-actions{display:flex;gap:10px;flex-wrap:wrap}.cookie-actions button{border:1px solid #245be5;border-radius:8px;padding:9px 15px;background:#245be5;color:#fff;font:inherit}.cookie-actions button+button{background:transparent;color:#162a40}\n.contact-float{position:fixed;z-index:900;left:20px;top:20px}.contact-float summary{cursor:pointer;list-style:none;padding:12px 16px;border-radius:999px;background:#173f32;color:#fff;font-size:14px;font-weight:600}.contact-float nav{display:grid;gap:4px;margin-top:8px;padding:8px;border-radius:14px;background:#fff;box-shadow:0 12px 32px #162a4020}.contact-float nav a{padding:9px 12px;color:#162a40;font-size:14px}'
 CSS+=".contact-float{position:fixed;left:20px;top:20px;z-index:900;transform:none}.contact-float summary.button-7{padding:0;background:#000;color:#fff;list-style:none;font-weight:500;box-shadow:none;border:2px solid #000}.contact-float summary::-webkit-details-marker{display:none}.contact-float[open]>summary.button-7{width:var(--button-7-width);--button-7-current:var(--button-7-width)}.contact-float[open] .button-7-label{opacity:1;transform:translateX(-3px)}.contact-float nav{position:absolute;top:100%;left:0;width:min(310px,calc(100vw - 40px));margin:0;padding:8px;display:grid;gap:3px;border:1px solid #e6e1e3;border-radius:16px;background:#fff;box-shadow:0 16px 40px #0002}.contact-float:not([open]) nav{display:none}.contact-float nav a{display:flex;align-items:center;gap:12px;min-height:56px;padding:10px 12px;border-radius:10px;color:#262323;text-decoration:none}.contact-float nav a:hover,.contact-float nav a:focus-visible{background:#f2f0f0}.contact-float nav a>svg{flex:none}.contact-float nav strong,.contact-float nav small{display:block}.contact-float nav strong{font:500 14px/1.4 var(--font-site)}.contact-float nav small{font:400 12px/1.4 var(--font-site);color:#716a6d;overflow-wrap:anywhere}.dark .contact-float nav{background:#1c1d20;border-color:#555}.dark .contact-float nav a{color:#fff}.dark .contact-float nav small{color:#bbb}.dark .contact-float nav a:hover{background:#333}@media(max-width:600px){.contact-float{left:12px;top:12px}.contact-float summary.button-7{width:48px;--button-7-current:48px}.contact-float summary .button-7-label{opacity:0}.contact-float[open] summary .button-7-label{opacity:1}}"
 EXPORT=ROOT/'prototype'
 NAV=[('services','services'),('pricing','pricing'),('projects','projects'),('knowledge','knowledge'),('about','about'),('contacts','contacts')]
-FOOTER=[['services','pricing','how-we-work','projects','faq'],['for-manufacturers','for-importers','for-partners','knowledge','knowledge/documents'],['about','about/team','about/editorial-policy','contacts','request']]
+FOOTER=['services','pricing','how-we-work','knowledge']
 def target(lang,path):return EXPORT/lang/path/'index.html'
 def render(lang,path,destination):
  t=T[lang]; pages=DATA['locales'][lang]['pages']; p=pages[path]
@@ -206,6 +210,15 @@ def render(lang,path,destination):
  clean_poppy_url=os.path.relpath(ROOT/'public/assets/poppy-isolated-clean.png',destination.parent).replace(os.sep,'/')
  logo_url=os.path.relpath(ROOT/'public/assets/nurba-black-sans.svg',destination.parent).replace(os.sep,'/')
  def a(path,label,cls=''):return f'<a class="{cls}" href="{escape(url(path),quote=True)}">{escape(label)}</a>'
+ def contact_channels(compact=False):
+  channels=[('WhatsApp',CONTACTS['phoneDisplay'],CONTACTS['whatsapp']),('Telegram',CONTACTS['phoneDisplay'],CONTACTS['telegram']),(t['phoneLabel'],CONTACTS['phoneDisplay'],'tel:'+CONTACTS['phone']),('Email',CONTACTS['email'],'mailto:'+CONTACTS['email'])]
+  out='<div class="'+('footer-contacts' if compact else 'contact-channels')+'">'
+  for label,value,href in channels:
+   external=' target="_blank" rel="noopener noreferrer"' if href.startswith('https:') else ''
+   arrow='' if compact else '<svg class="contact-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>'
+   detail=f'<span>{escape(value)}</span>' if not compact or not href.startswith('https:') else ''
+   out+=f'<a class="contact-channel" href="{escape(href,quote=True)}"{external}><span class="contact-copy"><strong>{escape(label)}</strong>{detail}</span>{arrow}</a>'
+  return out+'</div>'
  folder_serial=0
  def render_cards(items):
   nonlocal folder_serial
@@ -227,13 +240,15 @@ def render(lang,path,destination):
  blocks=[]
  for i,b in enumerate(p['blocks'],1):
   content=''
-  if b['type']=='form':content=form(b['title'])
+  if b['type']=='contacts':content=f'<div class="section-head"><h2 class="section-title">{escape(b["title"])}</h2></div>'+(f'<p class="section-lead">{escape(b["text"])}</p>' if b.get('text') else '')+contact_channels()
+  elif b['type']=='form':content=form(b['title'])
   else:
    content=f'<div class="section-head"><h2 class="section-title">{escape(b["title"])}</h2><span class="section-number" aria-hidden="true">{i:02}</span></div>'
    if b['type']=='text':content+=f'<p class="body-copy">{escape(b["text"])}</p>'
    elif b['type']=='cards':
     if b.get('text'):content+=f'<p class="section-lead">{escape(b["text"])}</p>'
     content+=render_cards(b['items'])
+    if b.get('morePath'):content+=a(b['morePath'],b['moreLabel'],'section-more')
    elif b['type']=='journey':
     content+=render_journey(b['items'],lang,b['title'],lambda stage:os.path.relpath(ROOT/f'public/assets/journey-stage-{stage}.svg',destination.parent).replace(os.sep,'/'))
    elif b['type']=='steps':content+='<ol class="steps">'+''.join(f'<li>{escape(item)}</li>' for item in b['items'])+'</ol>'
@@ -259,7 +274,7 @@ def render(lang,path,destination):
   'nb':{'light':'Dagtema','dark':'Nattema'},
  }[lang]
  theme_button=f'<button type="button" class="button-7 theme-toggle" data-theme-toggle aria-label="{escape(theme_labels["light"],quote=True)}" title="{escape(theme_labels["light"],quote=True)}" aria-pressed="false" style="--button-7-width:200px"><span class="button-7-label">{escape(theme_labels["light"])}</span><span class="button-7-arrow" aria-hidden="true"><svg class="theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg><svg class="theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/></svg></span></button>'
- header=f'<header class="site-header"><div class="shell header-inner"><nav class="site-nav" aria-label="{escape(t["home"],quote=True)}">{nav}</nav><div class="language-switcher"><details class="nav-dropdown language-dropdown"><summary class="nav-trigger language-trigger" aria-controls="header-languages"><span>{escape(LABELS[lang])}</span><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></summary><div class="nav-panel language-panel" id="header-languages">{langs}</div></details></div>{theme_button}</div></header>'
+ header=f'<header class="site-header"><div class="shell header-inner">{a("contacts",t["contactAction"],"header-contact")}<nav class="site-nav" aria-label="{escape(t["home"],quote=True)}">{nav}</nav><div class="language-switcher"><details class="nav-dropdown language-dropdown"><summary class="nav-trigger language-trigger" aria-controls="header-languages"><span>{escape(LABELS[lang])}</span><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></summary><div class="nav-panel language-panel" id="header-languages">{langs}</div></details></div>{theme_button}</div></header>'
  if not path:
   blooms=''
   for i in (1,3,4,6):
@@ -288,7 +303,7 @@ def render(lang,path,destination):
  header=re.sub(pattern,expanding_control,header)
  blocks=[re.sub(pattern,expanding_control,markup) for markup in blocks]
  footer=f'<footer class="site-footer"><div class="shell"><div class="footer-grid"><div class="footer-intro"><h2>{escape(t["brandName"])}</h2><p>{escape(t["footerText"])}</p></div>'
- for group in FOOTER:footer+='<div class="footer-links">'+''.join(a(route,pages[route]['title']) for route in group)+'</div>'
+ footer+='<nav class="footer-links" aria-label="'+escape(t['navMenu'],quote=True)+'">'+''.join(a(route,pages[route]['title']) for route in FOOTER)+'</nav><div class="footer-contact-group"><h2>'+a('contacts',t['contacts'])+'</h2>'+contact_channels(True)+'</div>'
  footer+=f'</div><div class="footer-bottom"><span>{escape(t["region"])}</span><div class="footer-legal">'+''.join(a(key,t[key]) for key in ['privacy','cookies','terms'])+'</div></div></div></footer>'
  config=json.dumps({'locale':lang,'labels':{k:t[k] for k in ['task','country','contact','name','comment','formError','formSuccess']}},ensure_ascii=False).replace('<','\\u003c')
  script=r'''
@@ -330,7 +345,7 @@ def render(lang,path,destination):
  social=social_metadata(lang,path,p['title'],p['lead'] or p['title'])
  theme_boot='<script>(function(){var t="light";try{var s=localStorage.getItem("nurba-theme");if(s==="dark"||s==="light")t=s}catch(e){}document.documentElement.classList.toggle("dark",t==="dark");document.documentElement.dataset.theme=t})();</script>'
  main_class='knowledge-article' if path.startswith('knowledge/') else ''
- contact_widget="<details class=\"contact-float\"><summary class=\"button-7\" aria-label=\"Связаться\" style=\"--button-7-width:220px\"><span class=\"button-7-label\">+996 503 030 997</span><span class=\"button-7-arrow\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2.1Z\"/></svg></span></summary><nav aria-label=\"Способы связи\"><a href=\"https://wa.me/996503030997\" target=\"_blank\" rel=\"noopener noreferrer\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-4.8a8.5 8.5 0 1 1 15.9-4.2Z\"/><path d=\"M8 7.5c-.5 0-1 1-1 1.7 0 2.7 4.2 6.8 7 6.8.8 0 1.9-1 1.9-1.5 0-.3-2-1.3-2.3-1.3-.3 0-.8.8-1.1.8-.8 0-3-2.2-3-3 0-.3.8-.8.8-1.1 0-.3-1-2.4-1.3-2.4Z\"/></svg><span><strong>WhatsApp</strong><small>+996 503 030 997</small></span></a><a href=\"https://t.me/+996503030997\" target=\"_blank\" rel=\"noopener noreferrer\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"currentColor\"  aria-hidden=\"true\"><path d=\"M21.5 3.5 18.2 20c-.2.8-.9 1-1.6.6l-5-3.7-2.4 2.3c-.3.3-.6.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.3L6.2 13.1l-4.8-1.5c-1-.3-1-1 .2-1.4L20.2 3c.9-.3 1.6.2 1.3.5Z\"/></svg><span><strong>Telegram</strong><small>+996 503 030 997</small></span></a><a href=\"mailto:aichurekmilashka@icloud.com\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"14\" rx=\"2\"/><path d=\"m3 6 9 7 9-7\"/></svg><span><strong>Email</strong><small>aichurekmilashka@icloud.com</small></span></a><a href=\"tel:+996503030997\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2.1Z\"/></svg><span><strong>Позвонить</strong><small>+996 503 030 997</small></span></a></nav></details>"
+ contact_widget=''
  return '<!doctype html>\n'+f'<html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="description" content="{escape(p["lead"] or p["title"],quote=True)}"><title>{escape(p["title"])} | {escape(t["brandName"])}</title>{alternates}{social}{theme_boot}<style>{CSS}</style></head><body>{header}<main id="main" class="{main_class}">{snake_rail}{heading}{"".join(blocks)}</main>{footer}{contact_widget}<aside class="cookie-notice" role="dialog" aria-label="Cookies" hidden><p>Мы используем cookies. Яндекс Метрика с Вебвизором запускается только после вашего согласия. <a href="{escape(url("cookies"),quote=True)}">Подробнее</a></p><div class="cookie-actions"><button type="button" data-choice="accepted">Принять</button><button type="button" data-choice="rejected">Отклонить</button></div></aside><script>{script}</script></body></html>'
 
 for lang in LANGS:

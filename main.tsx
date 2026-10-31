@@ -32,3 +32,4 @@ import './styles/mobile.css'
 import './styles/project-journey.css'
 
 import './styles/knowledge.css'
+import './styles/contacts.css'

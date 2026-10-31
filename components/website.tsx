@@ -10,6 +10,7 @@ import { mountScrollReveal } from '@/lib/scroll-reveal'
 import ServiceFolders from '@/components/service-folders'
 import DropdownNavigation from '@/components/dropdown-navigation'
 import LanguageSwitcher from '@/components/language-switcher'
+import ContactChannels from '@/components/contact-channels'
 
 const data = source as unknown as SiteData
 const brandLogo = `${import.meta.env.BASE_URL}assets/nurba-black-sans.svg`
@@ -71,12 +72,13 @@ function ContentBlock({ block, index, locale }: { block: Block; index: number; l
     {block.type === 'form' ? <RequestForm locale={locale} title={block.title} /> : <>
       <div className="section-head"><h2 className="section-title">{block.title}</h2><span className="section-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span></div>
       {block.type === 'text' && <p className="body-copy">{block.text}</p>}
-      {block.type === 'cards' && <>{block.text && <p className="section-lead">{block.text}</p>}<Cards items={block.items} locale={locale} more={t.more} /></>}
+      {block.type === 'cards' && <>{block.text && <p className="section-lead">{block.text}</p>}<Cards items={block.items} locale={locale} more={t.more} />{block.morePath && <a className="section-more" href={`#/${locale}/${block.morePath}`}>{block.moreLabel} <ArrowRight size={18} aria-hidden="true" /></a>}</>}
       {block.type === 'search' && <Search block={block} locale={locale} />}
       {block.type === 'journey' && <ProjectJourney items={block.items} locale={locale} title={block.title} />}
       {block.type === 'steps' && <ol className="steps">{block.items.map(item => <li key={item}>{item}</li>)}</ol>}
       {block.type === 'checklist' && <><p className="body-copy">{block.text}</p><ul className="document-checklist">{block.items.map(item=><li key={item}><label><input type="checkbox" /><span>{item}</span></label></li>)}</ul></>}
       {block.type === 'faq' && <div className="faq-list">{block.items.map(item => <details key={item.question}><summary>{item.question}</summary><p>{item.answer}</p></details>)}</div>}
+      {block.type === 'contacts' && <>{block.text && <p className="section-lead">{block.text}</p>}<ContactChannels ui={t} /></>}
     </>}
   </div></section>
 }
@@ -101,6 +103,7 @@ export default function Website() {
   const href = (target: string) => `#/${locale}/${target}`
   return <>
     <header className="site-header"><div className="shell header-inner">
+      <a className="header-contact" href={href('contacts')}>{t.contactAction}<ArrowRight size={16} aria-hidden="true" /></a>
       <DropdownNavigation locale={locale} path={path} ui={t} pages={pages} />
       <LanguageSwitcher locale={locale} path={path} languages={data.languages} />
       <ThemeToggle locale={locale} />
@@ -111,9 +114,8 @@ export default function Website() {
     </main>
     <footer className="site-footer"><div className="shell"><div className="footer-grid">
       <div className="footer-intro"><h2>{t.brandName}</h2><p>{t.footerText}</p></div>
-      <div className="footer-links">{['services','pricing','how-we-work','projects','faq'].map(target => <a key={target} href={href(target)}>{pages[target].title}</a>)}</div>
-      <div className="footer-links">{['for-manufacturers','for-importers','for-partners','knowledge','knowledge/documents'].map(target => <a key={target} href={href(target)}>{pages[target].title}</a>)}</div>
-      <div className="footer-links">{['about','about/team','about/editorial-policy','contacts','request'].map(target => <a key={target} href={href(target)}>{pages[target].title}</a>)}</div>
+      <nav className="footer-links" aria-label={t.navMenu}>{['services','pricing','how-we-work','knowledge'].map(target => <a key={target} href={href(target)}>{pages[target].title}</a>)}</nav>
+      <div className="footer-contact-group"><h2><a href={href('contacts')}>{t.contacts}</a></h2><ContactChannels ui={t} compact /></div>
     </div><div className="footer-bottom"><span>{t.region}</span><div className="footer-legal">{['privacy','cookies','terms'].map(target => <a key={target} href={href(target)}>{pages[target].title}</a>)}</div></div></div></footer>
   </>
 }

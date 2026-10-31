@@ -2,56 +2,31 @@
   {
     "label": "services",
     "pages": [
-      "services",
-      "services/medicines-registration",
-      "services/medical-devices-registration",
-      "services/dossier-review",
-      "services/dossier-preparation",
-      "services/variations",
-      "services/pharmacovigilance",
-      "services/regulatory-consulting",
-      "for-manufacturers",
-      "for-importers",
-      "for-partners"
+      "services"
     ]
   },
   {
-    "label": "pricing",
+    "label": "how",
     "pages": [
-      "pricing",
-      "how-we-work",
-      "request"
-    ]
-  },
-  {
-    "label": "projects",
-    "pages": [
-      "projects"
+      "how-we-work"
     ]
   },
   {
     "label": "knowledge",
     "pages": [
-      "knowledge",
-      "knowledge/initial-assessment",
-      "knowledge/checklist",
-      "faq"
+      "knowledge"
     ]
   },
   {
     "label": "about",
     "pages": [
-      "about",
-      "about/team",
-      "about/editorial-policy"
+      "about"
     ]
   },
   {
     "label": "contacts",
     "pages": [
-      "contacts",
-      "request",
-      "for-partners"
+      "contacts"
     ]
   }
 ]
