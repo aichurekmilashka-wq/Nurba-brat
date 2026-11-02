@@ -199,7 +199,7 @@ CSS=(ROOT/'styles/site.css').read_text()+'\n'+(ROOT/'styles/glass-folder.css').r
 CSS+='\n.cookie-notice{position:fixed;z-index:1000;left:20px;bottom:20px;width:min(440px,calc(100vw - 40px));padding:22px;border:1px solid #e1e7ee;border-radius:16px;background:#fff;color:#162a40;box-shadow:0 16px 48px #162a4030;font:14px/1.6 var(--font-site)}.cookie-notice[hidden]{display:none}.cookie-notice p{margin:0 0 14px}.cookie-notice a{text-decoration:underline}.cookie-actions{display:flex;gap:10px;flex-wrap:wrap}.cookie-actions button{border:1px solid #245be5;border-radius:8px;padding:9px 15px;background:#245be5;color:#fff;font:inherit}.cookie-actions button+button{background:transparent;color:#162a40}\n.contact-float{position:fixed;z-index:900;left:20px;top:20px}.contact-float summary{cursor:pointer;list-style:none;padding:12px 16px;border-radius:999px;background:#173f32;color:#fff;font-size:14px;font-weight:600}.contact-float nav{display:grid;gap:4px;margin-top:8px;padding:8px;border-radius:14px;background:#fff;box-shadow:0 12px 32px #162a4020}.contact-float nav a{padding:9px 12px;color:#162a40;font-size:14px}'
 CSS+=".contact-float{position:fixed;left:20px;top:20px;z-index:900;transform:none}.contact-float summary.button-7{padding:0;background:#000;color:#fff;list-style:none;font-weight:500;box-shadow:none;border:2px solid #000}.contact-float summary::-webkit-details-marker{display:none}.contact-float[open]>summary.button-7{width:var(--button-7-width);--button-7-current:var(--button-7-width)}.contact-float[open] .button-7-label{opacity:1;transform:translateX(-3px)}.contact-float nav{position:absolute;top:100%;left:0;width:min(310px,calc(100vw - 40px));margin:0;padding:8px;display:grid;gap:3px;border:1px solid #e6e1e3;border-radius:16px;background:#fff;box-shadow:0 16px 40px #0002}.contact-float:not([open]) nav{display:none}.contact-float nav a{display:flex;align-items:center;gap:12px;min-height:56px;padding:10px 12px;border-radius:10px;color:#262323;text-decoration:none}.contact-float nav a:hover,.contact-float nav a:focus-visible{background:#f2f0f0}.contact-float nav a>svg{flex:none}.contact-float nav strong,.contact-float nav small{display:block}.contact-float nav strong{font:500 14px/1.4 var(--font-site)}.contact-float nav small{font:400 12px/1.4 var(--font-site);color:#716a6d;overflow-wrap:anywhere}.dark .contact-float nav{background:#1c1d20;border-color:#555}.dark .contact-float nav a{color:#fff}.dark .contact-float nav small{color:#bbb}.dark .contact-float nav a:hover{background:#333}@media(max-width:600px){.contact-float{left:12px;top:12px}.contact-float summary.button-7{width:48px;--button-7-current:48px}.contact-float summary .button-7-label{opacity:0}.contact-float[open] summary .button-7-label{opacity:1}}"
 EXPORT=ROOT/'prototype'
-NAV=[('services','services'),('pricing','pricing'),('projects','projects'),('knowledge','knowledge'),('about','about'),('contacts','contacts')]
+NAV=[('services','services'),('pricing','pricing'),('projects','projects'),('knowledge','knowledge'),('about','about')]
 FOOTER=['services','pricing','how-we-work','knowledge']
 def target(lang,path):return EXPORT/lang/path/'index.html'
 def render(lang,path,destination):
@@ -211,79 +211,11 @@ def render(lang,path,destination):
  logo_url=os.path.relpath(ROOT/'public/assets/nurba-black-sans.svg',destination.parent).replace(os.sep,'/')
  def a(path,label,cls=''):return f'<a class="{cls}" href="{escape(url(path),quote=True)}">{escape(label)}</a>'
  def contact_channels(compact=False):
-  channels=[('WhatsApp',CONTACTS['phoneDisplay'],CONTACTS['whatsapp']),('Telegram',CONTACTS['phoneDisplay'],CONTACTS['telegram']),(t['phoneLabel'],CONTACTS['phoneDisplay'],'tel:'+CONTACTS['phone']),('Email',CONTACTS['email'],'mailto:'+CONTACTS['email'])]
-  out='<div class="'+('footer-contacts' if compact else 'contact-channels')+'">'
-  for label,value,href in channels:
-   external=' target="_blank" rel="noopener noreferrer"' if href.startswith('https:') else ''
-   arrow='' if compact else '<svg class="contact-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>'
-   detail=f'<span>{escape(value)}</span>' if not compact or not href.startswith('https:') else ''
-   out+=f'<a class="contact-channel" href="{escape(href,quote=True)}"{external}><span class="contact-copy"><strong>{escape(label)}</strong>{detail}</span>{arrow}</a>'
-  return out+'</div>'
- folder_serial=0
- def render_cards(items):
-  nonlocal folder_serial
-  if items and all(item['path'].startswith('services/') for item in items):
-   folder_serial+=1
-   return render_service_folders(items,t,url,f'gf-batch-{folder_serial}',lang)
-  out='<div class="cards">'
-  for i,item in enumerate(items,1):
-   out+=f'<a class="card" href="{escape(url(item["path"]),quote=True)}"><span class="card-no">{i:02}</span><h3>{escape(item["title"])}</h3><p>{escape(item["text"])}</p><div class="card-link">{escape(t["more"])}<span aria-hidden="true">↗</span></div></a>'
-  return out+'</div>'
+  return ''
+
  def form(title):
-  options=''.join(f'<option>{escape(t[k])}</option>' for _,k in SERVICES)
-  fields=f'<label class="field">{escape(t["task"])}<select name="task" required>{options}</select></label>'
-  for key,extra,full in [('country','required autocomplete="country-name" maxlength="100"',False),('contact','required maxlength="200"',True),('name','autocomplete="organization" maxlength="200"',True)]:
-   fields+=f'<label class="field{" full" if full else ""}">{escape(t[key])}<input name="{key}" {extra}></label>'
-  fields+=f'<label class="field full">{escape(t["comment"])}<textarea name="comment" maxlength="3000"></textarea></label>'
-  fields+=f'<div class="form-bottom"><button class="button button-primary" type="submit" disabled>{escape(t["submit"])} <span aria-hidden="true">↗</span></button><p role="status" class="form-status"></p></div>'
-  return f'<div class="request-layout"><div><h2 class="section-title">{escape(title)}</h2><p class="request-note">{escape(t["formNote"])}</p></div><form class="request-form">{fields}</form></div>'
- blocks=[]
- for i,b in enumerate(p['blocks'],1):
-  content=''
-  if b['type']=='contacts':content=f'<div class="section-head"><h2 class="section-title">{escape(b["title"])}</h2></div>'+(f'<p class="section-lead">{escape(b["text"])}</p>' if b.get('text') else '')+contact_channels()
-  elif b['type']=='form':content=form(b['title'])
-  else:
-   content=f'<div class="section-head"><h2 class="section-title">{escape(b["title"])}</h2><span class="section-number" aria-hidden="true">{i:02}</span></div>'
-   if b['type']=='text':content+=f'<p class="body-copy">{escape(b["text"])}</p>'
-   elif b['type']=='cards':
-    if b.get('text'):content+=f'<p class="section-lead">{escape(b["text"])}</p>'
-    content+=render_cards(b['items'])
-    if b.get('morePath'):content+=a(b['morePath'],b['moreLabel'],'section-more')
-   elif b['type']=='journey':
-    content+=render_journey(b['items'],lang,b['title'],lambda stage:os.path.relpath(ROOT/f'public/assets/journey-stage-{stage}.svg',destination.parent).replace(os.sep,'/'))
-   elif b['type']=='steps':content+='<ol class="steps">'+''.join(f'<li>{escape(item)}</li>' for item in b['items'])+'</ol>'
-   elif b['type']=='checklist':
-    content+=f'<p class="body-copy">{escape(b["text"])}</p><ul class="document-checklist">'+''.join(f'<li><label><input type="checkbox"><span>{escape(item)}</span></label></li>' for item in b['items'])+'</ul>'
-   elif b['type']=='faq':content+='<div class="faq-list">'+''.join(f'<details><summary>{escape(item["question"])}</summary><p>{escape(item["answer"])}</p></details>' for item in b['items'])+'</div>'
-   elif b['type']=='search':content+=f'<div class="knowledge-search"><label><span class="eyebrow">{escape(t["search"])}</span><input class="search-field" type="search" placeholder="{escape(t["search"],quote=True)}"></label>'+render_cards(b['items'])+f'<p class="search-empty" role="status" hidden>{escape(t["noResults"])}</p></div>'
-  blocks.append(f'<section class="content-section"><div class="shell">{content}</div></section>')
- langs=''.join(f'<a href="{escape(url(path,other),quote=True)}" lang="{other}" hreflang="{other}"'+(' aria-current="true"' if other==lang else '')+f'><span>{escape(LABELS[other])}</span>'+('<span aria-hidden="true">✓</span>' if other==lang else '')+'</a>' for other in LANGS)
- nav_links=f'<a href="{escape(url(),quote=True)}">{escape(t["home"])}</a>'
- for group in json.loads((ROOT/'content/navigation.json').read_text()):
-  if len(group['pages'])==1:
-   nav_links+=f'<a href="{escape(url(group["pages"][0]),quote=True)}">{escape(t[group["label"]])}</a>'
-  else:
-   links=''.join(f'<a href="{escape(url(route),quote=True)}"'+(' aria-current="page"' if route==path else '')+f'>{escape(t["allServices"] if route=="services" else pages[route]["title"])}</a>' for route in group['pages'])
-   nav_links+=f'<details class="nav-subgroup"><summary class="nav-group-trigger" aria-controls="submenu-{group["label"]}"><span>{escape(t[group["label"]])}</span><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></summary><div class="nav-subpanel" id="submenu-{group["label"]}">{links}</div></details>'
- nav=f'<details class="nav-dropdown main-menu-dropdown"><summary class="nav-trigger" aria-controls="header-main-menu"><span>{escape(t["navMenu"])}</span><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></summary><div class="nav-panel main-menu-panel" id="header-main-menu">{nav_links}</div></details>'
- theme_labels={
-  'ru':{'light':'Дневная тема','dark':'Ночная тема'},
-  'ky':{'light':'Күндүзгү тема','dark':'Түнкү тема'},
-  'en':{'light':'Day theme','dark':'Night theme'},
-  'sv':{'light':'Dagtema','dark':'Nattema'},
-  'nb':{'light':'Dagtema','dark':'Nattema'},
- }[lang]
- theme_button=f'<button type="button" class="button-7 theme-toggle" data-theme-toggle aria-label="{escape(theme_labels["light"],quote=True)}" title="{escape(theme_labels["light"],quote=True)}" aria-pressed="false" style="--button-7-width:200px"><span class="button-7-label">{escape(theme_labels["light"])}</span><span class="button-7-arrow" aria-hidden="true"><svg class="theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg><svg class="theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/></svg></span></button>'
- header=f'<a class="header-contact" href="{escape(url("contacts"),quote=True)}" aria-label="{escape(t["contactAction"],quote=True)}" title="{escape(t["contactAction"],quote=True)}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2.1Z"/></svg></a><header class="site-header"><div class="shell header-inner"><nav class="site-nav" aria-label="{escape(t["home"],quote=True)}">{nav}</nav><div class="language-switcher"><details class="nav-dropdown language-dropdown"><summary class="nav-trigger language-trigger" aria-controls="header-languages"><span>{escape(LABELS[lang])}</span><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></summary><div class="nav-panel language-panel" id="header-languages">{langs}</div></details></div>{theme_button}</div></header>'
- if not path:
-  blooms=''
-  for i in (1,3,4,6):
-   asset=f'poppy-blossom-{i}.png'
-   flower_url=os.path.relpath(ROOT/'public/assets'/asset,destination.parent).replace(os.sep,'/')
-   mobile_url=os.path.relpath(ROOT/'public/assets'/f'poppy-blossom-{i}-mobile.png',destination.parent).replace(os.sep,'/')
-   blooms+=f'<span class="botanical-bloom bloom-{i}" style="--poppy-image:url({escape(flower_url,quote=True)});--poppy-image-mobile:url({escape(mobile_url,quote=True)})"></span>' 
-  heading=f'''<section id="gp-home" class="glyph-portal nurba-glyph-hero" data-gp-word="Nurba" data-gp-typography="true" aria-label="Nurba" style="--gp-paper:#fff;--gp-ink:#000;--gp-field:#fff"><div data-gp-viewport aria-hidden="true"></div><div data-gp-pin><div data-gp-field aria-hidden="true" inert><div class="hero-botanical-art">{blooms}</div></div><svg data-gp-art aria-hidden="true" focusable="false"><text data-gp-glyph x="0" y="0" style="font-family:'Glyph Portal Jakarta',Arial,sans-serif;font-size:100px;font-weight:700;font-kerning:none;font-variant-ligatures:none;letter-spacing:0">Nurba</text><g data-gp-marks style="visibility:hidden"><path/></g></svg><div data-gp-front><h1 id="hero-title">{escape(p["title"])}</h1></div><span data-gp-fallback aria-hidden="true" style="font-family:'Glyph Portal Jakarta',Arial,sans-serif;font-weight:700">Nurba</span></div></section>'''
- else:heading=f'<div class="page-heading"><div class="shell"><nav class="breadcrumbs" aria-label="{escape(t["home"],quote=True)}">{a("",t["home"])}<span aria-hidden="true">/</span><span>{escape(p["title"])}</span></nav><h1>{escape(p["title"])}</h1>'+ (f'<p>{escape(p["lead"])}</p>' if p['lead'] else '')+'</div></div>'
+  return f'<div class="request-layout"><h2 class="section-title">{escape(title)}</h2><p>Приём заявок временно приостановлен. Requests are temporarily disabled.</p></div>'
+
  def expanding_control(match):
   tag,attrs,classes,tail,content=match.groups()
   label=re.sub(r'<svg.*?</svg>','',content)
