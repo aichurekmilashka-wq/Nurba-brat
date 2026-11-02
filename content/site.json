@@ -130,6 +130,29 @@
         "aboutText": "Регистрация лекарств и медицинских изделий, проверка документов и сопровождение проектов в Кыргызстане."
       },
       "pages": {
+        "404": {
+          "title": "Страница не найдена",
+          "lead": "",
+          "blocks": [
+            {
+              "type": "cards",
+              "title": "Услуги",
+              "text": "",
+              "items": [
+                {
+                  "title": "Регистрация лекарств",
+                  "text": "Первичная оценка проекта по лекарственному препарату, документов и состава сопровождения.",
+                  "path": "services/medicines-registration"
+                },
+                {
+                  "title": "Регистрация медизделий",
+                  "text": "Отдельная оценка медицинского изделия с учётом назначения и имеющейся документации.",
+                  "path": "services/medical-devices-registration"
+                }
+              ]
+            }
+          ]
+        },
         "": {
           "title": "Регуляторный консалтинг",
           "lead": "Регистрация лекарств и медицинских изделий в Кыргызстане. Проверка документов, подготовка досье и сопровождение проекта.",
@@ -922,9 +945,60 @@
           ]
         },
         "privacy": {
-          "title": "Персональные данные",
-          "lead": "В локальном прототипе нет сервера заявок, аналитики и отправки данных. Поля формы используются только в текущем окне для скачивания текста. Политика действующего сайта должна описывать реального оператора, цели, получателей, хранение и права пользователей.",
-          "blocks": []
+          "title": "Политика обработки персональных данных",
+          "lead": "Проект политики для сайта Nurba. До коммерческого запуска необходимо подтвердить реквизиты оператора, каналы получения заявок, сроки хранения и используемые сторонние сервисы.",
+          "blocks": [
+            {
+              "type": "text",
+              "title": "Оператор персональных данных",
+              "text": "Оператором является лицо или организация, оказывающая услуги под брендом Nurba. Полное юридическое наименование, регистрационный номер, юридический адрес и официальный контакт для обращений субъектов данных должны быть указаны до запуска приёма заявок. Пока эти сведения не подтверждены, настоящая редакция является проектом политики, а не окончательным юридическим уведомлением."
+            },
+            {
+              "type": "text",
+              "title": "Какие сведения обрабатываются",
+              "text": "При заполнении формы посетитель может указать вид услуги, страну, контактный адрес электронной почты или номер телефона, имя либо наименование организации, комментарий. Не направляйте через общую форму медицинские сведения пациентов, регистрационные досье, коммерческие секреты, пароли и иные конфиденциальные материалы. При посещении сайта хостинг и сторонние сервисы могут обрабатывать технические сведения, включая IP-адрес, время запроса, тип браузера и параметры устройства."
+            },
+            {
+              "type": "text",
+              "title": "Цели и правовые основания",
+              "text": "Данные, которые посетитель добровольно указывает в обращении, предназначены для подготовки ответа, предварительной оценки запроса и согласования возможного договора. В зависимости от обстоятельств основанием может служить принятие мер до заключения договора по инициативе посетителя, исполнение договора, установленная законом обязанность или согласие. Аналитические технологии, не являющиеся строго необходимыми, должны использоваться только при наличии применимого законного основания, в том числе согласия, когда оно требуется."
+            },
+            {
+              "type": "text",
+              "title": "Как сейчас работает форма",
+              "text": "В проверенной React-версии сайта заполненная форма формирует текстовый файл и скачивает его на устройство посетителя. Она не отправляет заявку оператору и не сохраняет её в собственной базе сайта. Если посетитель самостоятельно пересылает этот файл по электронной почте или через мессенджер, дальнейшая обработка происходит в соответствующем канале. При изменении механизма отправки этот раздел политики необходимо обновить до запуска."
+            },
+            {
+              "type": "text",
+              "title": "Получатели и сторонние сервисы",
+              "text": "Сайт размещён на GitHub Pages, а контактные ссылки могут переводить посетителя в WhatsApp, Telegram, почтовое приложение или телефонную связь. При переходе к стороннему сервису применяются также его правила конфиденциальности. В материалах сайта упоминается Яндекс Метрика с Вебвизором; фактическое подключение, режим согласия, категории передаваемых данных и международные передачи должны быть отдельно проверены перед публикацией окончательной политики. Оператор не должен заявлять об отсутствии передачи данных третьим лицам без технической проверки."
+            },
+            {
+              "type": "text",
+              "title": "Сроки хранения и безопасность",
+              "text": "Локально скачанный файл находится под контролем посетителя. Сроки хранения сообщений, полученных по почте и через мессенджеры, определяются оператором с учётом цели обращения, договора и требований законодательства и должны быть опубликованы после утверждения регламента. Оператор обязан ограничивать доступ к обращениям, использовать защищённые учётные записи, резервное копирование при необходимости и удалять сведения после достижения целей, если отсутствуют законные основания для дальнейшего хранения."
+            },
+            {
+              "type": "text",
+              "title": "Права посетителя",
+              "text": "Посетитель вправе запрашивать информацию об обработке своих данных, требовать исправления, удаления или ограничения обработки и отзывать согласие в предусмотренных законом случаях. Обращения направляются по официальному адресу оператора, который должен быть опубликован до начала приёма персональных данных. Также можно обращаться в уполномоченный орган по защите персональных данных Кыргызской Республики. При применимости GDPR могут действовать дополнительные права и порядок подачи жалобы европейскому надзорному органу."
+            },
+            {
+              "type": "text",
+              "title": "Международные передачи и GDPR",
+              "text": "Сайт рассчитан на международную аудиторию. Использование зарубежного хостинга, аналитики, почты и мессенджеров может предполагать трансграничную передачу данных. До начала реальной обработки оператор должен определить страны, получателей и законные механизмы передачи. GDPR применяется не автоматически из-за наличия европейских посетителей или перевода сайта: необходимо оценить критерии территориального действия, включая предложение услуг лицам в ЕС и мониторинг их поведения."
+            },
+            {
+              "type": "text",
+              "title": "Cookies и выбор посетителя",
+              "text": "Строго необходимые технологии могут обеспечивать базовые функции сайта, например сохранение настроек. Необязательная аналитика и запись действий посетителей должны включаться только после соответствующего выбора там, где требуется согласие. Посетителю должна быть доступна возможность изменить или отозвать выбор. Подробности о фактических cookie, сроках и провайдерах необходимо синхронизировать с отдельной страницей Cookies."
+            },
+            {
+              "type": "text",
+              "title": "Изменения политики",
+              "text": "Перед коммерческим запуском оператор должен утвердить настоящую политику, указать дату вступления в силу и актуальные реквизиты, а также проверить соответствие текста реально работающим формам, аналитике, хостингу и каналам связи. Существенные изменения обработки требуют своевременного обновления документа и, когда необходимо, нового согласия."
+            }
+          ]
         },
         "cookies": {
           "title": "Cookies",
@@ -935,29 +1009,6 @@
           "title": "Условия использования",
           "lead": "Содержание является проектом сайта и не заменяет индивидуальную регуляторную оценку. Нормативные перечни, сроки и применимость процедур требуют проверки специалистом перед публикацией.",
           "blocks": []
-        },
-        "404": {
-          "title": "Страница не найдена",
-          "lead": "",
-          "blocks": [
-            {
-              "type": "cards",
-              "title": "Услуги",
-              "text": "",
-              "items": [
-                {
-                  "title": "Регистрация лекарств",
-                  "text": "Первичная оценка проекта по лекарственному препарату, документов и состава сопровождения.",
-                  "path": "services/medicines-registration"
-                },
-                {
-                  "title": "Регистрация медизделий",
-                  "text": "Отдельная оценка медицинского изделия с учётом назначения и имеющейся документации.",
-                  "path": "services/medical-devices-registration"
-                }
-              ]
-            }
-          ]
         }
       }
     },
@@ -1084,6 +1135,29 @@
         "aboutText": "Кыргызстанда дары-дармектерди жана медициналык буюмдарды каттоо, документтерди текшерүү жана долбоорлорду коштоо."
       },
       "pages": {
+        "404": {
+          "title": "Бет табылган жок",
+          "lead": "",
+          "blocks": [
+            {
+              "type": "cards",
+              "title": "Кызматтар",
+              "text": "",
+              "items": [
+                {
+                  "title": "Дары-дармектерди каттоо",
+                  "text": "Дары препараты боюнча долбоорду, документтерди жана коштоо иштерин алгачкы баалоо.",
+                  "path": "services/medicines-registration"
+                },
+                {
+                  "title": "Медициналык буюмдарды каттоо",
+                  "text": "Медициналык буюмдун максатын жана учурдагы документтерин эске алуу менен өзүнчө баалоо.",
+                  "path": "services/medical-devices-registration"
+                }
+              ]
+            }
+          ]
+        },
         "": {
           "title": "Регулятордук консалтинг",
           "lead": "Кыргызстанда дары-дармектерди жана медициналык буюмдарды каттоо. Документтерди текшерүү, досьени даярдоо жана долбоорду коштоо.",
@@ -1889,29 +1963,6 @@
           "title": "Колдонуу шарттары",
           "lead": "Мазмун сайттын долбоору болуп саналат жана жеке регулятордук баалоону алмаштырбайт. Ченемдик тизмелер, мөөнөттөр жана жол-жоболордун колдонулушу жарыялоого чейин адис тарабынан текшерилиши керек.",
           "blocks": []
-        },
-        "404": {
-          "title": "Бет табылган жок",
-          "lead": "",
-          "blocks": [
-            {
-              "type": "cards",
-              "title": "Кызматтар",
-              "text": "",
-              "items": [
-                {
-                  "title": "Дары-дармектерди каттоо",
-                  "text": "Дары препараты боюнча долбоорду, документтерди жана коштоо иштерин алгачкы баалоо.",
-                  "path": "services/medicines-registration"
-                },
-                {
-                  "title": "Медициналык буюмдарды каттоо",
-                  "text": "Медициналык буюмдун максатын жана учурдагы документтерин эске алуу менен өзүнчө баалоо.",
-                  "path": "services/medical-devices-registration"
-                }
-              ]
-            }
-          ]
         }
       }
     },
@@ -2038,6 +2089,29 @@
         "aboutText": "Medicine and medical device registration, document review and project support in Kyrgyzstan."
       },
       "pages": {
+        "404": {
+          "title": "Page not found",
+          "lead": "",
+          "blocks": [
+            {
+              "type": "cards",
+              "title": "Services",
+              "text": "",
+              "items": [
+                {
+                  "title": "Medicine registration",
+                  "text": "Initial assessment of a medicinal product project, its documentation and coordination scope.",
+                  "path": "services/medicines-registration"
+                },
+                {
+                  "title": "Medical device registration",
+                  "text": "A separate assessment based on a device’s intended purpose and available documentation.",
+                  "path": "services/medical-devices-registration"
+                }
+              ]
+            }
+          ]
+        },
         "": {
           "title": "Regulatory consulting",
           "lead": "Medicine and medical device registration in Kyrgyzstan. Document review, dossier preparation and project coordination.",
@@ -2843,29 +2917,6 @@
           "title": "Terms of use",
           "lead": "This content is a website draft and does not replace an individual regulatory assessment. Statutory checklists, timelines and procedural applicability require specialist review before publication.",
           "blocks": []
-        },
-        "404": {
-          "title": "Page not found",
-          "lead": "",
-          "blocks": [
-            {
-              "type": "cards",
-              "title": "Services",
-              "text": "",
-              "items": [
-                {
-                  "title": "Medicine registration",
-                  "text": "Initial assessment of a medicinal product project, its documentation and coordination scope.",
-                  "path": "services/medicines-registration"
-                },
-                {
-                  "title": "Medical device registration",
-                  "text": "A separate assessment based on a device’s intended purpose and available documentation.",
-                  "path": "services/medical-devices-registration"
-                }
-              ]
-            }
-          ]
         }
       }
     },
@@ -2992,6 +3043,29 @@
         "aboutText": "Registrering av läkemedel och medicintekniska produkter, dokumentgranskning och projektstöd i Kirgizistan."
       },
       "pages": {
+        "404": {
+          "title": "Sidan hittades inte",
+          "lead": "",
+          "blocks": [
+            {
+              "type": "cards",
+              "title": "Tjänster",
+              "text": "",
+              "items": [
+                {
+                  "title": "Läkemedelsregistrering",
+                  "text": "Inledande bedömning av ett läkemedelsprojekt, dokumentationen och samordningens omfattning.",
+                  "path": "services/medicines-registration"
+                },
+                {
+                  "title": "Registrering av medicintekniska produkter",
+                  "text": "En separat bedömning utifrån produktens avsedda användning och tillgängliga dokumentation.",
+                  "path": "services/medical-devices-registration"
+                }
+              ]
+            }
+          ]
+        },
         "": {
           "title": "Regulatorisk rådgivning",
           "lead": "Registrering av läkemedel och medicintekniska produkter i Kirgizistan. Dokumentgranskning, sammanställning av dossier och projektsamordning.",
@@ -3797,29 +3871,6 @@
           "title": "Användarvillkor",
           "lead": "Innehållet är ett webbplatsutkast och ersätter inte en individuell regulatorisk bedömning. Lagstadgade listor, tidsramar och förfarandens tillämplighet kräver specialistgranskning före publicering.",
           "blocks": []
-        },
-        "404": {
-          "title": "Sidan hittades inte",
-          "lead": "",
-          "blocks": [
-            {
-              "type": "cards",
-              "title": "Tjänster",
-              "text": "",
-              "items": [
-                {
-                  "title": "Läkemedelsregistrering",
-                  "text": "Inledande bedömning av ett läkemedelsprojekt, dokumentationen och samordningens omfattning.",
-                  "path": "services/medicines-registration"
-                },
-                {
-                  "title": "Registrering av medicintekniska produkter",
-                  "text": "En separat bedömning utifrån produktens avsedda användning och tillgängliga dokumentation.",
-                  "path": "services/medical-devices-registration"
-                }
-              ]
-            }
-          ]
         }
       }
     },
@@ -3946,6 +3997,29 @@
         "aboutText": "Registrering av legemidler og medisinsk utstyr, dokumentgjennomgang og prosjektbistand i Kirgisistan."
       },
       "pages": {
+        "404": {
+          "title": "Siden ble ikke funnet",
+          "lead": "",
+          "blocks": [
+            {
+              "type": "cards",
+              "title": "Tjenester",
+              "text": "",
+              "items": [
+                {
+                  "title": "Legemiddelregistrering",
+                  "text": "Innledende vurdering av et legemiddelprosjekt, dokumentasjonen og oppfølgingens omfang.",
+                  "path": "services/medicines-registration"
+                },
+                {
+                  "title": "Registrering av medisinsk utstyr",
+                  "text": "En separat vurdering basert på utstyrets tiltenkte bruk og tilgjengelig dokumentasjon.",
+                  "path": "services/medical-devices-registration"
+                }
+              ]
+            }
+          ]
+        },
         "": {
           "title": "Regulatorisk rådgivning",
           "lead": "Registrering av legemidler og medisinsk utstyr i Kirgisistan. Dokumentgjennomgang, utarbeidelse av dokumentasjon og prosjektoppfølging.",
@@ -4751,29 +4825,6 @@
           "title": "Bruksvilkår",
           "lead": "Innholdet er et nettsideutkast og erstatter ikke en individuell regulatorisk vurdering. Lovpålagte lister, tidsfrister og relevansen av prosedyrer krever faglig gjennomgang før publisering.",
           "blocks": []
-        },
-        "404": {
-          "title": "Siden ble ikke funnet",
-          "lead": "",
-          "blocks": [
-            {
-              "type": "cards",
-              "title": "Tjenester",
-              "text": "",
-              "items": [
-                {
-                  "title": "Legemiddelregistrering",
-                  "text": "Innledende vurdering av et legemiddelprosjekt, dokumentasjonen og oppfølgingens omfang.",
-                  "path": "services/medicines-registration"
-                },
-                {
-                  "title": "Registrering av medisinsk utstyr",
-                  "text": "En separat vurdering basert på utstyrets tiltenkte bruk og tilgjengelig dokumentasjon.",
-                  "path": "services/medical-devices-registration"
-                }
-              ]
-            }
-          ]
         }
       }
     }
