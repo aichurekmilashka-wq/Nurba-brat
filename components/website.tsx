@@ -1,7 +1,6 @@
 import ProjectJourney from '@/components/ui/project-journey'
-import { Component as Button7 } from "@/components/ui/button-7"
 import ThemeToggle from "@/components/theme-toggle"
-import { useEffect, useState, type FormEvent } from 'react'
+import { useEffect, useState } from 'react'
 import { ArrowRight } from 'lucide-react'
 import source from '@/content/site.json'
 import type { Block, Card, Locale, SiteData } from '@/content/types'
@@ -28,34 +27,8 @@ function Cards({ items, locale, more }: { items: Card[]; locale: Locale; more: s
   </a>)}</div>
 }
 
-function RequestForm({ locale, title }: { locale: Locale; title: string }) {
-  const t = data.locales[locale].ui
-  const [status, setStatus] = useState('')
-  function submit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-    const form = event.currentTarget
-    const values = new FormData(form)
-    const contact = String(values.get('contact') || '').trim()
-    const input = form.elements.namedItem('contact') as HTMLInputElement
-    const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact) || (/^[+\d\s().-]+$/.test(contact) && contact.replace(/\D/g, '').length >= 7)
-    if (!valid) { input.setCustomValidity(t.formError); input.reportValidity(); return }
-    input.setCustomValidity('')
-    const text = ['task', 'country', 'contact', 'name', 'comment'].map(key => `${t[key]}: ${String(values.get(key) || '').trim()}`).join('\n\n')
-    const url = URL.createObjectURL(new Blob([text], { type: 'text/plain;charset=utf-8' }))
-    const link = document.createElement('a')
-    link.href = url; link.download = `project-request-${locale}.txt`; link.click()
-    window.setTimeout(() => URL.revokeObjectURL(url), 1000)
-    setStatus(t.formSuccess)
-  }
-  return <div className="request-layout"><div><h2 className="section-title">{title}</h2><p className="request-note">{t.formNote}</p></div>
-    <form className="request-form" onSubmit={submit} aria-disabled="true">
-      <label className="field">{t.task}<select name="task" required>{['medicines', 'devices', 'review', 'preparation', 'variations', 'pv', 'consulting'].map(key => <option key={key}>{t[key]}</option>)}</select></label>
-      <label className="field">{t.country}<input name="country" required autoComplete="country-name" maxLength={100} /></label>
-      <label className="field full">{t.contact}<input name="contact" required maxLength={200} onInput={event => event.currentTarget.setCustomValidity('')} /></label>
-      <label className="field full">{t.name}<input name="name" autoComplete="organization" maxLength={200} /></label>
-      <label className="field full">{t.comment}<textarea name="comment" maxLength={3000} /></label>
-      <div className="form-bottom"><p role="status">Приём заявок временно отключён.</p></div>
-    </form></div>
+function RequestForm({ title }: { locale: Locale; title: string }) {
+  return <section className="request-layout"><div><h2 className="section-title">{title}</h2><p className="request-note">Приём заявок временно приостановлен. Форма не собирает и не отправляет персональные данные.</p></div></section>
 }
 
 function Search({ block, locale }: { block: Extract<Block, { type: 'cards' | 'search' }>; locale: Locale }) {
