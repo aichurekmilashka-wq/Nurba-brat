@@ -2,7 +2,7 @@ import ProjectJourney from '@/components/ui/project-journey'
 import { Component as Button7 } from "@/components/ui/button-7"
 import ThemeToggle from "@/components/theme-toggle"
 import { useEffect, useState, type FormEvent } from 'react'
-import { ArrowRight, Phone } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import source from '@/content/site.json'
 import type { Block, Card, Locale, SiteData } from '@/content/types'
 import BrandHero from '@/components/ui/hero'
@@ -10,7 +10,6 @@ import { mountScrollReveal } from '@/lib/scroll-reveal'
 import ServiceFolders from '@/components/service-folders'
 import DropdownNavigation from '@/components/dropdown-navigation'
 import LanguageSwitcher from '@/components/language-switcher'
-import ContactChannels from '@/components/contact-channels'
 
 const data = source as unknown as SiteData
 const brandLogo = `${import.meta.env.BASE_URL}assets/nurba-black-sans.svg`
@@ -49,13 +48,13 @@ function RequestForm({ locale, title }: { locale: Locale; title: string }) {
     setStatus(t.formSuccess)
   }
   return <div className="request-layout"><div><h2 className="section-title">{title}</h2><p className="request-note">{t.formNote}</p></div>
-    <form className="request-form" onSubmit={submit}>
+    <form className="request-form" onSubmit={submit} aria-disabled="true">
       <label className="field">{t.task}<select name="task" required>{['medicines', 'devices', 'review', 'preparation', 'variations', 'pv', 'consulting'].map(key => <option key={key}>{t[key]}</option>)}</select></label>
       <label className="field">{t.country}<input name="country" required autoComplete="country-name" maxLength={100} /></label>
       <label className="field full">{t.contact}<input name="contact" required maxLength={200} onInput={event => event.currentTarget.setCustomValidity('')} /></label>
       <label className="field full">{t.name}<input name="name" autoComplete="organization" maxLength={200} /></label>
       <label className="field full">{t.comment}<textarea name="comment" maxLength={3000} /></label>
-      <div className="form-bottom"><Button7 className="button site-action" type="submit" label={t.submit} /><p role="status">{status}</p></div>
+      <div className="form-bottom"><p role="status">Приём заявок временно отключён.</p></div>
     </form></div>
 }
 
@@ -78,7 +77,6 @@ function ContentBlock({ block, index, locale }: { block: Block; index: number; l
       {block.type === 'steps' && <ol className="steps">{block.items.map(item => <li key={item}>{item}</li>)}</ol>}
       {block.type === 'checklist' && <><p className="body-copy">{block.text}</p><ul className="document-checklist">{block.items.map(item=><li key={item}><label><input type="checkbox" /><span>{item}</span></label></li>)}</ul></>}
       {block.type === 'faq' && <div className="faq-list">{block.items.map(item => <details key={item.question}><summary>{item.question}</summary><p>{item.answer}</p></details>)}</div>}
-      {block.type === 'contacts' && <>{block.text && <p className="section-lead">{block.text}</p>}<ContactChannels ui={t} /></>}
     </>}
   </div></section>
 }
@@ -102,7 +100,6 @@ export default function Website() {
   }, [locale, page, t.brandName])
   const href = (target: string) => `#/${locale}/${target}`
   return <>
-    <a className="header-contact" href={href('contacts')} aria-label={t.contactAction} title={t.contactAction}><Phone size={22} aria-hidden="true" /></a>
     <header className="site-header"><div className="shell header-inner">
       <DropdownNavigation locale={locale} path={path} ui={t} pages={pages} />
       <LanguageSwitcher locale={locale} path={path} languages={data.languages} />
@@ -115,7 +112,6 @@ export default function Website() {
     <footer className="site-footer"><div className="shell"><div className="footer-grid">
       <div className="footer-intro"><h2>{t.brandName}</h2><p>{t.footerText}</p></div>
       <nav className="footer-links" aria-label={t.navMenu}>{['services','pricing','how-we-work','knowledge'].map(target => <a key={target} href={href(target)}>{pages[target].title}</a>)}</nav>
-      <div className="footer-contact-group"><h2><a href={href('contacts')}>{t.contacts}</a></h2><ContactChannels ui={t} compact /></div>
     </div><div className="footer-bottom"><span>{t.region}</span><div className="footer-legal">{['privacy','cookies','terms'].map(target => <a key={target} href={href(target)}>{pages[target].title}</a>)}</div></div></div></footer>
   </>
 }
